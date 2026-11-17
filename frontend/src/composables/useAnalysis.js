@@ -1795,6 +1795,7 @@ Lakukan 3 Lapis Penalaran (Reasoning) sekaligus:
  - Hitung SROI Ratio = (Outcome * (100 - Deadweight) / 100) / Pagu Anggaran.
 4. Analisis Proporsi Rekening: Identifikasi kode rekening belanja utama dan distribusi persentasenya dari total pagu. Minimal 4-6 rekening.
 5. Justifikasi Realokasi Berpasangan: Alasan spesifik kurangi/tambah rekening.
+6. Ekstraksi Anggaran per Tahun (anggaran_tahunan): BACA SEMUA TAHUN yang tercantum pada dokumen RKA, jangan hanya tahun berjalan — termasuk tahun sebelumnya (n-1), tahun berjalan (n), dan tahun berikutnya/prakiraan maju (n+1, n+2, dst.). Masukkan setiap tahun sebagai { "tahun": angka, "jumlah": rupiah tanpa titik }, urut dari tahun terkecil, tanpa melewatkan tahun dan tanpa mengarang tahun yang tidak ada di dokumen. "pagu" harus sama dengan "jumlah" pada tahun_rencana.
 
 Patuhi kebijakan threshold berikut yang sedang aktif:
 ${activeRulesStr}
@@ -1814,7 +1815,8 @@ Format JSON kaku dan valid:
  "sroi_ratio": 1.02,
  "anggaran_tahunan": [
  { "tahun": 2026, "jumlah": 10865685600 },
- { "tahun": 2027, "jumlah": 11075485600 }
+ { "tahun": 2027, "jumlah": 11075485600 },
+ { "tahun": 2028, "jumlah": 27120567000 }
  ],
  "rekening_proporsi": [
  { "kode": "5.2.06.01", "nama": "Belanja Perjalanan Dinas", "persen": 15.5, "nilai": 19375000 }
