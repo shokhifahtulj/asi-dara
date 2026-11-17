@@ -600,10 +600,10 @@
  </div>
 
  <!-- Rantai Transparansi Perhitungan SROI (Rule 16) -->
- <div class="sroi-transparency-card">
- <div class="transparency-header">
- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" stroke="#1B4D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" stroke="#1B4D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Rantai Transparansi Perhitungan Nilai Prakiraan Dampak
- </div>
+ <details class="sroi-transparency-card sroi-transparency-details">
+ <summary class="transparency-header">
+ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" stroke="#1B4D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" stroke="#1B4D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Rantai Transparansi Perhitungan Nilai Prakiraan Dampak <span class="sroi-gap-hint">(klik untuk melihat rincian)</span>
+ </summary>
  <div class="transparency-flow">
  <div class="flow-step">
  <div class="step-num">1</div>
@@ -700,19 +700,6 @@
 
  <!-- Rumus Akhir SROI (pedoman baku) -->
  <div class="sroi-formula-box">
- <div class="sroi-formula-eq sroi-formula-eq-numeric">
- <span class="sroi-formula-label">Rasio Nilai Prakiraan Dampak&nbsp;=</span>
- <span class="sroi-formula-fraction">
- <span class="sroi-formula-num">{{ formatRupiah(sroiMetrics.pvImpact) }}</span>
- <span class="sroi-formula-bar"></span>
- <span class="sroi-formula-den">{{ formatRupiah(sroiMetrics.valueOfInputs) }}</span>
- </span>
- <span class="sroi-formula-result">= {{ sroiMetrics.sroiScore }}</span>
- </div>
- <p class="sroi-formula-note">
- {{ sroiMetrics.sroiInterpretation }} Berdasarkan pedoman ambang batas kelayakan, skor {{ sroiMetrics.sroiScore }} tergolong <strong>{{ sroiMetrics.shortLabel }}</strong> ({{ sroiMetrics.sroiStatus }}).
- </p>
-
  <!-- Penjabaran konkret kenapa rasio belum mencapai kategori Layak (≥ 1,0) -->
  <details v-if="sroiGapExplanation && sroiGapExplanation.isBelowLayak" class="sroi-gap-box sroi-gap-details">
  <summary class="sroi-gap-title">Kenapa belum masuk kategori "Layak" (≥ 1,0)? <span class="sroi-gap-hint">(klik untuk melihat rincian)</span></summary>
@@ -749,7 +736,7 @@
  </p>
  </details>
  </div>
- </div>
+ </details>
  </div>
 
  <!-- ══════════ 6. RINGKASAN EFISIEN & INEFISIEN PER REKENING ══════════ -->
@@ -2524,6 +2511,8 @@ const copyJson = async () => {
  border: 1px solid #fed7aa;
  border-radius: var(--radius-md);
 }
+.sroi-transparency-details > summary { cursor: pointer; margin-bottom: 0; }
+.sroi-transparency-details[open] > summary { margin-bottom: 12px; }
 .sroi-gap-details > summary { cursor: pointer; margin-bottom: 0; }
 .sroi-gap-details[open] > summary { margin-bottom: 8px; }
 .sroi-gap-hint { font-weight: 400; opacity: .7; font-size: 0.85em; }
