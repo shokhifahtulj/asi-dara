@@ -541,7 +541,6 @@
  <span class="sroi-status-pill" :class="sroiMetrics.tone">{{ sroiMetrics.shortLabel }} · {{ sroiMetrics.sroiStatus }}</span>
  </div>
  <div class="sroi-ratio-value">{{ sroiMetrics.sroiScore }}</div>
- <div class="sroi-ratio-formula">Rasio Nilai Prakiraan Dampak = Nilai Dampak yang Dihasilkan Saat Ini ÷ Nilai Input</div>
  </div>
 
  <!-- 4 Pilar Valuasi Utama SROI (Rule 11) -->
@@ -599,81 +598,9 @@
  </div>
  </div>
 
- <!-- Rantai Transparansi Perhitungan SROI (Rule 16) -->
- <details class="sroi-transparency-card sroi-transparency-details">
- <summary class="transparency-header">
- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" stroke="#1B4D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" stroke="#1B4D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Rantai Transparansi Perhitungan Nilai Prakiraan Dampak <span class="sroi-gap-hint">(klik untuk melihat rincian)</span>
- </summary>
- <div class="transparency-flow">
- <div class="flow-step">
- <div class="step-num">1</div>
- <div class="step-body">
- <div class="step-title">Nilai Input</div>
- <div class="step-val">{{ formatRupiah(sroiMetrics.valueOfInputs) }}</div>
- </div>
- </div>
- <div class="flow-arrow">→</div>
- <div class="flow-step">
- <div class="step-num">2</div>
- <div class="step-body">
- <div class="step-title">Nilai Dampak</div>
- <div class="step-val">{{ formatRupiah(sroiMetrics.totalNilaiDampak) }}</div>
- </div>
- </div>
- <div class="flow-arrow">→</div>
- <div class="flow-step">
- <div class="step-num">3</div>
- <div class="step-body">
- <div class="step-title">− Kerugian Bobot ({{ sroiMetrics.deadweight }}%)</div>
- <div class="step-val">{{ formatRupiah(sroiMetrics.dampakSetelahDeadweight) }}</div>
- </div>
- </div>
- <div class="flow-arrow">→</div>
- <div class="flow-step">
- <div class="step-num">4</div>
- <div class="step-body">
- <div class="step-title">− Atribusi ({{ sroiMetrics.attribution }}%)</div>
- <div class="step-val">{{ formatRupiah(sroiMetrics.dampakSetelahAttribution) }}</div>
- </div>
- </div>
- <div class="flow-arrow">→</div>
- <div class="flow-step">
- <div class="step-num">5</div>
- <div class="step-body">
- <div class="step-title">− Pergeseran Manfaat ({{ sroiMetrics.displacement }}%)</div>
- <div class="step-val">{{ formatRupiah(sroiMetrics.dampakSetelahDisplacement) }}</div>
- </div>
- </div>
- <div class="flow-arrow">→</div>
- <div class="flow-step">
- <div class="step-num">6</div>
- <div class="step-body">
- <div class="step-title">Dampak Bersih Tahun 1</div>
- <div class="step-val">{{ formatRupiah(sroiMetrics.netImpact) }}</div>
- </div>
- </div>
- <div class="flow-arrow">→</div>
- <div class="flow-step">
- <div class="step-num">7</div>
- <div class="step-body">
- <div class="step-title">Dampak Nilai Saat Ini ({{ sroiMetrics.durationYears }} thn, diskonto {{ sroiMetrics.discountRate }}%)</div>
- <div class="step-val">{{ formatRupiah(sroiMetrics.pvImpact) }}</div>
- </div>
- </div>
- <div class="flow-arrow">→</div>
- <div class="flow-step highlight">
- <div class="step-num">8</div>
- <div class="step-body">
- <div class="step-title">Rasio Nilai Prakiraan Dampak</div>
- <div class="step-val">{{ sroiMetrics.sroiScore }}</div>
- <div class="step-hint" style="font-size: 15.5px; opacity: 0.9; margin-top: 2px;">{{ sroiMetrics.shortLabel }}</div>
- </div>
- </div>
- </div>
-
  <!-- Rincian Penyusutan & Diskonto per Tahun (jika durasi manfaat > 1 tahun) -->
- <div v-if="sroiMetrics.yearlyBreakdown && sroiMetrics.yearlyBreakdown.length > 1" class="sroi-yearly-table-wrap">
- <div class="sroi-yearly-title">Rincian Penyusutan &amp; Diskonto Multi-Tahun</div>
+ <details v-if="sroiMetrics.yearlyBreakdown && sroiMetrics.yearlyBreakdown.length > 1" class="sroi-yearly-table-wrap sroi-gap-details">
+ <summary class="sroi-yearly-title">Rincian Penyusutan &amp; Diskonto Multi-Tahun <span class="sroi-gap-hint">(klik untuk melihat)</span></summary>
  <table class="sroi-yearly-table">
  <thead>
  <tr>
@@ -696,9 +623,8 @@
  </tr>
  </tfoot>
  </table>
- </div>
+ </details>
 
- <!-- Rumus Akhir SROI (pedoman baku) -->
  <div class="sroi-formula-box">
  <!-- Penjabaran konkret kenapa rasio belum mencapai kategori Layak (≥ 1,0) -->
  <details v-if="sroiGapExplanation && sroiGapExplanation.isBelowLayak" class="sroi-gap-box sroi-gap-details">
@@ -736,7 +662,6 @@
  </p>
  </details>
  </div>
- </details>
  </div>
 
  <!-- ══════════ 6. RINGKASAN EFISIEN & INEFISIEN PER REKENING ══════════ -->

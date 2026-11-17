@@ -1232,7 +1232,6 @@ export function generateAnalysisHtml(doc) {
  <span class="sroi-status-pill">${sroiMetrics.shortLabel} · ${sroiMetrics.sroiStatus}</span>
  </div>
  <div class="sroi-ratio-value">${sroiMetrics.sroiScore}</div>
- <div class="sroi-ratio-formula">Rasio Nilai Prakiraan Dampak = Nilai Dampak yang Dihasilkan Saat Ini ÷ Nilai Input</div>
  </div>
 
  <!-- 4 Pilar Valuasi Utama SROI -->
@@ -1287,62 +1286,6 @@ export function generateAnalysisHtml(doc) {
  </div>
  </div>
 
- <!-- Rantai Transparansi Perhitungan SROI -->
- <div class="sroi-transparency-card">
- <div class="transparency-header">
- <span class="icon"></span> Rantai Transparansi Perhitungan SROI
- </div>
- <div class="transparency-flow">
- <div class="flow-step">
- <div class="step-num">1</div>
- <div class="step-body">
- <div class="step-title">Nilai Input</div>
- <div class="step-val">${formatRupiah(sroiMetrics.valueOfInputs)}</div>
- </div>
- </div>
- <div class="flow-arrow">→</div>
- <div class="flow-step">
- <div class="step-num">2</div>
- <div class="step-body">
- <div class="step-title">Nilai Dampak</div>
- <div class="step-val">${formatRupiah(sroiMetrics.totalNilaiDampak)}</div>
- </div>
- </div>
- <div class="flow-arrow">→</div>
- <div class="flow-step">
- <div class="step-num">3</div>
- <div class="step-body">
- <div class="step-title">Kerugian Bobot (${sroiMetrics.deadweight}%)</div>
- <div class="step-val">${formatRupiah(sroiMetrics.dampakSetelahDeadweight)}</div>
- </div>
- </div>
- <div class="flow-arrow">→</div>
- <div class="flow-step">
- <div class="step-num">4</div>
- <div class="step-body">
- <div class="step-title">Dampak Bersih</div>
- <div class="step-val">${formatRupiah(sroiMetrics.netImpact)}</div>
- </div>
- </div>
- <div class="flow-arrow">→</div>
- <div class="flow-step">
- <div class="step-num">5</div>
- <div class="step-body">
- <div class="step-title">Dampak Nilai Saat Ini</div>
- <div class="step-val">${formatRupiah(sroiMetrics.pvImpact)}</div>
- </div>
- </div>
- <div class="flow-arrow">→</div>
- <div class="flow-step highlight">
- <div class="step-num">6</div>
- <div class="step-body">
- <div class="step-title">Rasio Nilai Prakiraan Dampak</div>
- <div class="step-val">${sroiMetrics.sroiScore}</div>
- <div class="step-hint" style="font-size: 11px; opacity: 0.9; margin-top: 2px;">${sroiMetrics.shortLabel}</div>
- </div>
- </div>
- </div>
- </div>
  </div>
 
  <!-- ══════════ 6. RINGKASAN EFEKTIF & INEFEKTIF PER REKENING ══════════ -->
