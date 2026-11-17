@@ -700,18 +700,6 @@
 
  <!-- Rumus Akhir SROI (pedoman baku) -->
  <div class="sroi-formula-box">
- <p class="sroi-formula-desc">
- Rumus utama untuk menghitung rasio nilai prakiraan dampak adalah membandingkan nilai dampak yang dihasilkan saat ini dengan total nilai input yang digunakan.
- </p>
- <div class="sroi-formula-title">Rumus Rasio Nilai Prakiraan Dampak</div>
- <div class="sroi-formula-eq">
- <span class="sroi-formula-label">Rasio Nilai Prakiraan Dampak&nbsp;=</span>
- <span class="sroi-formula-fraction">
- <span class="sroi-formula-num">Nilai Dampak yang Dihasilkan Saat Ini</span>
- <span class="sroi-formula-bar"></span>
- <span class="sroi-formula-den">Nilai Input</span>
- </span>
- </div>
  <div class="sroi-formula-eq sroi-formula-eq-numeric">
  <span class="sroi-formula-label">Rasio Nilai Prakiraan Dampak&nbsp;=</span>
  <span class="sroi-formula-fraction">
@@ -726,8 +714,8 @@
  </p>
 
  <!-- Penjabaran konkret kenapa rasio belum mencapai kategori Layak (≥ 1,0) -->
- <div v-if="sroiGapExplanation && sroiGapExplanation.isBelowLayak" class="sroi-gap-box">
- <div class="sroi-gap-title">Kenapa belum masuk kategori "Layak" (≥ 1,0)?</div>
+ <details v-if="sroiGapExplanation && sroiGapExplanation.isBelowLayak" class="sroi-gap-box sroi-gap-details">
+ <summary class="sroi-gap-title">Kenapa belum masuk kategori "Layak" (≥ 1,0)? <span class="sroi-gap-hint">(klik untuk melihat rincian)</span></summary>
  <p class="sroi-gap-desc">
  Rasio dihitung dari Dampak Nilai Saat Ini dibanding Nilai Input, bukan dari pembulatan atau pemotongan sepihak. Dari Total Nilai Dampak Sosial {{ formatRupiah(sroiMetrics.totalNilaiDampak) }}, berikut rincian nilai yang tereduksi di setiap tahap sampai menjadi Dampak Nilai Saat Ini {{ formatRupiah(sroiMetrics.pvImpact) }}:
  </p>
@@ -759,7 +747,7 @@
  <p class="sroi-gap-suggestion">
  Angka ini bukan dikurangi secara sepihak — semua persentase (Kerugian Bobot, Atribusi, Pergeseran Manfaat) berasal dari estimasi/justifikasi program itu sendiri dan bisa disesuaikan lewat menu <em>edit manual</em> bila Anda memiliki data pendukung yang lebih kuat (mis. Kerugian Bobot lebih rendah karena tanpa program ini outcome benar-benar tidak akan terjadi). Alternatif lain adalah memperbesar estimasi Total Nilai Dampak Sosial, kira-kira perlu tambahan sekitar {{ formatRupiah(sroiGapExplanation.additionalDampakNeeded) }} pada estimasi awal (sebelum potongan) agar Dampak Nilai Saat Ini menyamai Nilai Input — dengan asumsi persentase potongan yang sama.
  </p>
- </div>
+ </details>
  </div>
  </div>
  </div>
@@ -2536,6 +2524,9 @@ const copyJson = async () => {
  border: 1px solid #fed7aa;
  border-radius: var(--radius-md);
 }
+.sroi-gap-details > summary { cursor: pointer; margin-bottom: 0; }
+.sroi-gap-details[open] > summary { margin-bottom: 8px; }
+.sroi-gap-hint { font-weight: 400; opacity: .7; font-size: 0.85em; }
 .sroi-gap-title {
  font-size: 17.6px;
  font-weight: 800;
