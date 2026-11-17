@@ -953,10 +953,22 @@ export function generateHtmlBackup(backupPayload, isFullBackup = false) {
  let status = rek.status;
  let alasan = rek.alasan;
 
- const matchedRealloc = reallocs.find(r =>
- (r.rekening_nama && r.rekening_nama.toLowerCase().includes(rek.nama.toLowerCase())) ||
- (rek.nama && rek.nama.toLowerCase().includes(r.rekening_nama.toLowerCase()))
- );
+ const cocokRealloc = (r) => {
+ if (!r) return false;
+ const hasKode = (k) => k && String(k).trim() && String(k).trim() !== '-';
+ if (hasKode(rek.kode) && hasKode(r.kode) && String(rek.kode).trim() === String(r.kode).trim()) return true;
+ const a = String(rek.nama || '').trim().toLowerCase();
+ const b = String(r.rekening_nama || '').trim().toLowerCase();
+ return !!a && !!b && (a.includes(b) || b.includes(a));
+ };
+ const matchedRealloc =
+ reallocs.find(r => r && r.aksi === 'KURANGI' && cocokRealloc(r)) ||
+ reallocs.find(cocokRealloc);
+ // Sinkronisasi: rekening yang direkomendasikan dikurangi pasti Inefisien.
+ if (matchedRealloc && matchedRealloc.aksi === 'KURANGI' && status !== 'Inefisien') {
+ status = 'Inefisien';
+ alasan = matchedRealloc.alasan_dikurangi || 'Item belanja ini terindikasi kurang efisien dan berpotensi diefisienkan.';
+ }
 
  if (!status) {
  if (matchedRealloc) {
