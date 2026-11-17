@@ -319,6 +319,34 @@
  Tabel Indikator &amp; Tolok Ukur Kinerja tidak ditemukan pada dokumen ini.
  </p>
  </div>
+
+ <!-- Anggaran Dikeluarkan per Tahun (+ analisis selisih dari tahun sebelumnya) -->
+ <div class="indikator-col anggaran-col">
+ <div class="indikator-col-header">
+ <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:4px;"><path d="M12 2c3 4 6 6.5 6 11a6 6 0 01-12 0c0-2 1-3.5 2-4.5.3 1.5 1.2 2.5 2.2 2.8C10 8.5 10.5 5 12 2z" stroke="#16a34a" stroke-width="2" stroke-linejoin="round"/></svg> Anggaran Dikeluarkan per Tahun
+ </div>
+ <div
+ v-for="(a, i) in anggaranTahunanSorted"
+ :key="'ag' + i"
+ class="anggaran-year-card"
+ :class="{ 'is-current-year': Number(a.tahun) === Number(analysis.tahunRencana) }"
+ >
+ <div class="anggaran-year-top">
+ <span class="anggaran-year-label">Tahun {{ a.tahun }}</span>
+ <span v-if="Number(a.tahun) === Number(analysis.tahunRencana)" class="tahun-tag-inline">Tahun Berjalan</span>
+ </div>
+ <div class="anggaran-year-body">
+ <span class="anggaran-year-jumlah">{{ formatRupiah(a.jumlah) }}</span>
+ </div>
+ <div v-if="a.deltaLabel" class="anggaran-year-delta" :class="a.deltaClass">
+ <span class="delta-arrow">{{ a.deltaClass === 'up' ? '▲' : '▼' }}</span>
+ {{ a.deltaLabel }} dari Tahun {{ a.prevTahun }} ({{ a.deltaPercent }}%)
+ </div>
+ </div>
+ <p v-if="!hasAnggaranTahunan" class="indikator-empty">
+ Data anggaran per tahun tidak ditemukan pada dokumen ini.
+ </p>
+ </div>
  </div>
  </div>
  </div>
@@ -2623,11 +2651,15 @@ const copyJson = async () => {
  margin-top: 14px;
 }
 
-/* Single-column layout: kolom "Anggaran Dikeluarkan per Tahun" telah dihapus dari section ini */
+/* Dua kolom: Target Kinerja per Indikator (kiri) & Anggaran Dikeluarkan per Tahun (kanan) */
 .indikator-grid {
  display: grid;
- grid-template-columns: 1fr;
+ grid-template-columns: 1fr 1fr;
  gap: 16px;
+ align-items: start;
+}
+@media (max-width: 820px) {
+ .indikator-grid { grid-template-columns: 1fr; }
 }
 .indikator-col-header {
  display: flex;
