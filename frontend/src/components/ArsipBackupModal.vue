@@ -460,9 +460,9 @@ async function executeMerge() {
   isolation: isolate;
 }
 .bk-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
-.bk-title { margin: 0; font-family: var(--font-heading); font-size: 1.438rem; }
-.bk-subtitle { margin: 6px 0 0; font-size: 0.943rem; color: var(--text-secondary); line-height: 1.5; }
-.bk-close { border: none; background: transparent; font-size: 1.955rem; line-height: 1; cursor: pointer; color: var(--text-muted); padding: 0 4px; }
+.bk-title { margin: 0; font-family: var(--font-heading); font-size: 1.582rem; }
+.bk-subtitle { margin: 6px 0 0; font-size: 1.113rem; color: var(--text-secondary); line-height: 1.5; }
+.bk-close { border: none; background: transparent; font-size: 2.151rem; line-height: 1; cursor: pointer; color: var(--text-muted); padding: 0 4px; }
 .bk-close:hover:not(:disabled) { color: var(--text-primary); }
 .bk-close:disabled { opacity: 0.4; cursor: default; }
 
@@ -479,9 +479,9 @@ async function executeMerge() {
   border: 1px solid var(--border-color);
 }
 .bk-card-body { flex: 1; }
-.bk-card h4 { margin: 0 0 6px; font-size: 1.127rem; font-family: var(--font-heading); }
-.bk-card p { margin: 0 0 10px; font-size: 0.92rem; line-height: 1.55; color: var(--text-secondary); }
-.bk-card code { font-size: 0.897rem; background: rgba(0, 0, 0, 0.06); padding: 1px 5px; border-radius: 4px; }
+.bk-card h4 { margin: 0 0 6px; font-size: 1.24rem; font-family: var(--font-heading); }
+.bk-card p { margin: 0 0 10px; font-size: 1.086rem; line-height: 1.55; color: var(--text-secondary); }
+.bk-card code { font-size: 1.058rem; background: rgba(0, 0, 0, 0.06); padding: 1px 5px; border-radius: 4px; }
 
 .bk-icon { width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
 .bk-icon-export { background: rgba(var(--primary-rgb), 0.12); color: var(--primary-color); }
@@ -489,7 +489,7 @@ async function executeMerge() {
 .bk-icon-convert { background: rgba(16, 185, 129, 0.12); color: #10b981; }
 .bk-icon-merge { background: rgba(245, 158, 11, 0.14); color: #f59e0b; }
 
-.bk-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.851rem; color: var(--text-muted); }
+.bk-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 1.004rem; color: var(--text-muted); }
 
 .bk-drop {
   display: flex;
@@ -498,7 +498,7 @@ async function executeMerge() {
   min-height: 74px;
   padding: 12px;
   text-align: center;
-  font-size: 0.897rem;
+  font-size: 1.058rem;
   color: var(--text-muted);
   border: 1.5px dashed var(--border-color-strong);
   border-radius: 12px;
@@ -509,19 +509,19 @@ async function executeMerge() {
 .bk-drop:hover, .bk-drop-over { background: rgba(var(--primary-rgb), 0.07); border-color: var(--primary-color); }
 .bk-hidden { display: none; }
 .bk-file-picked { display: flex; flex-direction: column; gap: 2px; color: var(--text-primary); word-break: break-all; }
-.bk-file-picked span { color: var(--text-secondary); font-size: 0.851rem; }
+.bk-file-picked span { color: var(--text-secondary); font-size: 1.004rem; }
 
 .bk-list { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; max-height: 150px; overflow-y: auto; }
-.bk-list li { display: flex; align-items: center; gap: 8px; font-size: 0.874rem; padding: 6px 10px; border-radius: 8px; background: rgba(0, 0, 0, 0.04); border: 1px solid var(--border-color); }
+.bk-list li { display: flex; align-items: center; gap: 8px; font-size: 1.031rem; padding: 6px 10px; border-radius: 8px; background: rgba(0, 0, 0, 0.04); border: 1px solid var(--border-color); }
 .bk-list-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .bk-list-status { color: var(--text-muted); text-align: right; }
 .st-done .bk-list-status { color: #10b981; }
 .st-error .bk-list-status { color: #ef4444; }
 .st-processing .bk-list-status { color: #f59e0b; }
-.bk-list-remove { border: none; background: transparent; cursor: pointer; font-size: 1.15rem; line-height: 1; color: var(--text-muted); }
+.bk-list-remove { border: none; background: transparent; cursor: pointer; font-size: 1.265rem; line-height: 1; color: var(--text-muted); }
 .bk-list-remove:hover { color: #ef4444; }
 
-.bk-check { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 0.874rem; color: var(--text-secondary); cursor: pointer; }
+.bk-check { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 1.031rem; color: var(--text-secondary); cursor: pointer; }
 
 .bk-actions { display: flex; }
 .bk-actions-row { gap: 8px; flex-wrap: wrap; }
@@ -533,7 +533,7 @@ async function executeMerge() {
   gap: 8px;
   width: 100%;
   padding: 10px 14px;
-  font-size: 0.92rem;
+  font-size: 1.086rem;
   font-weight: 700;
   color: #fff;
   border: none;

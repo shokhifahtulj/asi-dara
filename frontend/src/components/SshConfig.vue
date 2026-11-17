@@ -84,15 +84,15 @@
  <i data-lucide="file-text" style="width: 32px; height: 32px; color: var(--primary-color);"></i>
  </div>
  <h4 style="margin: 4px 0;">Pilih atau Seret PDF SSH</h4>
- <p class="upload-zone-sub" style="font-size: 0.92rem; max-width: 250px;">
+ <p class="upload-zone-sub" style="font-size: 1.086rem; max-width: 250px;">
  Pindai dan ekstrak otomatis dengan AI Gemini
  </p>
  </div>
 
  <div v-else class="upload-zone-content">
  <div class="large-spinner" style="width: 36px; height: 36px;"></div>
- <h4 style="margin-top: 12px; font-size: 1.092rem;">{{ sshLoadingText }}</h4>
- <p class="upload-zone-sub" style="font-size: 0.862rem;">Proses ini memerlukan waktu beberapa detik</p>
+ <h4 style="margin-top: 12px; font-size: 1.289rem;">{{ sshLoadingText }}</h4>
+ <p class="upload-zone-sub" style="font-size: 1.017rem;">Proses ini memerlukan waktu beberapa detik</p>
  </div>
  </div>
  </div>
@@ -618,7 +618,7 @@ watch(sshPreview, () => {
  color: var(--text-secondary);
  padding: 6px 12px;
  border-radius: 6px;
- font-size: 0.977rem;
+ font-size: 1.153rem;
  font-weight: 600;
  border: 1px solid var(--border-color);
 }
@@ -691,7 +691,7 @@ watch(sshPreview, () => {
  padding: 40px;
  color: var(--text-muted);
  text-align: center;
- font-size: 1.035rem;
+ font-size: 1.221rem;
 }
 
 .archive-items-list {
@@ -737,7 +737,7 @@ watch(sshPreview, () => {
 .year-badge {
  background-color: var(--primary-color);
  color: white;
- font-size: 0.92rem;
+ font-size: 1.086rem;
  font-weight: 700;
  padding: 2px 8px;
  border-radius: 4px;
@@ -745,12 +745,12 @@ watch(sshPreview, () => {
 
 .version-label {
  font-weight: 700;
- font-size: 1.035rem;
+ font-size: 1.221rem;
  color: var(--text-primary);
 }
 
 .status-indicator-badge {
- font-size: 0.828rem;
+ font-size: 0.977rem;
  font-weight: 700;
  padding: 2px 6px;
  border-radius: 4px;
@@ -772,7 +772,7 @@ watch(sshPreview, () => {
  grid-template-columns: 1fr;
  gap: 4px;
  margin-bottom: 8px;
- font-size: 0.92rem;
+ font-size: 1.086rem;
  color: var(--text-secondary);
 }
 
@@ -797,7 +797,7 @@ watch(sshPreview, () => {
 
 .btn-xs {
  padding: 4px 8px;
- font-size: 0.862rem;
+ font-size: 1.017rem;
  border-radius: 4px;
 }
 
@@ -815,7 +815,7 @@ watch(sshPreview, () => {
  background: none;
  border: none;
  color: var(--danger-text);
- font-size: 0.862rem;
+ font-size: 1.017rem;
  cursor: pointer;
  display: flex;
  align-items: center;
@@ -845,7 +845,7 @@ watch(sshPreview, () => {
 .ssh-badge {
  padding: 3px 10px;
  border-radius: 12px;
- font-size: 0.862rem;
+ font-size: 1.017rem;
  font-weight: 700;
  text-transform: uppercase;
 }
@@ -872,7 +872,7 @@ watch(sshPreview, () => {
 }
 
 .filtered-count {
- font-size: 1.012rem;
+ font-size: 1.194rem;
  color: var(--text-secondary);
 }
 
@@ -901,7 +901,7 @@ watch(sshPreview, () => {
 }
 
 .page-indicator {
- font-size: 1.012rem;
+ font-size: 1.194rem;
  font-weight: 600;
  color: var(--text-secondary);
 }

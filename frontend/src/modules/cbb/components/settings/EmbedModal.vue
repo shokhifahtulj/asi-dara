@@ -12,19 +12,19 @@
       <!-- Modal Header -->
       <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; background: color-mix(in srgb, var(--primary-color) 10%, transparent);">
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <span style="font-size: 1.725rem;">⚡</span>
+          <span style="font-size: 1.898rem;">⚡</span>
           <div>
-            <h2 style="font-size: 1.294rem; font-weight: 700; color: var(--text-primary);">
+            <h2 style="font-size: 1.423rem; font-weight: 700; color: var(--text-primary);">
               Integrasi & Sematkan ke Sistem Web Anda
             </h2>
-            <p style="font-size: 0.862rem; color: var(--text-secondary);">
+            <p style="font-size: 1.017rem; color: var(--text-secondary);">
               Solusi integrasi cepat untuk memperbarui web sistem pemerintah / OPD yang sudah ada
             </p>
           </div>
         </div>
         <button 
           @click="$emit('close')"
-          style="background: transparent; border: none; font-size: 1.438rem; color: var(--text-secondary); cursor: pointer;"
+          style="background: transparent; border: none; font-size: 1.582rem; color: var(--text-secondary); cursor: pointer;"
           class="cbb-close-btn"
         >
           ✕
@@ -40,7 +40,7 @@
           :style="{
             padding: '0.4rem 0.85rem',
             borderRadius: '6px',
-            fontSize: '0.891rem',
+            fontSize: '1.051rem',
             fontWeight: activeSubTab === st.id ? '700' : '500',
             background: activeSubTab === st.id ? 'color-mix(in srgb, var(--primary-color) 25%, transparent)' : 'transparent',
             color: activeSubTab === st.id ? 'var(--primary-color)' : 'var(--text-secondary)',
@@ -58,16 +58,16 @@
         
         <!-- 1. Floating Widget Snippet -->
         <div v-if="activeSubTab === 'widget'" style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 0.949rem; color: var(--text-secondary);">
+          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 1.12rem; color: var(--text-secondary);">
             Pasang kode berikut sebelum tag penutup <code>&lt;/body&gt;</code> di web sistem Anda untuk memunculkan tombol chat melayang di pojok kanan bawah.
           </div>
 
           <div style="position: relative;">
-            <pre style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1rem; font-family: var(--font-mono); font-size: 0.891rem; color: var(--primary-color); overflow-x: auto; line-height: 1.5;">{{ widgetSnippet }}</pre>
+            <pre style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1rem; font-family: var(--font-mono); font-size: 1.051rem; color: var(--primary-color); overflow-x: auto; line-height: 1.5;">{{ widgetSnippet }}</pre>
             <button 
               @click="copySnippet(widgetSnippet, 'widget')"
               class="cbb-btn-secondary" 
-              style="position: absolute; top: 10px; right: 10px; padding: 4px 10px; font-size: 0.834rem;"
+              style="position: absolute; top: 10px; right: 10px; padding: 4px 10px; font-size: 0.984rem;"
             >
               {{ copiedType === 'widget' ? '✓ Tersalin!' : '📋 Salin Kode' }}
             </button>
@@ -76,16 +76,16 @@
 
         <!-- 2. Iframe / Portal Embed -->
         <div v-if="activeSubTab === 'iframe'" style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="background: color-mix(in srgb, var(--info-color) 8%, transparent); border-left: 3px solid var(--info-color); padding: 0.75rem; border-radius: 4px; font-size: 0.949rem; color: var(--text-secondary);">
+          <div style="background: color-mix(in srgb, var(--info-color) 8%, transparent); border-left: 3px solid var(--info-color); padding: 0.75rem; border-radius: 4px; font-size: 1.12rem; color: var(--text-secondary);">
             Sematkan sebagai halaman utuh atau bagian menu dashboard sistem internal:
           </div>
 
           <div style="position: relative;">
-            <pre style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1rem; font-family: var(--font-mono); font-size: 0.891rem; color: var(--info-color); overflow-x: auto; line-height: 1.5;">{{ iframeSnippet }}</pre>
+            <pre style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1rem; font-family: var(--font-mono); font-size: 1.051rem; color: var(--info-color); overflow-x: auto; line-height: 1.5;">{{ iframeSnippet }}</pre>
             <button 
               @click="copySnippet(iframeSnippet, 'iframe')"
               class="cbb-btn-secondary" 
-              style="position: absolute; top: 10px; right: 10px; padding: 4px 10px; font-size: 0.834rem;"
+              style="position: absolute; top: 10px; right: 10px; padding: 4px 10px; font-size: 0.984rem;"
             >
               {{ copiedType === 'iframe' ? '✓ Tersalin!' : '📋 Salin Kode' }}
             </button>
@@ -94,16 +94,16 @@
 
         <!-- 3. Vue 3 Integration Guide -->
         <div v-if="activeSubTab === 'vue'" style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 0.949rem; color: var(--text-secondary);">
+          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 1.12rem; color: var(--text-secondary);">
             Jika web sistem Anda berbasis <strong>Vue 3</strong>, Anda dapat mengimpor komponen atau service langsung:
           </div>
 
           <div style="position: relative;">
-            <pre style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1rem; font-family: var(--font-mono); font-size: 0.891rem; color: var(--primary-color); overflow-x: auto; line-height: 1.5;">{{ vueSnippet }}</pre>
+            <pre style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1rem; font-family: var(--font-mono); font-size: 1.051rem; color: var(--primary-color); overflow-x: auto; line-height: 1.5;">{{ vueSnippet }}</pre>
             <button 
               @click="copySnippet(vueSnippet, 'vue')"
               class="cbb-btn-secondary" 
-              style="position: absolute; top: 10px; right: 10px; padding: 4px 10px; font-size: 0.834rem;"
+              style="position: absolute; top: 10px; right: 10px; padding: 4px 10px; font-size: 0.984rem;"
             >
               {{ copiedType === 'vue' ? '✓ Tersalin!' : '📋 Salin Kode' }}
             </button>
@@ -113,13 +113,13 @@
         <!-- 4. System Prompt Inspector -->
         <div v-if="activeSubTab === 'prompt'" style="display: flex; flex-direction: column; gap: 1rem;">
           <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 0.949rem; color: var(--text-secondary);">
+            <span style="font-size: 1.12rem; color: var(--text-secondary);">
               System Prompt acuan resmi Bapperida Kabupaten Cirebon:
             </span>
             <button 
               @click="copySnippet(systemPromptContent, 'prompt')"
               class="cbb-btn-secondary" 
-              style="padding: 4px 10px; font-size: 0.834rem;"
+              style="padding: 4px 10px; font-size: 0.984rem;"
             >
               {{ copiedType === 'prompt' ? '✓ Tersalin!' : '📋 Salin Prompt' }}
             </button>
@@ -128,18 +128,18 @@
           <textarea 
             readonly
             :value="systemPromptContent"
-            style="width: 100%; height: 260px; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1rem; font-family: var(--font-mono); font-size: 0.862rem; color: var(--text-secondary); outline: none; resize: vertical;"
+            style="width: 100%; height: 260px; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1rem; font-family: var(--font-mono); font-size: 1.017rem; color: var(--text-secondary); outline: none; resize: vertical;"
           ></textarea>
         </div>
 
         <!-- 5. API Key Settings -->
         <div v-if="activeSubTab === 'api'" style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="background: color-mix(in srgb, var(--warning-color) 8%, transparent); border-left: 3px solid var(--warning-color); padding: 0.75rem; border-radius: 4px; font-size: 0.949rem; color: var(--warning-hover);">
+          <div style="background: color-mix(in srgb, var(--warning-color) 8%, transparent); border-left: 3px solid var(--warning-color); padding: 0.75rem; border-radius: 4px; font-size: 1.12rem; color: var(--warning-hover);">
             <strong>Opsional:</strong> Aplikasi saat ini berjalan mandiri dengan basis data lokal Bapperida Cirebon (cepat dan gratis). Masukkan API Key jika Anda ingin menghubungkan dengan model LLM live secara langsung.
           </div>
 
           <div>
-            <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
+            <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
               Google Gemini API Key
             </label>
             <input 
@@ -148,7 +148,7 @@
               placeholder="AIzaSy..." 
               style="width: 100%; padding: 0.65rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);"
             />
-            <span style="font-size: 0.805rem; color: var(--text-muted); margin-top: 4px; display: block;">
+            <span style="font-size: 0.969rem; color: var(--text-muted); margin-top: 4px; display: block;">
               Kunci disimpan aman hanya di browser (Local Storage) pengguna.
             </span>
           </div>
@@ -157,7 +157,7 @@
             <button 
               @click="saveApiKey"
               class="cbb-btn-primary" 
-              style="padding: 0.5rem 1.25rem; font-size: 0.92rem;"
+              style="padding: 0.5rem 1.25rem; font-size: 1.086rem;"
             >
               Simpan Pengaturan API
             </button>
@@ -171,7 +171,7 @@
         <button 
           @click="$emit('close')" 
           class="cbb-btn-secondary"
-          style="padding: 0.5rem 1.25rem; font-size: 0.92rem;"
+          style="padding: 0.5rem 1.25rem; font-size: 1.086rem;"
         >
           Selesai
         </button>

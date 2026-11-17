@@ -14,7 +14,7 @@
  </h2>
  </div>
  <div class="card-body">
- <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px;">
+ <p style="font-size: 1.086rem; color: var(--text-secondary); margin-bottom: 20px;">
  Tentukan parameter ambang batas yang digunakan AI untuk mengevaluasi kepatuhan biaya e-SSH dan efisiensi sosial.
  </p>
  <div id="rules-settings-list" style="display: flex; flex-direction: column; gap: 8px;">

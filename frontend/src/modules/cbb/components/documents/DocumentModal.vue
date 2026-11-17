@@ -12,19 +12,19 @@
       <!-- Modal Header -->
       <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; background: color-mix(in srgb, var(--info-color) 8%, transparent);">
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <span style="font-size: 1.725rem;">📚</span>
+          <span style="font-size: 1.898rem;">📚</span>
           <div>
-            <h2 style="font-size: 1.294rem; font-weight: 700; color: var(--text-primary);">
+            <h2 style="font-size: 1.423rem; font-weight: 700; color: var(--text-primary);">
               Pustaka Dokumen & Regulasi Perencanaan Daerah
             </h2>
-            <p style="font-size: 0.862rem; color: var(--text-secondary);">
+            <p style="font-size: 1.017rem; color: var(--text-secondary);">
               Bapperida Kabupaten Cirebon • Permendagri 86/2017 & UU 25/2004
             </p>
           </div>
         </div>
         <button 
           @click="$emit('close')"
-          style="background: transparent; border: none; font-size: 1.438rem; color: var(--text-secondary); cursor: pointer;"
+          style="background: transparent; border: none; font-size: 1.582rem; color: var(--text-secondary); cursor: pointer;"
           class="cbb-close-btn"
         >
           ✕
@@ -40,7 +40,7 @@
           :style="{
             padding: '0.4rem 0.85rem',
             borderRadius: '6px',
-            fontSize: '0.891rem',
+            fontSize: '1.051rem',
             fontWeight: selectedCategory === cat.id ? '700' : '500',
             background: selectedCategory === cat.id ? 'color-mix(in srgb, var(--info-color) 25%, transparent)' : 'transparent',
             color: selectedCategory === cat.id ? 'var(--info-color)' : 'var(--text-secondary)',
@@ -66,19 +66,19 @@
           >
             <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
               <div style="display: flex; align-items: center; gap: 0.5rem;">
-                <span class="cbb-badge cbb-badge-emerald" style="font-size: 0.862rem;">{{ doc.kode }}</span>
-                <h3 style="font-size: 1.092rem; font-weight: 700; color: var(--text-primary);">{{ doc.nama }}</h3>
+                <span class="cbb-badge cbb-badge-emerald" style="font-size: 1.017rem;">{{ doc.kode }}</span>
+                <h3 style="font-size: 1.289rem; font-weight: 700; color: var(--text-primary);">{{ doc.nama }}</h3>
               </div>
-              <span style="font-size: 0.834rem; color: var(--text-secondary); background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px;">
+              <span style="font-size: 0.984rem; color: var(--text-secondary); background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px;">
                 Periode: {{ doc.periode }}
               </span>
             </div>
 
-            <p style="font-size: 0.949rem; color: var(--text-secondary); line-height: 1.5;">
+            <p style="font-size: 1.12rem; color: var(--text-secondary); line-height: 1.5;">
               {{ doc.deskripsi }}
             </p>
 
-            <div style="font-size: 0.862rem; color: var(--text-muted); font-family: var(--font-mono); margin-top: 0.25rem;">
+            <div style="font-size: 1.017rem; color: var(--text-muted); font-family: var(--font-mono); margin-top: 0.25rem;">
               ⚖️ Dasar Hukum: {{ doc.dasarHukum }}
             </div>
 
@@ -86,7 +86,7 @@
               <button 
                 @click="askAbout(doc.kode)"
                 class="cbb-btn-secondary"
-                style="padding: 0.35rem 0.75rem; font-size: 0.862rem;"
+                style="padding: 0.35rem 0.75rem; font-size: 1.017rem;"
               >
                 💬 Tanyakan Dokumen Ini
               </button>
@@ -103,10 +103,10 @@
             style="padding: 1.25rem; border-radius: 12px; display: flex; flex-direction: column; gap: 0.5rem;"
           >
             <div style="display: flex; align-items: center; justify-content: space-between;">
-              <span class="cbb-badge cbb-badge-blue" style="font-size: 0.862rem;">{{ reg.nomor }}</span>
+              <span class="cbb-badge cbb-badge-blue" style="font-size: 1.017rem;">{{ reg.nomor }}</span>
             </div>
-            <h3 style="font-size: 1.092rem; font-weight: 700; color: var(--text-primary);">{{ reg.tentang }}</h3>
-            <p style="font-size: 0.949rem; color: var(--text-secondary); line-height: 1.5;">
+            <h3 style="font-size: 1.289rem; font-weight: 700; color: var(--text-primary);">{{ reg.tentang }}</h3>
+            <p style="font-size: 1.12rem; color: var(--text-secondary); line-height: 1.5;">
               <strong>Poin Kunci di Bapperida:</strong> {{ reg.poinKunci }}
             </p>
 
@@ -114,7 +114,7 @@
               <button 
                 @click="askAbout(reg.nomor)"
                 class="cbb-btn-secondary"
-                style="padding: 0.35rem 0.75rem; font-size: 0.862rem;"
+                style="padding: 0.35rem 0.75rem; font-size: 1.017rem;"
               >
                 💬 Pelajari Regulasi Ini
               </button>
@@ -131,15 +131,15 @@
               class="cbb-glass-card"
               style="padding: 1rem 1.25rem; border-radius: 10px; display: flex; gap: 1rem; align-items: flex-start;"
             >
-              <div style="width: 32px; height: 32px; border-radius: 50%; background: color-mix(in srgb, var(--primary-color) 20%, transparent); border: 1px solid var(--primary-color); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary-color); font-size: 0.977rem; flex-shrink: 0;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: color-mix(in srgb, var(--primary-color) 20%, transparent); border: 1px solid var(--primary-color); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary-color); font-size: 1.153rem; flex-shrink: 0;">
                 {{ m.tahap }}
               </div>
               <div style="flex: 1;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
-                  <h4 style="font-size: 1.035rem; font-weight: 700; color: var(--text-primary);">{{ m.nama }}</h4>
-                  <span class="cbb-badge cbb-badge-gold" style="font-size: 0.805rem;">{{ m.waktu }}</span>
+                  <h4 style="font-size: 1.221rem; font-weight: 700; color: var(--text-primary);">{{ m.nama }}</h4>
+                  <span class="cbb-badge cbb-badge-gold" style="font-size: 0.969rem;">{{ m.waktu }}</span>
                 </div>
-                <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.4;">
+                <p style="font-size: 1.086rem; color: var(--text-secondary); line-height: 1.4;">
                   {{ m.fokus }}
                 </p>
               </div>
@@ -150,7 +150,7 @@
             <button 
               @click="askAbout('Alur Musrenbang Kabupaten Cirebon')"
               class="cbb-btn-primary"
-              style="padding: 0.45rem 1rem; font-size: 0.891rem;"
+              style="padding: 0.45rem 1rem; font-size: 1.051rem;"
             >
               💬 Konsultasikan Alur Musrenbang di Chat
             </button>
@@ -164,7 +164,7 @@
         <button 
           @click="$emit('close')" 
           class="cbb-btn-secondary"
-          style="padding: 0.5rem 1.25rem; font-size: 0.92rem;"
+          style="padding: 0.5rem 1.25rem; font-size: 1.086rem;"
         >
           Tutup Pustaka
         </button>

@@ -16,7 +16,7 @@ export function showToast(message, { type = 'info', duration = 9000 } = {}) {
   }
   const el = document.createElement('div');
   el.setAttribute('role', 'status');
-  el.style.cssText = `background:${colors.bg};border:1px solid ${colors.bd};color:${colors.fg};padding:10px 14px;border-radius:10px;font-size:14.9px;line-height:1.45;box-shadow:0 4px 14px rgba(0,0,0,.12);cursor:pointer;`;
+  el.style.cssText = `background:${colors.bg};border:1px solid ${colors.bd};color:${colors.fg};padding:10px 14px;border-radius:10px;font-size:17.6px;line-height:1.45;box-shadow:0 4px 14px rgba(0,0,0,.12);cursor:pointer;`;
   el.textContent = message;
   const close = () => el.remove();
   el.addEventListener('click', close);

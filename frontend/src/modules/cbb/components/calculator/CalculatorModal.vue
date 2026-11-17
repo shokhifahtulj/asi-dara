@@ -12,19 +12,19 @@
       <!-- Modal Header -->
       <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; background: color-mix(in srgb, var(--primary-color) 8%, transparent);">
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <span style="font-size: 1.725rem;">🧮</span>
+          <span style="font-size: 1.898rem;">🧮</span>
           <div>
-            <h2 style="font-size: 1.294rem; font-weight: 700; color: var(--text-primary);">
+            <h2 style="font-size: 1.423rem; font-weight: 700; color: var(--text-primary);">
               Kalkulator Indikator Pembangunan & Kinerja Anggaran
             </h2>
-            <p style="font-size: 0.862rem; color: var(--text-secondary);">
+            <p style="font-size: 1.017rem; color: var(--text-secondary);">
               Kepmendagri No. 690.900-327 Tahun 1996 • Permendagri 86/2017 • Metodologi BPS
             </p>
           </div>
         </div>
         <button 
           @click="$emit('close')"
-          style="background: transparent; border: none; font-size: 1.438rem; color: var(--text-secondary); cursor: pointer;"
+          style="background: transparent; border: none; font-size: 1.582rem; color: var(--text-secondary); cursor: pointer;"
           class="cbb-close-btn"
         >
           ✕
@@ -40,7 +40,7 @@
           :style="{
             padding: '0.4rem 0.85rem',
             borderRadius: '6px',
-            fontSize: '0.891rem',
+            fontSize: '1.051rem',
             fontWeight: activeTab === t.id ? '700' : '500',
             background: activeTab === t.id ? 'color-mix(in srgb, var(--primary-color) 25%, transparent)' : 'transparent',
             color: activeTab === t.id ? 'var(--primary-color)' : 'var(--text-secondary)',
@@ -58,13 +58,13 @@
         
         <!-- 1. Pertumbuhan PDRB -->
         <div v-if="activeTab === 'pdrb'" style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 0.92rem; color: var(--text-secondary);">
+          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 1.086rem; color: var(--text-secondary);">
             <strong>Rumus PDRB ADHK:</strong> ((PDRB th_n − PDRB th_n-1) / PDRB th_n-1) × 100%
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
                 PDRB Tahun Sebelumnya (th n-1)
               </label>
               <input 
@@ -74,11 +74,11 @@
                 placeholder="53.4" 
                 style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);"
               />
-              <span style="font-size: 0.805rem; color: var(--text-muted);">(Misal dalam Triliun Rp)</span>
+              <span style="font-size: 0.969rem; color: var(--text-muted);">(Misal dalam Triliun Rp)</span>
             </div>
 
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
                 PDRB Tahun Berjalan (th n)
               </label>
               <input 
@@ -88,16 +88,16 @@
                 placeholder="56.2" 
                 style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);"
               />
-              <span style="font-size: 0.805rem; color: var(--text-muted);">(Misal dalam Triliun Rp)</span>
+              <span style="font-size: 0.969rem; color: var(--text-muted);">(Misal dalam Triliun Rp)</span>
             </div>
           </div>
 
           <div v-if="pdrbResult.valid" style="background: var(--bg-secondary); border: 1px solid color-mix(in srgb, var(--primary-color) 40%, transparent); border-radius: 12px; padding: 1.25rem; margin-top: 0.5rem;">
-            <div style="font-size: 0.862rem; color: var(--text-secondary); text-transform: uppercase;">Laju Pertumbuhan Ekonomi</div>
-            <div style="font-size: 2.3rem; font-weight: 800; color: var(--primary-color); font-family: var(--font-mono); margin: 0.25rem 0;">
+            <div style="font-size: 1.017rem; color: var(--text-secondary); text-transform: uppercase;">Laju Pertumbuhan Ekonomi</div>
+            <div style="font-size: 2.53rem; font-weight: 800; color: var(--primary-color); font-family: var(--font-mono); margin: 0.25rem 0;">
               {{ pdrbResult.laju }}%
             </div>
-            <p style="font-size: 0.949rem; color: var(--text-secondary);">
+            <p style="font-size: 1.12rem; color: var(--text-secondary);">
               <strong>Interpretasi:</strong> {{ pdrbResult.interpretasi }}
             </p>
           </div>
@@ -105,13 +105,13 @@
 
         <!-- 2. Efektivitas Anggaran (Kepmendagri 690/1996) -->
         <div v-if="activeTab === 'efektivitas'" style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="background: color-mix(in srgb, var(--info-color) 8%, transparent); border-left: 3px solid var(--info-color); padding: 0.75rem; border-radius: 4px; font-size: 0.92rem; color: var(--text-secondary);">
+          <div style="background: color-mix(in srgb, var(--info-color) 8%, transparent); border-left: 3px solid var(--info-color); padding: 0.75rem; border-radius: 4px; font-size: 1.086rem; color: var(--text-secondary);">
             <strong>Kepmendagri 690.900-327/1996:</strong> Efektivitas (%) = (Realisasi Output / Target Output) × 100%
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
                 Target Output RKA/DPA (Fisik/Outcome)
               </label>
               <input 
@@ -123,7 +123,7 @@
               />
             </div>
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
                 Realisasi Output Riil
               </label>
               <input 
@@ -139,16 +139,16 @@
           <div v-if="efektivitasResult.valid" style="background: var(--bg-secondary); border: 1px solid color-mix(in srgb, var(--info-color) 40%, transparent); border-radius: 12px; padding: 1.25rem;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
               <div>
-                <div style="font-size: 0.862rem; color: var(--text-secondary); text-transform: uppercase;">Persentase Efektivitas</div>
-                <div style="font-size: 2.3rem; font-weight: 800; color: var(--info-color); font-family: var(--font-mono);">
+                <div style="font-size: 1.017rem; color: var(--text-secondary); text-transform: uppercase;">Persentase Efektivitas</div>
+                <div style="font-size: 2.53rem; font-weight: 800; color: var(--info-color); font-family: var(--font-mono);">
                   {{ efektivitasResult.persen }}%
                 </div>
               </div>
-              <span class="cbb-badge cbb-badge-blue" style="font-size: 0.977rem;">
+              <span class="cbb-badge cbb-badge-blue" style="font-size: 1.153rem;">
                 {{ efektivitasResult.predikat }}
               </span>
             </div>
-            <p style="font-size: 0.949rem; color: var(--text-secondary); margin-top: 0.5rem;">
+            <p style="font-size: 1.12rem; color: var(--text-secondary); margin-top: 0.5rem;">
               {{ efektivitasResult.penjelasan }}
             </p>
           </div>
@@ -156,26 +156,26 @@
 
         <!-- 3. Efisiensi Anggaran (Kepmendagri 690/1996) -->
         <div v-if="activeTab === 'efisiensi'" style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="background: color-mix(in srgb, var(--warning-color) 8%, transparent); border-left: 3px solid var(--warning-color); padding: 0.75rem; border-radius: 4px; font-size: 0.92rem; color: var(--text-secondary);">
+          <div style="background: color-mix(in srgb, var(--warning-color) 8%, transparent); border-left: 3px solid var(--warning-color); padding: 0.75rem; border-radius: 4px; font-size: 1.086rem; color: var(--text-secondary);">
             <strong>Kepmendagri 690.900-327/1996:</strong> Efisiensi (%) = (Rasio Serapan Anggaran / Rasio Capaian Output) × 100%
-            <br><span style="font-size: 0.862rem; color: var(--warning-hover);">Semakin kecil rasio (&lt; 60%), semakin hemat/efisien program dilaksanakan.</span>
+            <br><span style="font-size: 1.017rem; color: var(--warning-hover);">Semakin kecil rasio (&lt; 60%), semakin hemat/efisien program dilaksanakan.</span>
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Pagu Anggaran (Rp)</label>
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Pagu Anggaran (Rp)</label>
               <input v-model="efisiensiForm.pagu" type="number" step="any" placeholder="100000000" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Realisasi Belanja Anggaran (Rp)</label>
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Realisasi Belanja Anggaran (Rp)</label>
               <input v-model="efisiensiForm.realAnggaran" type="number" step="any" placeholder="85000000" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Target Kinerja Output (Fisik)</label>
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Target Kinerja Output (Fisik)</label>
               <input v-model="efisiensiForm.targetOut" type="number" step="any" placeholder="100" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Realisasi Kinerja Output (Fisik)</label>
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Realisasi Kinerja Output (Fisik)</label>
               <input v-model="efisiensiForm.realOut" type="number" step="any" placeholder="100" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
           </div>
@@ -183,16 +183,16 @@
           <div v-if="efisiensiResult.valid" style="background: var(--bg-secondary); border: 1px solid color-mix(in srgb, var(--warning-color) 40%, transparent); border-radius: 12px; padding: 1.25rem;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
               <div>
-                <div style="font-size: 0.862rem; color: var(--text-secondary); text-transform: uppercase;">Indeks Efisiensi Anggaran</div>
-                <div style="font-size: 2.3rem; font-weight: 800; color: var(--warning-text); font-family: var(--font-mono);">
+                <div style="font-size: 1.017rem; color: var(--text-secondary); text-transform: uppercase;">Indeks Efisiensi Anggaran</div>
+                <div style="font-size: 2.53rem; font-weight: 800; color: var(--warning-text); font-family: var(--font-mono);">
                   {{ efisiensiResult.efisiensi }}%
                 </div>
               </div>
-              <span class="cbb-badge cbb-badge-gold" style="font-size: 0.977rem;">
+              <span class="cbb-badge cbb-badge-gold" style="font-size: 1.153rem;">
                 {{ efisiensiResult.predikat }}
               </span>
             </div>
-            <p style="font-size: 0.949rem; color: var(--text-secondary); margin-top: 0.5rem;">
+            <p style="font-size: 1.12rem; color: var(--text-secondary); margin-top: 0.5rem;">
               {{ efisiensiResult.penjelasan }}
             </p>
           </div>
@@ -200,26 +200,26 @@
 
         <!-- 4. SROI Simulator (Social Return on Investment) -->
         <div v-if="activeTab === 'sroi'" style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 0.92rem; color: var(--text-secondary);">
+          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 1.086rem; color: var(--text-secondary);">
             <strong>SROI Ratio:</strong> (Total Nilai Manfaat Sosial − Faktor Pengurang) / Total Biaya Investasi
-            <br><span style="font-size: 0.862rem; color: var(--primary-color);">SROI &gt; 1 = Dampak sosial positif melampaui biaya investasi daerah.</span>
+            <br><span style="font-size: 1.017rem; color: var(--primary-color);">SROI &gt; 1 = Dampak sosial positif melampaui biaya investasi daerah.</span>
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
                 Total Investasi / Biaya Program (Rp)
               </label>
               <input v-model="sroiForm.investasi" type="number" step="any" placeholder="500000000" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
                 Total Nilai Manfaat Sosial (Proxy Rp)
               </label>
               <input v-model="sroiForm.manfaat" type="number" step="any" placeholder="1250000000" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
             <div style="grid-column: span 2;">
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
                 Faktor Pengurang / Deadweight & Attribution (Rp) — Opsional
               </label>
               <input v-model="sroiForm.faktorPengurang" type="number" step="any" placeholder="100000000" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
@@ -229,16 +229,16 @@
           <div v-if="sroiResult.valid" style="background: var(--bg-secondary); border: 1px solid color-mix(in srgb, var(--primary-color) 40%, transparent); border-radius: 12px; padding: 1.25rem;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
               <div>
-                <div style="font-size: 0.862rem; color: var(--text-secondary); text-transform: uppercase;">Rasio SROI Program</div>
-                <div style="font-size: 2.3rem; font-weight: 800; color: var(--primary-color); font-family: var(--font-mono);">
+                <div style="font-size: 1.017rem; color: var(--text-secondary); text-transform: uppercase;">Rasio SROI Program</div>
+                <div style="font-size: 2.53rem; font-weight: 800; color: var(--primary-color); font-family: var(--font-mono);">
                   {{ sroiResult.ratio }}
                 </div>
               </div>
-              <span class="cbb-badge cbb-badge-emerald" style="font-size: 0.977rem;">
+              <span class="cbb-badge cbb-badge-emerald" style="font-size: 1.153rem;">
                 {{ sroiResult.ratio > 1 ? 'Sangat Layak (Social Gain)' : 'Perlu Evaluasi' }}
               </span>
             </div>
-            <p style="font-size: 0.949rem; color: var(--text-secondary); margin-top: 0.5rem;">
+            <p style="font-size: 1.12rem; color: var(--text-secondary); margin-top: 0.5rem;">
               {{ sroiResult.interpretasi }}
             </p>
           </div>
@@ -246,17 +246,17 @@
 
         <!-- 5. Realisasi Anggaran (Serapan) -->
         <div v-if="activeTab === 'realisasi'" style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 0.92rem; color: var(--text-secondary);">
+          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 1.086rem; color: var(--text-secondary);">
             <strong>Rumus:</strong> (Realisasi Belanja / Pagu Anggaran) × 100%
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Pagu Alokasi Anggaran (DPA/APBD)</label>
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Pagu Alokasi Anggaran (DPA/APBD)</label>
               <input v-model="realisasi.pagu" type="number" step="any" placeholder="1000000000" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Realisasi Belanja Riil</label>
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Realisasi Belanja Riil</label>
               <input v-model="realisasi.real" type="number" step="any" placeholder="924000000" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
           </div>
@@ -264,16 +264,16 @@
           <div v-if="realisasiResult.valid" style="background: var(--bg-secondary); border: 1px solid color-mix(in srgb, var(--primary-color) 40%, transparent); border-radius: 12px; padding: 1.25rem;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
               <div>
-                <div style="font-size: 0.862rem; color: var(--text-secondary); text-transform: uppercase;">Persentase Serapan</div>
-                <div style="font-size: 2.3rem; font-weight: 800; color: var(--primary-color); font-family: var(--font-mono);">
+                <div style="font-size: 1.017rem; color: var(--text-secondary); text-transform: uppercase;">Persentase Serapan</div>
+                <div style="font-size: 2.53rem; font-weight: 800; color: var(--primary-color); font-family: var(--font-mono);">
                   {{ realisasiResult.persen }}%
                 </div>
               </div>
-              <span class="cbb-badge cbb-badge-emerald" style="font-size: 0.92rem;">
+              <span class="cbb-badge cbb-badge-emerald" style="font-size: 1.086rem;">
                 {{ realisasiResult.predikat }}
               </span>
             </div>
-            <p style="font-size: 0.949rem; color: var(--text-secondary); margin-top: 0.5rem;">
+            <p style="font-size: 1.12rem; color: var(--text-secondary); margin-top: 0.5rem;">
               {{ realisasiResult.status }}
             </p>
           </div>
@@ -281,25 +281,25 @@
 
         <!-- 6. Simulasi IPM -->
         <div v-if="activeTab === 'ipm'" style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 0.92rem; color: var(--text-secondary);">
+          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 1.086rem; color: var(--text-secondary);">
             <strong>Metode Baru BPS:</strong> Rata-rata Geometrik Indeks Kesehatan, Pendidikan (HLS+RLS), dan Pengeluaran Riil.
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Umur Harapan Hidup / UHH (Tahun)</label>
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Umur Harapan Hidup / UHH (Tahun)</label>
               <input v-model="ipmForm.uhh" type="number" step="0.01" placeholder="74.2" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Harapan Lama Sekolah / HLS (Tahun)</label>
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Harapan Lama Sekolah / HLS (Tahun)</label>
               <input v-model="ipmForm.hls" type="number" step="0.01" placeholder="12.5" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Rata-rata Lama Sekolah / RLS (Tahun)</label>
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Rata-rata Lama Sekolah / RLS (Tahun)</label>
               <input v-model="ipmForm.rls" type="number" step="0.01" placeholder="8.1" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Pengeluaran Riil per Kapita (Rp/tahun)</label>
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Pengeluaran Riil per Kapita (Rp/tahun)</label>
               <input v-model="ipmForm.pengeluaran" type="number" step="1000" placeholder="11200000" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
           </div>
@@ -307,12 +307,12 @@
           <div v-if="ipmResult.valid" style="background: var(--bg-secondary); border: 1px solid color-mix(in srgb, var(--primary-color) 40%, transparent); border-radius: 12px; padding: 1.25rem;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
               <div>
-                <div style="font-size: 0.862rem; color: var(--text-secondary); text-transform: uppercase;">Skor Indeks Pembangunan Manusia</div>
-                <div style="font-size: 2.3rem; font-weight: 800; color: var(--primary-color); font-family: var(--font-mono);">
+                <div style="font-size: 1.017rem; color: var(--text-secondary); text-transform: uppercase;">Skor Indeks Pembangunan Manusia</div>
+                <div style="font-size: 2.53rem; font-weight: 800; color: var(--primary-color); font-family: var(--font-mono);">
                   {{ ipmResult.ipm }}
                 </div>
               </div>
-              <span class="cbb-badge cbb-badge-emerald" style="font-size: 0.92rem;">
+              <span class="cbb-badge cbb-badge-emerald" style="font-size: 1.086rem;">
                 Kategori: {{ ipmResult.kategori }}
               </span>
             </div>
@@ -321,17 +321,17 @@
 
         <!-- 7. Capaian Kinerja IKU -->
         <div v-if="activeTab === 'iku'" style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 0.92rem; color: var(--text-secondary);">
+          <div style="background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); padding: 0.75rem; border-radius: 4px; font-size: 1.086rem; color: var(--text-secondary);">
             <strong>Permendagri 86/2017:</strong> Pengukuran ketercapaian target IKU Perangkat Daerah / RPJMD.
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Target Rencana (Renstra / RKPD)</label>
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Target Rencana (Renstra / RKPD)</label>
               <input v-model="ikuForm.target" type="number" step="any" placeholder="100" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
             <div>
-              <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Realisasi Kinerja Riil</label>
+              <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">Realisasi Kinerja Riil</label>
               <input v-model="ikuForm.realisasi" type="number" step="any" placeholder="96" style="width: 100%; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-family: var(--font-mono);" />
             </div>
           </div>
@@ -339,12 +339,12 @@
           <div v-if="ikuResult.valid" style="background: var(--bg-secondary); border: 1px solid color-mix(in srgb, var(--primary-color) 40%, transparent); border-radius: 12px; padding: 1.25rem;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
               <div>
-                <div style="font-size: 0.862rem; color: var(--text-secondary); text-transform: uppercase;">Tingkat Capaian Kinerja</div>
-                <div style="font-size: 2.3rem; font-weight: 800; color: var(--primary-color); font-family: var(--font-mono);">
+                <div style="font-size: 1.017rem; color: var(--text-secondary); text-transform: uppercase;">Tingkat Capaian Kinerja</div>
+                <div style="font-size: 2.53rem; font-weight: 800; color: var(--primary-color); font-family: var(--font-mono);">
                   {{ ikuResult.capaian }}%
                 </div>
               </div>
-              <span class="cbb-badge cbb-badge-emerald" style="font-size: 0.92rem;">
+              <span class="cbb-badge cbb-badge-emerald" style="font-size: 1.086rem;">
                 {{ ikuResult.predikat }}
               </span>
             </div>
@@ -358,14 +358,14 @@
         <button 
           @click="$emit('close')" 
           class="cbb-btn-secondary"
-          style="padding: 0.5rem 1rem; font-size: 0.92rem;"
+          style="padding: 0.5rem 1rem; font-size: 1.086rem;"
         >
           Tutup
         </button>
         <button 
           @click="insertIntoChat"
           class="cbb-btn-primary"
-          style="padding: 0.5rem 1.25rem; font-size: 0.92rem;"
+          style="padding: 0.5rem 1.25rem; font-size: 1.086rem;"
         >
           <span>💬</span> Masukkan Hasil ke Percakapan
         </button>

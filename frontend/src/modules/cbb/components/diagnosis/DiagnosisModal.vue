@@ -12,19 +12,19 @@
       <!-- Modal Header -->
       <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; background: color-mix(in srgb, var(--danger-color) 8%, transparent);">
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <span style="font-size: 1.725rem;">🩺</span>
+          <span style="font-size: 1.898rem;">🩺</span>
           <div>
-            <h2 style="font-size: 1.294rem; font-weight: 700; color: var(--text-primary);">
+            <h2 style="font-size: 1.423rem; font-weight: 700; color: var(--text-primary);">
               Pusat Diagnosis Permasalahan Bapperida (Modul 5)
             </h2>
-            <p style="font-size: 0.862rem; color: var(--text-secondary);">
+            <p style="font-size: 1.017rem; color: var(--text-secondary);">
               Identifikasi Masalah, Akar Penyebab Umum, dan Rekomendasi Pihak Berwenang
             </p>
           </div>
         </div>
         <button 
           @click="$emit('close')"
-          style="background: transparent; border: none; font-size: 1.438rem; color: var(--text-secondary); cursor: pointer;"
+          style="background: transparent; border: none; font-size: 1.582rem; color: var(--text-secondary); cursor: pointer;"
           class="cbb-close-btn"
         >
           ✕
@@ -33,7 +33,7 @@
 
       <!-- Quick Issue Input Bar -->
       <div style="padding: 1rem 1.5rem; background: var(--bg-tertiary); border-bottom: 1px solid var(--border-subtle);">
-        <label style="display: block; font-size: 0.891rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
+        <label style="display: block; font-size: 1.051rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
           Ketik kendala atau permasalahan yang Anda alami:
         </label>
         <div style="display: flex; gap: 0.5rem;">
@@ -41,13 +41,13 @@
             v-model="customProblem" 
             type="text" 
             placeholder="Contoh: Usulan Musrenbang kecamatan kami tidak muncul di APBD, atau SIPD telat diinput..."
-            style="flex: 1; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-size: 0.949rem;"
+            style="flex: 1; padding: 0.6rem 0.85rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-primary); font-size: 1.12rem;"
             @keyup.enter="diagnoseCustom"
           />
           <button 
             @click="diagnoseCustom" 
             class="cbb-btn-primary" 
-            style="padding: 0.5rem 1rem; font-size: 0.92rem; background: var(--danger-color);"
+            style="padding: 0.5rem 1rem; font-size: 1.086rem; background: var(--danger-color);"
             :disabled="!customProblem.trim()"
           >
             Diagnosis Sekarang
@@ -57,7 +57,7 @@
 
       <!-- 6 Problem Categories Grid -->
       <div style="padding: 1.25rem 1.5rem; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 1rem;">
-        <div style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 600;">
+        <div style="font-size: 1.086rem; color: var(--text-secondary); font-weight: 600;">
           Pilih salah satu dari 6 Kategori Permasalahan Bapperida:
         </div>
 
@@ -69,21 +69,21 @@
             style="padding: 1rem 1.15rem; border-radius: 12px; display: flex; flex-direction: column; gap: 0.5rem; border-left: 3px solid var(--danger-color);"
           >
             <div style="display: flex; align-items: center; justify-content: space-between;">
-              <span class="cbb-badge" style="background: color-mix(in srgb, var(--danger-color) 15%, transparent); color: var(--danger-text); border: 1px solid color-mix(in srgb, var(--danger-color) 30%, transparent); font-size: 0.805rem;">
+              <span class="cbb-badge" style="background: color-mix(in srgb, var(--danger-color) 15%, transparent); color: var(--danger-text); border: 1px solid color-mix(in srgb, var(--danger-color) 30%, transparent); font-size: 0.969rem;">
                 Kategori {{ cat.nomor }}
               </span>
             </div>
 
-            <h3 style="font-size: 1.092rem; font-weight: 700; color: var(--text-primary);">
+            <h3 style="font-size: 1.289rem; font-weight: 700; color: var(--text-primary);">
               {{ cat.nama }}
             </h3>
 
             <!-- Gejala / Contoh Masalah -->
             <div style="margin-top: 0.25rem;">
-              <div style="font-size: 0.834rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 0.25rem;">
+              <div style="font-size: 0.984rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 0.25rem;">
                 Contoh Kasus / Gejala:
               </div>
-              <ul style="padding-left: 1.1rem; font-size: 0.891rem; color: var(--text-secondary); line-height: 1.4;">
+              <ul style="padding-left: 1.1rem; font-size: 1.051rem; color: var(--text-secondary); line-height: 1.4;">
                 <li v-for="(g, gIdx) in cat.gejala" :key="gIdx">
                   {{ g }}
                 </li>
@@ -91,7 +91,7 @@
             </div>
 
             <!-- Rekomendasi Arah -->
-            <div style="background: var(--bg-tertiary); border-radius: 6px; padding: 0.5rem; font-size: 0.834rem; margin-top: 0.25rem;">
+            <div style="background: var(--bg-tertiary); border-radius: 6px; padding: 0.5rem; font-size: 0.984rem; margin-top: 0.25rem;">
               <div style="color: var(--primary-color); font-weight: 600;">🏛️ Ditujukan ke: {{ cat.tujuanArah }}</div>
               <div style="color: var(--text-muted); font-family: var(--font-mono); margin-top: 2px;">⚖️ {{ cat.dasarHukum }}</div>
             </div>
@@ -100,7 +100,7 @@
               <button 
                 @click="diagnoseCategory(cat)"
                 class="cbb-btn-secondary" 
-                style="padding: 0.35rem 0.75rem; font-size: 0.834rem;"
+                style="padding: 0.35rem 0.75rem; font-size: 0.984rem;"
               >
                 🩺 Konsultasikan Masalah Ini
               </button>
@@ -111,13 +111,13 @@
 
       <!-- Modal Footer -->
       <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; background: var(--bg-tertiary);">
-        <span style="font-size: 0.834rem; color: var(--text-muted);">
+        <span style="font-size: 0.984rem; color: var(--text-muted);">
           ⚠️ Dugaan penyimpangan/korupsi dialihkan langsung ke Inspektorat / SP4N-LAPOR!
         </span>
         <button 
           @click="$emit('close')" 
           class="cbb-btn-secondary"
-          style="padding: 0.45rem 1.25rem; font-size: 0.92rem;"
+          style="padding: 0.45rem 1.25rem; font-size: 1.086rem;"
         >
           Tutup
         </button>

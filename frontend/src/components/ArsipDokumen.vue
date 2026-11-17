@@ -189,15 +189,15 @@
 
  <!-- Pengunggah (Admin/Moderator Only) -->
  <td v-if="currentUser?.role === 'admin' || currentUser?.role === 'moderator'">
- <div style="font-weight:600; color:var(--text-primary); font-size: 0.977rem; margin-bottom:2px;">{{ item.createdBy || 'Unknown User' }}</div>
- <div v-if="item.clientIp" style="font-size: 0.805rem; color: var(--text-muted); display:flex; align-items:center; gap:4px; cursor:help;" :title="item.clientDevice || 'Perangkat tidak diketahui'">
+ <div style="font-weight:600; color:var(--text-primary); font-size: 1.153rem; margin-bottom:2px;">{{ item.createdBy || 'Unknown User' }}</div>
+ <div v-if="item.clientIp" style="font-size: 0.969rem; color: var(--text-muted); display:flex; align-items:center; gap:4px; cursor:help;" :title="item.clientDevice || 'Perangkat tidak diketahui'">
  <i data-lucide="network" style="width:12px;height:12px;"></i> {{ item.clientIp }}
  </div>
- <div v-else style="font-size: 0.805rem; color: var(--text-muted);">ID: {{ item.userId || '-' }}</div>
+ <div v-else style="font-size: 0.969rem; color: var(--text-muted);">ID: {{ item.userId || '-' }}</div>
  </td>
 
  <!-- Tahun Berjalan (sesuai dokumen PDF) -->
- <td style="text-align:center; font-weight: 700; font-size: 1.012rem; color: var(--primary-color);">
+ <td style="text-align:center; font-weight: 700; font-size: 1.194rem; color: var(--primary-color);">
  {{ item.tahunRencana || item.tahun || '2026' }}
  </td>
 
@@ -219,7 +219,7 @@
  </td>
 
  <!-- Ukuran File -->
- <td style="text-align:right; font-size: 0.92rem; color: var(--text-secondary);">
+ <td style="text-align:right; font-size: 1.086rem; color: var(--text-secondary);">
  {{ formatFileSize(item.ukuranFile) }}
  </td>
 
@@ -230,7 +230,7 @@
  class="btn btn-primary btn-sm"
  @click="viewItem(item)"
  title="Lihat Hasil Analisis Nilai Prakiraan Dampak"
- style="display: inline-flex; align-items: center; gap: 4px; font-weight: 600; font-size: 0.897rem; padding: 5px 10px;"
+ style="display: inline-flex; align-items: center; gap: 4px; font-weight: 600; font-size: 1.058rem; padding: 5px 10px;"
  >
  <i data-lucide="eye"></i>
  <span>Lihat Analisis</span>
@@ -280,7 +280,7 @@
  >
  <button
  class="arsip-more-menu-item"
- style="display:flex; align-items:center; gap:8px; width:100%; padding:10px 14px; background:none; border:none; cursor:pointer; font-size:0.943rem; color:var(--text-primary,#111); text-align:left;"
+ style="display:flex; align-items:center; gap:8px; width:100%; padding:10px 14px; background:none; border:none; cursor:pointer; font-size:1.113rem; color:var(--text-primary,#111); text-align:left;"
  @click="openManualAnalysisModal(item)"
  >
  <i data-lucide="file-pen-line" style="width:15px;height:15px; color:var(--primary-color,#1B4D46); flex-shrink:0;"></i>
@@ -288,7 +288,7 @@
  </button>
  <button
  class="arsip-more-menu-item"
- style="display:flex; align-items:center; gap:8px; width:100%; padding:10px 14px; background:none; border:none; border-top:1px solid var(--border-color,#eee); cursor:pointer; font-size:0.943rem; color:#7c3aed; text-align:left;"
+ style="display:flex; align-items:center; gap:8px; width:100%; padding:10px 14px; background:none; border:none; border-top:1px solid var(--border-color,#eee); cursor:pointer; font-size:1.113rem; color:#7c3aed; text-align:left;"
  @click="openEditAiModal(item)"
  >
  <i data-lucide="sparkles" style="width:15px;height:15px; color:#7c3aed; flex-shrink:0;"></i>
@@ -296,7 +296,7 @@
  </button>
  <button
  class="arsip-more-menu-item"
- style="display:flex; align-items:center; gap:8px; width:100%; padding:10px 14px; background:none; border:none; border-top:1px solid var(--border-color,#eee); cursor:pointer; font-size:0.943rem; color:#0284c7; text-align:left;"
+ style="display:flex; align-items:center; gap:8px; width:100%; padding:10px 14px; background:none; border:none; border-top:1px solid var(--border-color,#eee); cursor:pointer; font-size:1.113rem; color:#0284c7; text-align:left;"
  title="Generate ulang analisis AI tanpa unggah PDF"
  @click="handleMuatUlangPdf(item)"
  >
@@ -443,11 +443,11 @@
        <td class="arsip-td-opd" :title="item.opd">{{ cleanOpdName(item.opd) }}</td>
 
        <td v-if="isPrivileged">
-        <div style="font-weight:600; color:var(--text-primary); font-size: 0.977rem; margin-bottom:2px;">{{ item.createdBy || 'Unknown User' }}</div>
-        <div style="font-size: 0.805rem; color: var(--text-muted);">{{ item.clientIp || ('ID: ' + (item.userId || '-')) }}</div>
+        <div style="font-weight:600; color:var(--text-primary); font-size: 1.153rem; margin-bottom:2px;">{{ item.createdBy || 'Unknown User' }}</div>
+        <div style="font-size: 0.969rem; color: var(--text-muted);">{{ item.clientIp || ('ID: ' + (item.userId || '-')) }}</div>
        </td>
 
-       <td style="text-align:center; font-weight: 700; font-size: 1.012rem; color: var(--text-secondary);">
+       <td style="text-align:center; font-weight: 700; font-size: 1.194rem; color: var(--text-secondary);">
         {{ item.tahunRencana || item.tahun || '—' }}
        </td>
 
@@ -460,7 +460,7 @@
         <span class="trash-expiry" :class="{ urgent: trashExpiry(item).urgent }">{{ trashExpiry(item).text }}</span>
        </td>
 
-       <td style="text-align:right; font-size: 0.92rem; color: var(--text-secondary);">
+       <td style="text-align:right; font-size: 1.086rem; color: var(--text-secondary);">
         {{ formatFileSize(item.ukuranFile) }}
        </td>
 
@@ -481,13 +481,13 @@
 
  <!-- Indikator proses Muat Ulang PDF -->
  <Teleport to="body">
- <div v-if="muatUlangId" style="position:fixed; right:20px; bottom:20px; z-index:9999; background:#0f172a; color:#fff; padding:12px 16px; border-radius:10px; box-shadow:0 8px 28px rgba(0,0,0,0.3); font-size:0.977rem; max-width:340px;">
+ <div v-if="muatUlangId" style="position:fixed; right:20px; bottom:20px; z-index:9999; background:#0f172a; color:#fff; padding:12px 16px; border-radius:10px; box-shadow:0 8px 28px rgba(0,0,0,0.3); font-size:1.153rem; max-width:340px;">
  <strong>{{ bulkRunning ? `Muat Ulang PDF — ${bulkProgress.done}/${bulkProgress.total}` : 'Muat Ulang PDF' }}</strong><br>
  <span v-if="bulkRunning" style="opacity:0.7; display:block; margin-bottom:2px;">{{ bulkProgress.current }}</span>
  <span style="opacity:0.85;">{{ muatUlangText }}</span>
  <template v-if="bulkRunning">
- <div style="margin-top:6px; font-size:0.897rem; opacity:0.8;">Berhasil {{ bulkProgress.ok }} · Gagal {{ bulkProgress.failed }}</div>
- <button type="button" style="margin-top:8px; padding:4px 10px; border-radius:6px; border:1px solid rgba(255,255,255,0.4); background:transparent; color:#fff; cursor:pointer; font-size:0.897rem;" :disabled="bulkCancel" @click="bulkCancel = true">{{ bulkCancel ? 'Berhenti setelah dokumen ini…' : 'Berhenti' }}</button>
+ <div style="margin-top:6px; font-size:1.058rem; opacity:0.8;">Berhasil {{ bulkProgress.ok }} · Gagal {{ bulkProgress.failed }}</div>
+ <button type="button" style="margin-top:8px; padding:4px 10px; border-radius:6px; border:1px solid rgba(255,255,255,0.4); background:transparent; color:#fff; cursor:pointer; font-size:1.058rem;" :disabled="bulkCancel" @click="bulkCancel = true">{{ bulkCancel ? 'Berhenti setelah dokumen ini…' : 'Berhenti' }}</button>
  </template>
  </div>
  </Teleport>
@@ -693,10 +693,10 @@
  <i data-lucide="refresh-cw"></i>
  </div>
  <div style="text-align: left;">
- <h3 class="modal-title" style="text-align:left; margin: 0; font-size: 1.265rem; color: var(--text-primary);">
+ <h3 class="modal-title" style="text-align:left; margin: 0; font-size: 1.391rem; color: var(--text-primary);">
  Unggah Ulang PDF & Analisis Ulang
  </h3>
- <span style="font-size: 0.92rem; color: var(--text-secondary);">
+ <span style="font-size: 1.086rem; color: var(--text-secondary);">
  Perbaiki analisis yang kurang tepat dengan mengevaluasi ulang berkas PDF dokumen ini
  </span>
  </div>
@@ -719,7 +719,7 @@
  <div class="target-card-row">
  <span class="target-card-label">Nilai Prakiraan Dampak Saat Ini:</span>
  <span class="target-card-val">
- <span :class="['sroi-badge-pill', getSroiInfo(reuploadTarget).badgeClass]" style="padding: 2px 8px; font-size: 12.1px;">
+ <span :class="['sroi-badge-pill', getSroiInfo(reuploadTarget).badgeClass]" style="padding: 2px 8px; font-size: 15.5px;">
  {{ getSroiInfo(reuploadTarget).scoreText }} · {{ getSroiInfo(reuploadTarget).label }}
  </span>
  </span>
@@ -756,8 +756,8 @@
  <div class="selected-file-info">
  <i data-lucide="file-text" style="width: 26px; height: 26px; color: var(--primary-color);"></i>
  <div style="text-align: left;">
- <div style="font-weight: 700; font-size: 1.012rem; color: var(--text-primary);">{{ selectedReuploadFile.name }}</div>
- <div style="font-size: 0.862rem; color: var(--text-secondary);">{{ formatFileSize(selectedReuploadFile.size) }}</div>
+ <div style="font-weight: 700; font-size: 1.194rem; color: var(--text-primary);">{{ selectedReuploadFile.name }}</div>
+ <div style="font-size: 1.017rem; color: var(--text-secondary);">{{ formatFileSize(selectedReuploadFile.size) }}</div>
  </div>
  </div>
  <button class="btn btn-secondary btn-sm" @click="selectedReuploadFile = null" title="Ganti Berkas">
@@ -769,16 +769,16 @@
  <!-- Re-analysis Progress Bar -->
  <div v-else class="reupload-progress-box">
  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
- <span style="font-size: 0.977rem; font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
+ <span style="font-size: 1.153rem; font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
  <i data-lucide="loader-2" class="spin-anim" style="width: 16px; height: 16px; color: var(--primary-color);"></i>
  {{ reuploadProgressText }}
  </span>
- <span style="font-size: 0.977rem; font-weight: 800; color: var(--primary-color);">{{ reuploadProgress }}%</span>
+ <span style="font-size: 1.153rem; font-weight: 800; color: var(--primary-color);">{{ reuploadProgress }}%</span>
  </div>
  <div class="progress-bar-bg" style="height: 8px; border-radius: 4px; background: rgba(0,0,0,0.06); overflow: hidden;">
  <div class="progress-bar-fill" :style="{ width: reuploadProgress + '%' }" style="height: 100%; background: var(--primary-color); transition: width 0.3s ease;"></div>
  </div>
- <p style="font-size: 0.862rem; color: var(--text-secondary); margin-top: 8px; margin-bottom: 0;">
+ <p style="font-size: 1.017rem; color: var(--text-secondary); margin-top: 8px; margin-bottom: 0;">
  Layanan AI sedang mengekstrak data dan mengkalkulasi ulang Nilai Prakiraan Dampak berdasarkan dokumen PDF baru...
  </p>
  </div>
@@ -818,10 +818,10 @@
  <i data-lucide="upload"></i>
  </div>
  <div style="text-align: left;">
- <h3 class="modal-title" style="text-align:left; margin: 0; font-size: 1.265rem; color: var(--text-primary);">
+ <h3 class="modal-title" style="text-align:left; margin: 0; font-size: 1.391rem; color: var(--text-primary);">
  Upload Backup .html — Pulihkan Data
  </h3>
- <span style="font-size: 0.92rem; color: var(--text-secondary);">
+ <span style="font-size: 1.086rem; color: var(--text-secondary);">
  Pilih berkas cadangan <strong>.html</strong> yang sebelumnya diunduh dari sistem ini
  </span>
  </div>
@@ -831,7 +831,7 @@
  <div class="restore-info-box">
  <div style="display: flex; align-items: flex-start; gap: 10px;">
  <i data-lucide="info" style="width: 16px; height: 16px; flex-shrink: 0; color: #0284c7; margin-top: 1px;"></i>
- <div style="font-size: 0.92rem; color: #0369a1; line-height: 1.5;">
+ <div style="font-size: 1.086rem; color: #0369a1; line-height: 1.5;">
  <strong>Format yang didukung:</strong> Berkas <code>.html</code> cadangan yang dihasilkan oleh tombol <em>"Unduh Data RKA"</em> pada sistem ini. Berkas HTML mengandung seluruh data JSON yang akan dipulihkan ke server.
  </div>
  </div>
@@ -867,8 +867,8 @@
  <div class="selected-file-info">
  <i data-lucide="file-code" style="width: 26px; height: 26px; color: #0284c7;"></i>
  <div style="text-align: left;">
- <div style="font-weight: 700; font-size: 1.012rem; color: var(--text-primary);">{{ selectedRestoreFile.name }}</div>
- <div style="font-size: 0.862rem; color: var(--text-secondary);">{{ formatFileSize(selectedRestoreFile.size) }}</div>
+ <div style="font-weight: 700; font-size: 1.194rem; color: var(--text-primary);">{{ selectedRestoreFile.name }}</div>
+ <div style="font-size: 1.017rem; color: var(--text-secondary);">{{ formatFileSize(selectedRestoreFile.size) }}</div>
  </div>
  </div>
  <button class="btn btn-secondary btn-sm" @click="selectedRestoreFile = null" title="Ganti Berkas">
@@ -880,7 +880,7 @@
  <!-- Progress saat restore -->
  <div v-if="isRestoring" class="reupload-progress-box" style="margin: 14px 0;">
  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
- <span style="font-size: 0.977rem; font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
+ <span style="font-size: 1.153rem; font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
  <i data-lucide="loader-2" class="spin-anim" style="width: 16px; height: 16px; color: #0284c7;"></i>
  Memulihkan data dari berkas cadangan...
  </span>
@@ -888,7 +888,7 @@
  <div class="progress-bar-bg" style="height: 8px; border-radius: 4px; background: rgba(0,0,0,0.06); overflow: hidden;">
  <div class="progress-bar-fill" style="height: 100%; background: #0284c7; width: 100%; animation: progress-indeterminate 1.2s ease-in-out infinite;"></div>
  </div>
- <p style="font-size: 0.862rem; color: var(--text-secondary); margin-top: 8px; margin-bottom: 0;">
+ <p style="font-size: 1.017rem; color: var(--text-secondary); margin-top: 8px; margin-bottom: 0;">
  Mengekstrak data JSON dari berkas .html dan mengunggahnya ke server...
  </p>
  </div>
@@ -1902,20 +1902,20 @@ watch([showDeleteModal, showEditModal, showSaveConfirmModal, showReuploadModal, 
 /* ── Filter & sortir OPD / Tahun ── */
 .arsip-filter-bar-sub { padding-top: 12px; padding-bottom: 12px; align-items: flex-end; }
 .arsip-filter-field { display: flex; flex-direction: column; gap: 4px; min-width: 150px; flex: 1 1 170px; max-width: 320px; }
-.arsip-filter-label { font-size: 0.805rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
+.arsip-filter-label { font-size: 0.969rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
 .arsip-select { width: 100%; cursor: pointer; text-overflow: ellipsis; }
 @media (max-width: 640px) {
  .arsip-filter-field { max-width: none; flex-basis: 100%; }
 }
 /* ── Pilih & hapus massal ── */
 .arsip-bulk-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-left: auto; }
-.bulk-count { font-size: 0.92rem; font-weight: 700; color: var(--primary-color); margin-right: 2px; }
+.bulk-count { font-size: 1.086rem; font-weight: 700; color: var(--primary-color); margin-right: 2px; }
 .bulk-btn {
  display: inline-flex;
  align-items: center;
  gap: 6px;
  padding: 8px 14px;
- font-size: 0.897rem;
+ font-size: 1.058rem;
  font-weight: 700;
  border-radius: 8px;
  cursor: pointer;
@@ -1958,12 +1958,12 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
  border-radius: 10px;
  background: var(--bg-secondary);
 }
-.delete-doc-list li { display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-bottom: 1px solid var(--border-color); font-size: 0.92rem; }
+.delete-doc-list li { display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-bottom: 1px solid var(--border-color); font-size: 1.086rem; }
 .delete-doc-list li:last-child { border-bottom: none; }
 .ddl-name { font-weight: 600; color: var(--text-primary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.ddl-id { font-size: 0.805rem; color: var(--text-muted); font-family: ui-monospace, Menlo, Consolas, monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ddl-id { font-size: 0.969rem; color: var(--text-muted); font-family: ui-monospace, Menlo, Consolas, monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ddl-more { color: var(--text-secondary); font-style: italic; }
-.delete-confirm-label { display: block; margin: 14px 0 8px; font-size: 0.943rem; text-align: left; color: var(--text-secondary); }
+.delete-confirm-label { display: block; margin: 14px 0 8px; font-size: 1.113rem; text-align: left; color: var(--text-secondary); }
 .delete-phrase {
  font-family: ui-monospace, Menlo, Consolas, monospace;
  font-weight: 700;
@@ -1984,7 +1984,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
  margin: 0 20px 12px;
  padding: 8px 12px;
  border-radius: 8px;
- font-size: 0.897rem;
+ font-size: 1.058rem;
  color: var(--text-secondary);
  background: var(--bg-secondary);
  border: 1px solid var(--border-color);
@@ -2005,7 +2005,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
  align-items: center;
  gap: 6px;
  padding: 5px 10px;
- font-size: 0.862rem;
+ font-size: 1.017rem;
  font-weight: 600;
  border-radius: 6px;
  cursor: pointer;
@@ -2026,7 +2026,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
  display: inline-block;
  margin-left: 6px;
  padding: 1px 6px;
- font-size: 10.9px;
+ font-size: 15.5px;
  font-weight: 800;
  letter-spacing: 0.04em;
  border-radius: 4px;
@@ -2041,7 +2041,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
 .badge-ver-count {
  background: var(--info-glow);
  color: var(--info-hover);
- font-size: 11.5px;
+ font-size: 15.5px;
  font-weight: 800;
  padding: 1px 6px;
  border-radius: 6px;
@@ -2068,7 +2068,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
  gap: 5px;
  padding: 4px 11px;
  border-radius: 20px;
- font-size: 12.6px;
+ font-size: 15.5px;
  font-weight: 700;
  text-decoration: none;
  white-space: nowrap;
@@ -2084,7 +2084,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
 .sroi-badge-ratio {
  font-family: 'JetBrains Mono', monospace, sans-serif;
  font-weight: 800;
- font-size: 13.2px;
+ font-size: 15.6px;
 }
 
 .sroi-badge-sep {
@@ -2092,7 +2092,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
 }
 
 .sroi-badge-label {
- font-size: 12.1px;
+ font-size: 15.5px;
 }
 
 /* 1. Hijau: SROI >= 1.0 (Layak) */
@@ -2139,7 +2139,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
  display: flex;
  justify-content: space-between;
  align-items: center;
- font-size: 0.943rem;
+ font-size: 1.113rem;
 }
 
 .target-card-label {
@@ -2195,12 +2195,12 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
 }
 
 .dropzone-text {
- font-size: 1.012rem;
+ font-size: 1.194rem;
  color: var(--text-primary, #334155);
 }
 
 .dropzone-hint {
- font-size: 0.862rem;
+ font-size: 1.017rem;
  color: var(--text-muted, #94a3b8);
 }
 
@@ -2251,7 +2251,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
  color: #0369a1;
  padding: 1px 5px;
  border-radius: 4px;
- font-size: 0.92rem;
+ font-size: 1.086rem;
  font-family: 'JetBrains Mono', monospace;
 }
 
@@ -2279,7 +2279,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
   border-bottom: 2px solid transparent;
   border-radius: 8px 8px 0 0;
   background: none;
-  font-size: 0.977rem;
+  font-size: 1.153rem;
   font-weight: 600;
   color: var(--text-muted);
   cursor: pointer;
@@ -2291,7 +2291,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
   min-width: 22px;
   padding: 1px 7px;
   border-radius: 999px;
-  font-size: 0.805rem;
+  font-size: 0.969rem;
   font-weight: 700;
   text-align: center;
   color: var(--text-muted);
@@ -2307,7 +2307,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
   align-items: flex-start;
   gap: 10px;
   padding: 12px 24px;
-  font-size: 0.92rem;
+  font-size: 1.086rem;
   line-height: 1.5;
   color: var(--text-secondary);
   background: var(--bg-secondary);
@@ -2319,12 +2319,12 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
 .bulk-btn-restore-outline { color: var(--primary-color); background: transparent; border-color: rgba(var(--primary-rgb), 0.45); }
 .bulk-btn-restore-outline:hover:not(:disabled) { background: rgba(var(--primary-rgb), 0.08); }
 .trash-doc-name { font-weight: 700; color: var(--text-primary); }
-.trash-by { font-size: 0.805rem; color: var(--text-muted); margin-top: 2px; }
+.trash-by { font-size: 0.969rem; color: var(--text-muted); margin-top: 2px; }
 .trash-expiry {
   display: inline-block;
   padding: 3px 10px;
   border-radius: 999px;
-  font-size: 0.828rem;
+  font-size: 0.977rem;
   font-weight: 700;
   color: var(--text-secondary);
   background: var(--bg-tertiary);
@@ -2332,7 +2332,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
   white-space: nowrap;
 }
 .trash-expiry.urgent { color: #c4344f; background: rgba(196, 52, 79, 0.08); border-color: rgba(196, 52, 79, 0.3); }
-.trash-restore-btn { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 0.897rem; padding: 5px 10px; white-space: nowrap; }
+.trash-restore-btn { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 1.058rem; padding: 5px 10px; white-space: nowrap; }
 
 /* Pilihan cakupan di dialog kembalikan */
 .trash-scope-toggle {
@@ -2350,7 +2350,7 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
   border: none;
   border-radius: 7px;
   background: none;
-  font-size: 0.92rem;
+  font-size: 1.086rem;
   font-weight: 700;
   color: var(--text-secondary);
   cursor: pointer;

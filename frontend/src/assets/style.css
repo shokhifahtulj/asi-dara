@@ -215,7 +215,7 @@
 }
 
 body {
-    font-size: 18px; /* teks dasar diperbesar (sebelumnya 16px) */
+    font-size: 21.2px; /* teks dasar diperbesar (sebelumnya 16px) */
     font-family: var(--font-body);
     background-color: var(--bg-primary);
     color: var(--text-primary);
@@ -225,7 +225,7 @@ body {
 }
 
 /* Kontrol form tanpa ukuran eksplisit: ikut diperbesar (sebelumnya 13.33px) */
-input, select, textarea, button { font-size: 15.3px; }
+input, select, textarea, button { font-size: 18.1px; }
 
 h1,
 h2,
@@ -301,7 +301,7 @@ h6 {
     color: white;
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 1.61rem;
+    font-size: 1.771rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -317,12 +317,12 @@ h6 {
 .logo-title {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 1.265rem;
+    font-size: 1.391rem;
     letter-spacing: 0.5px;
 }
 
 .logo-subtitle {
-    font-size: 0.805rem;
+    font-size: 0.969rem;
     color: var(--text-muted);
     font-weight: 600;
 }
@@ -342,7 +342,7 @@ h6 {
     padding: 12px 16px;
     color: var(--text-secondary);
     text-decoration: none;
-    font-size: 1.035rem;
+    font-size: 1.221rem;
     font-weight: 500;
     border-radius: var(--border-radius-md);
     transition: background-color var(--transition-speed), color var(--transition-speed);
@@ -413,7 +413,7 @@ h6 {
 }
 
 .sidebar-section-label {
-    font-size: 0.747rem;
+    font-size: 0.969rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -437,7 +437,7 @@ h6 {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.782rem;
+    font-size: 0.969rem;
     color: var(--text-muted);
     padding: 0 4px 10px;
     font-weight: 500;
@@ -492,7 +492,7 @@ h6 {
 }
 
 .user-name {
-    font-size: 0.897rem;
+    font-size: 1.058rem;
     font-weight: 700;
     color: var(--text-primary);
     white-space: nowrap;
@@ -503,7 +503,7 @@ h6 {
 }
 
 .user-role {
-    font-size: 0.805rem;
+    font-size: 0.969rem;
     color: var(--text-muted);
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -529,7 +529,7 @@ h6 {
     padding: 9px 0;
     display: flex;
     align-items: center;
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     color: white;
     font-weight: 500;
     overflow: hidden;
@@ -580,7 +580,7 @@ h6 {
     display: inline-flex;
     align-items: center;
     padding: 0 32px;
-    font-size: 0.943rem;
+    font-size: 1.113rem;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.95);
     letter-spacing: 0.2px;
@@ -636,7 +636,7 @@ h6 {
 }
 
 .header-breadcrumb {
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     color: var(--text-muted);
     font-weight: 600;
     text-transform: uppercase;
@@ -645,7 +645,7 @@ h6 {
 }
 
 .header-title {
-    font-size: 1.495rem;
+    font-size: 1.645rem;
     color: var(--text-primary);
 }
 
@@ -656,7 +656,7 @@ h6 {
 }
 
 .header-date {
-    font-size: 0.897rem;
+    font-size: 1.058rem;
     color: var(--text-secondary);
     font-weight: 500;
     white-space: nowrap;
@@ -672,7 +672,7 @@ h6 {
     background: var(--gradient-brand);
     color: #ffffff;
     font-family: var(--font-heading);
-    font-size: 0.828rem;
+    font-size: 0.977rem;
     font-weight: 800;
     display: flex;
     align-items: center;
@@ -697,7 +697,7 @@ h6 {
     color: var(--text-primary);
     padding: 8px 16px;
     font-family: var(--font-body);
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     font-weight: 500;
     border-radius: 20px;
     cursor: pointer;
@@ -773,7 +773,7 @@ h6 {
     color: var(--text-secondary);
     padding: 10px 14px;
     font-family: var(--font-body);
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     text-align: left;
     display: flex;
     align-items: center;
@@ -841,7 +841,7 @@ h6 {
     right: -2px;
     background-color: var(--danger-solid);
     color: white;
-    font-size: 0.747rem;
+    font-size: 0.969rem;
     font-weight: 700;
     width: 16px;
     height: 16px;
@@ -863,7 +863,7 @@ h6 {
 }
 
 .page-kicker {
-    font-size: 0.782rem;
+    font-size: 0.969rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -883,14 +883,14 @@ h6 {
 
 .page-title-lg {
     font-family: var(--font-heading);
-    font-size: 1.725rem;
+    font-size: 1.898rem;
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: -0.01em;
 }
 
 .page-desc {
-    font-size: 0.977rem;
+    font-size: 1.153rem;
     color: var(--text-secondary);
     max-width: 100%;
     line-height: 1.45;
@@ -962,7 +962,7 @@ h6 {
 }
 
 .card-title {
-    font-size: 1.15rem;
+    font-size: 1.265rem;
     color: var(--text-primary);
     font-weight: 700;
     display: flex;
@@ -975,7 +975,7 @@ h6 {
 }
 
 .card-subtitle {
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     color: var(--text-muted);
 }
 
@@ -1017,7 +1017,7 @@ h6 {
 }
 
 .stat-label {
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     font-weight: 600;
     color: var(--text-muted);
     text-transform: uppercase;
@@ -1025,14 +1025,14 @@ h6 {
 }
 
 .stat-value {
-    font-size: 1.725rem;
+    font-size: 1.898rem;
     font-weight: 800;
     font-family: var(--font-heading);
     color: var(--text-primary);
 }
 
 .stat-growth {
-    font-size: 0.805rem;
+    font-size: 0.969rem;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -1054,7 +1054,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.38rem;
+    font-size: 1.518rem;
 }
 
 .stat-icon.primary {
@@ -1108,7 +1108,7 @@ h6 {
 }
 
 .upload-icon {
-    font-size: 3.45rem;
+    font-size: 3.795rem;
     color: var(--text-muted);
     margin-bottom: 16px;
 }
@@ -1119,14 +1119,14 @@ h6 {
 }
 
 .upload-title {
-    font-size: 1.208rem;
+    font-size: 1.329rem;
     font-weight: 700;
     margin-bottom: 8px;
     color: var(--text-primary);
 }
 
 .upload-text {
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     color: var(--text-muted);
     margin-bottom: 20px;
 }
@@ -1138,7 +1138,7 @@ h6 {
 }
 
 .processing-title {
-    font-size: 1.15rem;
+    font-size: 1.265rem;
     font-weight: 700;
     margin-bottom: 12px;
     text-align: center;
@@ -1163,7 +1163,7 @@ h6 {
 }
 
 .scanning-status {
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     color: var(--text-muted);
     text-align: center;
     font-weight: 600;
@@ -1217,7 +1217,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.977rem;
+    font-size: 1.153rem;
     font-weight: 700;
     border: 2px solid var(--border-color);
     flex-shrink: 0;
@@ -1246,13 +1246,13 @@ h6 {
 }
 
 .timeline-step-title {
-    font-size: 0.977rem;
+    font-size: 1.153rem;
     font-weight: 700;
     color: var(--text-primary);
 }
 
 .timeline-step-desc {
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     color: var(--text-muted);
     line-height: 1.4;
 }
@@ -1268,7 +1268,7 @@ h6 {
 .data-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.977rem;
+    font-size: 1.153rem;
     text-align: left;
 }
 
@@ -1327,7 +1327,7 @@ h6 {
 .badge {
     display: inline-block;
     padding: 4px 12px;
-    font-size: 0.805rem;
+    font-size: 0.969rem;
     font-weight: 700;
     border-radius: 999px;
     text-transform: uppercase;
@@ -1396,7 +1396,7 @@ h6 {
 }
 
 .pane-title {
-    font-size: 1.035rem;
+    font-size: 1.221rem;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -1413,7 +1413,7 @@ h6 {
 /* Simulated Document Text / OCR Panel */
 .doc-text-wrapper {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     line-height: 1.6;
     color: var(--text-primary);
     white-space: pre-wrap;
@@ -1432,7 +1432,7 @@ h6 {
     height: 100%;
     color: var(--text-muted);
     font-family: var(--font-body);
-    font-size: 0.977rem;
+    font-size: 1.153rem;
     text-align: center;
 }
 
@@ -1465,7 +1465,7 @@ h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1476,26 +1476,26 @@ h6 {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 3px 8px;
     border-radius: 12px;
-    font-size: 0.747rem;
+    font-size: 0.969rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .rating-large-number {
     font-family: var(--font-heading);
-    font-size: 3.45rem;
+    font-size: 3.795rem;
     font-weight: 800;
     margin: 8px 0;
 }
 
 .rating-formula {
-    font-size: 0.747rem;
+    font-size: 0.969rem;
     font-family: monospace;
     opacity: 0.8;
     margin-bottom: 10px;
 }
 
 .rating-desc {
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     font-weight: 500;
     line-height: 1.4;
 }
@@ -1519,14 +1519,14 @@ h6 {
 }
 
 .sroi-detail-label {
-    font-size: 0.805rem;
+    font-size: 0.969rem;
     font-weight: 600;
     color: var(--text-muted);
     text-transform: uppercase;
 }
 
 .sroi-detail-value {
-    font-size: 1.15rem;
+    font-size: 1.265rem;
     font-weight: 700;
     color: var(--text-primary);
 }
@@ -1551,7 +1551,7 @@ h6 {
     border: none;
     padding: 10px 16px;
     font-family: var(--font-body);
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     font-weight: 600;
     color: var(--text-secondary);
     cursor: pointer;
@@ -1597,7 +1597,7 @@ h6 {
 }
 
 .box-header {
-    font-size: 0.805rem;
+    font-size: 0.969rem;
     font-weight: 700;
     color: var(--text-secondary);
     display: flex;
@@ -1658,13 +1658,13 @@ h6 {
 }
 
 .finding-title {
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     font-weight: 700;
     color: var(--text-primary);
 }
 
 .finding-desc {
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     color: var(--text-secondary);
     line-height: 1.4;
 }
@@ -1674,7 +1674,7 @@ h6 {
     background-color: var(--text-primary);
     color: var(--bg-tertiary);
     font-family: monospace;
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     padding: 16px;
     border-radius: var(--border-radius-sm);
     max-height: 250px;
@@ -1702,13 +1702,13 @@ h6 {
 }
 
 .form-label {
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     font-weight: 600;
     color: var(--text-secondary);
 }
 
 .form-label-sm {
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     font-weight: 700;
     color: var(--text-secondary);
 }
@@ -1721,7 +1721,7 @@ h6 {
     padding: 11px 14px;
     border-radius: var(--border-radius-md);
     font-family: var(--font-body);
-    font-size: 0.977rem;
+    font-size: 1.153rem;
     outline: none;
     box-shadow: var(--shadow-inset);
     transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
@@ -1745,7 +1745,7 @@ h6 {
     padding: 7px 10px;
     border-radius: var(--border-radius-sm);
     font-family: var(--font-body);
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     outline: none;
     box-shadow: var(--shadow-inset);
     transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
@@ -1870,12 +1870,12 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 .queue-item-title {
     font-weight: 700;
-    font-size: 0.977rem;
+    font-size: 1.153rem;
     color: var(--text-primary);
 }
 
 .queue-item-opd {
-    font-size: 0.805rem;
+    font-size: 0.969rem;
     color: var(--text-muted);
     font-weight: 500;
 }
@@ -1890,14 +1890,14 @@ input[type="range"]::-webkit-slider-thumb:hover {
 .queue-item-savings {
     font-weight: 700;
     color: var(--success-text);
-    font-size: 0.92rem;
+    font-size: 1.086rem;
 }
 
 /* Notification layout */
 .notification-item {
     display: flex;
     gap: 12px;
-    font-size: 0.92rem;
+    font-size: 1.086rem;
 }
 
 .notif-icon {
@@ -1953,13 +1953,13 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 
 .rule-setting-name {
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     font-weight: 700;
     color: var(--text-primary);
 }
 
 .rule-setting-desc {
-    font-size: 0.805rem;
+    font-size: 0.969rem;
     color: var(--text-secondary);
 }
 
@@ -2028,7 +2028,7 @@ input:checked+.slider:before {
     border: none;
     border-radius: var(--border-radius-md);
     font-family: var(--font-body);
-    font-size: 0.977rem;
+    font-size: 1.153rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color var(--transition-speed), transform 0.15s ease, box-shadow var(--transition-speed);
@@ -2073,7 +2073,7 @@ input:checked+.slider:before {
 
 .btn-sm {
     padding: 7px 14px;
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     border-radius: var(--border-radius-sm);
 }
 
@@ -2184,7 +2184,7 @@ input:checked+.slider:before {
     padding: 12px 16px;
     background: rgba(99, 102, 241, 0.08);
     border-bottom: 1px solid var(--border-color);
-    font-size: 0.977rem;
+    font-size: 1.153rem;
     font-weight: 700;
     color: var(--text-primary);
     font-family: var(--font-heading);
@@ -2194,7 +2194,7 @@ input:checked+.slider:before {
     margin-left: auto;
     padding: 2px 8px;
     border-radius: 20px;
-    font-size: 0.747rem;
+    font-size: 0.969rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -2210,7 +2210,7 @@ input:checked+.slider:before {
 }
 
 .realloc-desc {
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     color: var(--text-secondary);
     padding: 10px 16px;
     line-height: 1.5;
@@ -2225,7 +2225,7 @@ input:checked+.slider:before {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.897rem;
+    font-size: 1.058rem;
     font-weight: 700;
     margin-bottom: 10px;
     font-family: var(--font-heading);
@@ -2308,7 +2308,7 @@ input:checked+.slider:before {
 }
 
 .realloc-item-kode {
-    font-size: 0.747rem;
+    font-size: 0.969rem;
     font-weight: 700;
     font-family: monospace;
     color: var(--text-muted);
@@ -2317,7 +2317,7 @@ input:checked+.slider:before {
 }
 
 .realloc-item-nama {
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 2px;
@@ -2325,13 +2325,13 @@ input:checked+.slider:before {
 }
 
 .realloc-item-alasan {
-    font-size: 0.828rem;
+    font-size: 0.977rem;
     color: var(--text-secondary);
     line-height: 1.4;
 }
 
 .realloc-item-nilai {
-    font-size: 0.897rem;
+    font-size: 1.058rem;
     font-weight: 700;
     text-align: right;
     flex-shrink: 0;
@@ -2365,7 +2365,7 @@ input:checked+.slider:before {
     display: flex;
     align-items: center;
     gap: 4px;
-    font-size: 0.805rem;
+    font-size: 0.969rem;
     font-weight: 600;
     color: var(--text-muted);
     white-space: nowrap;
@@ -2403,7 +2403,7 @@ input:checked+.slider:before {
 }
 
 .realloc-impact-label {
-    font-size: 0.747rem;
+    font-size: 0.969rem;
     color: var(--text-muted);
     text-align: center;
     line-height: 1.3;
@@ -2411,7 +2411,7 @@ input:checked+.slider:before {
 }
 
 .realloc-impact-val {
-    font-size: 1.012rem;
+    font-size: 1.194rem;
     font-weight: 800;
     font-family: var(--font-heading);
 }
@@ -2484,7 +2484,7 @@ input:checked+.slider:before {
 }
 
 .rekening-wajib-kode {
-    font-size: 0.724rem;
+    font-size: 0.969rem;
     font-family: monospace;
     font-weight: 700;
     color: var(--text-muted);
@@ -2492,7 +2492,7 @@ input:checked+.slider:before {
 }
 
 .rekening-wajib-nama {
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     font-weight: 600;
     color: var(--text-primary);
     line-height: 1.2;
@@ -2502,7 +2502,7 @@ input:checked+.slider:before {
 }
 
 .rekening-wajib-pagu {
-    font-size: 0.828rem;
+    font-size: 0.977rem;
     font-weight: 700;
     color: var(--success-text);
     white-space: nowrap;
@@ -2520,7 +2520,7 @@ input:checked+.slider:before {
     display: flex;
     align-items: center;
     gap: 4px;
-    font-size: 0.747rem;
+    font-size: 0.969rem;
     color: var(--text-muted);
 }
 
@@ -2566,7 +2566,7 @@ input:checked+.slider:before {
 
 .justified-col-title {
     padding: 10px 14px;
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -2635,7 +2635,7 @@ input:checked+.slider:before {
 }
 
 .justif-card-kode {
-    font-size: 0.69rem;
+    font-size: 0.969rem;
     font-family: monospace;
     font-weight: 700;
     padding: 2px 6px;
@@ -2654,7 +2654,7 @@ input:checked+.slider:before {
 }
 
 .justif-card-nama {
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     font-weight: 700;
     color: var(--text-primary);
     line-height: 1.2;
@@ -2662,14 +2662,14 @@ input:checked+.slider:before {
 }
 
 .justif-card-alasan {
-    font-size: 0.828rem;
+    font-size: 0.977rem;
     color: var(--text-secondary);
     line-height: 1.45;
     margin-bottom: 5px;
 }
 
 .justif-card-nilai {
-    font-size: 0.805rem;
+    font-size: 0.969rem;
     font-weight: 700;
     padding: 2px 8px;
     border-radius: 20px;
@@ -2720,7 +2720,7 @@ input:checked+.slider:before {
 }
 
 .proporsi-charts-title {
-    font-size: 0.828rem;
+    font-size: 0.977rem;
     font-weight: 700;
     color: var(--text-muted);
     text-transform: uppercase;
@@ -2741,7 +2741,7 @@ input:checked+.slider:before {
 }
 
 .proporsi-chart-label {
-    font-size: 0.805rem;
+    font-size: 0.969rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 8px;
@@ -2775,7 +2775,7 @@ input:checked+.slider:before {
 }
 
 .proporsi-no-data {
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     color: var(--text-muted);
     text-align: center;
     padding: 16px;
@@ -2796,7 +2796,7 @@ input:checked+.slider:before {
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 0.713rem;
+    font-size: 0.969rem;
     color: var(--text-secondary);
     font-weight: 500;
     width: 100%;
@@ -2827,7 +2827,7 @@ input:checked+.slider:before {
     border: none;
     padding: 10px 18px;
     border-radius: var(--border-radius-sm);
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     font-weight: 600;
     cursor: pointer;
     display: inline-flex;
@@ -2848,7 +2848,7 @@ input:checked+.slider:before {
     text-align: center;
     padding: 24px;
     color: var(--text-muted);
-    font-size: 0.92rem;
+    font-size: 1.086rem;
 }
 
 .proporsi-placeholder i {
@@ -2944,21 +2944,21 @@ input:checked+.slider:before {
 }
 
 .modal-title {
-    font-size: 1.322rem;
+    font-size: 1.454rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 10px;
 }
 
 .modal-desc {
-    font-size: 0.977rem;
+    font-size: 1.153rem;
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 6px;
 }
 
 .modal-warning {
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     color: var(--danger-text);
     font-weight: 600;
     margin-bottom: 24px;
@@ -3077,7 +3077,7 @@ input:checked+.slider:before {
     -webkit-appearance: none;
     height: 38px;
     padding: 0 32px 0 30px;
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     font-weight: 600;
     color: var(--text-primary);
     background: var(--bg-secondary);
@@ -3097,7 +3097,7 @@ input:checked+.slider:before {
 }
 
 .arsip-filter-select option {
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     font-weight: 500;
 }
 
@@ -3107,7 +3107,7 @@ input:checked+.slider:before {
     gap: 5px;
     height: 38px;
     padding: 0 12px;
-    font-size: 0.897rem;
+    font-size: 1.058rem;
     font-weight: 600;
     color: #b45309;
     background: #fef3c7;
@@ -3127,7 +3127,7 @@ input:checked+.slider:before {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     font-weight: 600;
     color: var(--text-muted);
     background: var(--bg-secondary);
@@ -3139,7 +3139,7 @@ input:checked+.slider:before {
 
 
 .arsip-table th {
-    font-size: 0.828rem;
+    font-size: 0.977rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--text-muted);
@@ -3162,7 +3162,7 @@ input:checked+.slider:before {
 
 .arsip-doc-name {
     font-weight: 600;
-    font-size: 0.977rem;
+    font-size: 1.153rem;
     color: var(--text-primary);
     white-space: nowrap;
     overflow: hidden;
@@ -3171,7 +3171,7 @@ input:checked+.slider:before {
 }
 
 .arsip-doc-sub {
-    font-size: 0.805rem;
+    font-size: 0.969rem;
     color: var(--text-muted);
     margin-top: 2px;
     white-space: nowrap;
@@ -3181,13 +3181,13 @@ input:checked+.slider:before {
 }
 
 .arsip-td-opd {
-    font-size: 0.943rem;
+    font-size: 1.113rem;
     color: var(--text-secondary);
     max-width: 180px;
 }
 
 .arsip-td-date {
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     color: var(--text-secondary);
     white-space: nowrap;
 }
@@ -3242,7 +3242,7 @@ input:checked+.slider:before {
     flex-direction: column;
     align-items: center;
     color: var(--text-muted);
-    font-size: 1.035rem;
+    font-size: 1.221rem;
     line-height: 1.6;
 }
 
@@ -3279,14 +3279,14 @@ input:checked+.slider:before {
 
 .bi-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.438rem;
+    font-size: 1.582rem;
     font-weight: 800;
     color: var(--primary-color);
     margin: 0;
 }
 
 .bi-subtitle {
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     color: var(--text-muted);
 }
 
@@ -3302,7 +3302,7 @@ input:checked+.slider:before {
 .bi-gauge-score {
     position: absolute;
     bottom: -5px;
-    font-size: 1.265rem;
+    font-size: 1.391rem;
     font-weight: 800;
     font-family: 'Outfit', sans-serif;
     color: var(--text-primary);
@@ -3367,7 +3367,7 @@ input:checked+.slider:before {
 }
 
 .bi-kpi-title {
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     font-weight: 600;
     color: var(--text-secondary);
     text-transform: uppercase;
@@ -3376,13 +3376,13 @@ input:checked+.slider:before {
 
 .bi-kpi-value {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.725rem;
+    font-size: 1.898rem;
     font-weight: 700;
     color: var(--text-primary);
 }
 
 .bi-kpi-status {
-    font-size: 0.862rem;
+    font-size: 1.017rem;
     color: var(--text-muted);
 }
 
@@ -3420,7 +3420,7 @@ input:checked+.slider:before {
     border-radius: var(--border-radius-sm);
     padding: 12px 20px;
     justify-content: space-between;
-    font-size: 0.977rem;
+    font-size: 1.153rem;
     gap: 12px;
     flex-wrap: wrap;
 }
@@ -3453,7 +3453,7 @@ input:checked+.slider:before {
 }
 
 .bi-chart-title {
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     font-weight: 700;
     color: var(--text-secondary);
     margin-bottom: 12px;
@@ -3478,7 +3478,7 @@ input:checked+.slider:before {
 }
 
 .bi-insight-list li {
-    font-size: 0.92rem;
+    font-size: 1.086rem;
     padding: 10px;
     border-radius: 6px;
     display: flex;
@@ -3524,7 +3524,7 @@ input:checked+.slider:before {
 .bi-timeline-step {
     position: relative;
     z-index: 2;
-    font-size: 0.747rem;
+    font-size: 0.969rem;
     font-weight: 600;
     color: var(--text-muted);
     text-align: center;
@@ -3559,7 +3559,7 @@ input:checked+.slider:before {
 .bi-heatmap-block {
     padding: 8px;
     border-radius: 6px;
-    font-size: 0.805rem;
+    font-size: 0.969rem;
     font-weight: 600;
     text-align: center;
     color: white;
@@ -3650,7 +3650,7 @@ input:checked+.slider:before {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 1.012rem;
+    font-size: 1.194rem;
     color: var(--text-muted);
     font-weight: 500;
 }
@@ -3674,7 +3674,7 @@ input:checked+.slider:before {
 
 .nav-item {
     padding: 10px 14px;
-    font-size: 1.035rem;
+    font-size: 1.221rem;
 }
 
 .nav-item:hover i { transform: none; }

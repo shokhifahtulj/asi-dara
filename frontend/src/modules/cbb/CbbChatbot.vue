@@ -11,12 +11,12 @@
     <div style="margin-bottom: 1rem; padding: 0.85rem 1.25rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--border-radius-md, 14px);">
       <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem;">
         <div style="display: flex; align-items: center; gap: 0.6rem; min-width: 240px; flex: 1;">
-          <span style="font-size: 1.438rem;">📁</span>
+          <span style="font-size: 1.582rem;">📁</span>
           <div>
-            <div style="font-weight: 700; font-size: 1.006rem; color: var(--text-primary);">
+            <div style="font-weight: 700; font-size: 1.187rem; color: var(--text-primary);">
               Integrasi Arsip Analisis ASI DARA
             </div>
-            <div style="font-size: 0.862rem; color: var(--text-secondary);">
+            <div style="font-size: 1.017rem; color: var(--text-secondary);">
               Pilih dokumen arsip RKA untuk menanyakan alasan, faktor penyesuaian & rincian Nilai Prakiraan Dampak
             </div>
           </div>
@@ -25,7 +25,7 @@
         <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; max-width: 520px;">
           <select
             v-model="selectedRkaId"
-            style="width: 100%; padding: 0.45rem 0.75rem; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 8px; font-size: 0.92rem; color: var(--text-primary); outline: none;"
+            style="width: 100%; padding: 0.45rem 0.75rem; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 8px; font-size: 1.086rem; color: var(--text-primary); outline: none;"
           >
             <option value="">-- Pilih Arsip Dokumen RKA ({{ rkisList.length }} Berkas) --</option>
             <option
@@ -41,7 +41,7 @@
             v-if="selectedRkaId"
             @click="selectedRkaId = ''"
             class="cbb-btn-secondary"
-            style="padding: 0.45rem 0.75rem; font-size: 0.862rem; white-space: nowrap;"
+            style="padding: 0.45rem 0.75rem; font-size: 1.017rem; white-space: nowrap;"
             title="Reset Pilihan Arsip"
           >
             ❌ Lepas
@@ -53,10 +53,10 @@
       <div v-if="selectedDoc" style="margin-top: 0.85rem; padding: 0.75rem 1rem; background: color-mix(in srgb, var(--primary-color) 8%, transparent); border-left: 3px solid var(--primary-color); border-radius: 8px; display: flex; flex-direction: column; gap: 0.6rem;" class="cbb-animate-fade-in">
         <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
           <div>
-            <span style="font-weight: 700; font-size: 0.977rem; color: var(--primary-color);">
+            <span style="font-weight: 700; font-size: 1.153rem; color: var(--primary-color);">
               📌 Arsip Ditanyakan: {{ selectedDoc.namaDokumen || selectedDoc.subKegiatan || selectedDoc.program || selectedDoc.id }}
             </span>
-            <span style="font-size: 0.891rem; color: var(--text-secondary); margin-left: 8px;">
+            <span style="font-size: 1.051rem; color: var(--text-secondary); margin-left: 8px;">
               • {{ selectedDoc.opd || 'OPD' }} | Pagu: Rp {{ (selectedDoc.pagu || selectedDoc.alokasi || 0).toLocaleString('id-ID') }}
             </span>
           </div>
@@ -67,12 +67,12 @@
         </div>
 
         <!-- Tombol Pertanyaan Cepat untuk Arsip Ini -->
-        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; font-size: 0.862rem;">
+        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; font-size: 1.017rem;">
           <span style="color: var(--text-muted); font-weight: 600;">Tanya Alasan & Detail:</span>
           <button
             @click="askQuickQuestion('💡 Mengapa rasio Nilai Prakiraan Dampak dokumen arsip ini bernilai demikian? Jelaskan alasan dan kausalitas kelayakannya.')"
             class="cbb-btn-secondary cbb-quick-btn"
-            style="padding: 3px 9px; font-size: 0.834rem; border-radius: 20px;"
+            style="padding: 3px 9px; font-size: 0.984rem; border-radius: 20px;"
             :disabled="isTyping"
           >
             💡 Mengapa Rasio {{ getDocRatioBadge(selectedDoc) }}?
@@ -80,7 +80,7 @@
           <button
             @click="askQuickQuestion('⚖️ Jelaskan rincian 5 Faktor Penyesuaian (Deadweight, Attribution, Displacement, Drop-off, Unintended) pada dokumen ini.')"
             class="cbb-btn-secondary cbb-quick-btn"
-            style="padding: 3px 9px; font-size: 0.834rem; border-radius: 20px;"
+            style="padding: 3px 9px; font-size: 0.984rem; border-radius: 20px;"
             :disabled="isTyping"
           >
             ⚖️ Rincian 5 Faktor Penyesuaian
@@ -88,7 +88,7 @@
           <button
             @click="askQuickQuestion('📝 Berikan rekomendasi perbaikan dan langkah strategis AI untuk dokumen RKA arsip ini.')"
             class="cbb-btn-secondary cbb-quick-btn"
-            style="padding: 3px 9px; font-size: 0.834rem; border-radius: 20px;"
+            style="padding: 3px 9px; font-size: 0.984rem; border-radius: 20px;"
             :disabled="isTyping"
           >
             📝 Rekomendasi Strategis AI

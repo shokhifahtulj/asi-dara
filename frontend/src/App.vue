@@ -74,7 +74,7 @@
  <div class="pane-body">
  <div class="doc-placeholder-msg" style="padding: 40px 20px;">
  <i data-lucide="file-search" style="width: 56px; height: 56px; opacity: 0.4; margin-bottom: 12px; color: var(--primary-color);"></i>
- <h3 style="font-size: 1.438rem; font-weight: 700;">Pilih dokumen</h3>
+ <h3 style="font-size: 1.582rem; font-weight: 700;">Pilih dokumen</h3>
  <p style="max-width: 540px; margin: 6px auto 20px; color: var(--text-secondary);">
  {{ rkis.length > 0
  ? rkis.length + ' dokumen siap dibuka'
@@ -89,8 +89,8 @@
  @click="loadHistoricalDocIntoAnalyzer(doc)"
  >
  <div>
- <div style="font-weight: 700; font-size: 1.092rem; color: var(--text-primary);">{{ doc.namaDokumen || doc.program || doc.id }}</div>
- <div style="font-size: 0.92rem; color: var(--text-muted);">{{ doc.opd }} · Pagu: Rp {{ Number(doc.pagu || 0).toLocaleString('id-ID') }} · Nilai Prakiraan Dampak: {{ formatSroiSnippet(doc) }}</div>
+ <div style="font-weight: 700; font-size: 1.289rem; color: var(--text-primary);">{{ doc.namaDokumen || doc.program || doc.id }}</div>
+ <div style="font-size: 1.086rem; color: var(--text-muted);">{{ doc.opd }} · Pagu: Rp {{ Number(doc.pagu || 0).toLocaleString('id-ID') }} · Nilai Prakiraan Dampak: {{ formatSroiSnippet(doc) }}</div>
  </div>
  <button class="btn btn-primary btn-sm" style="display: flex; align-items: center; gap: 6px; white-space: nowrap;">
  <i data-lucide="eye"></i> Lihat Analisis
@@ -181,12 +181,12 @@
  class="toast-item"
  :style="{ borderLeft: '4px solid ' + getToastBorderColor(toast.type) }"
  >
- <div :style="{ color: getToastBorderColor(toast.type), fontSize: '1.38rem', display: 'flex', alignItems: 'center' }">
+ <div :style="{ color: getToastBorderColor(toast.type), fontSize: '1.518rem', display: 'flex', alignItems: 'center' }">
  <i :data-lucide="getToastIcon(toast.type)"></i>
  </div>
  <div style="display:flex; flex-direction:column; gap:2px;">
- <div style="font-weight:700; font-size:0.977rem; color:var(--text-primary);">{{ toast.title }}</div>
- <div style="font-size:0.862rem; color:var(--text-secondary); line-height:1.3;">{{ toast.message }}</div>
+ <div style="font-weight:700; font-size:1.153rem; color:var(--text-primary);">{{ toast.title }}</div>
+ <div style="font-size:1.017rem; color:var(--text-secondary); line-height:1.3;">{{ toast.message }}</div>
  </div>
  </div>
  </div>
@@ -349,7 +349,7 @@ watch([currentTab, notificationsList, isLoggedIn], () => {
  justify-content: center;
  gap: 6px 14px;
  padding: 12px 24px;
- font-size: 0.92rem;
+ font-size: 1.086rem;
  color: var(--text-muted);
  background: var(--bg-secondary, transparent);
  border-top: 1px solid var(--border-color);
@@ -398,12 +398,12 @@ watch([currentTab, notificationsList, isLoggedIn], () => {
 
 .wake-box h3 {
  margin: 16px 0 8px;
- font-size: 20.7px;
+ font-size: 22.8px;
  color: #2B2620;
 }
 
 .wake-box p {
- font-size: 16.1px;
+ font-size: 19px;
  line-height: 1.5;
  color: #6B6151;
  margin: 0;

@@ -633,7 +633,7 @@ function printReport() {
   const title = activeTab.value === 'mode1' ? 'Hasil Evaluasi RKA' : 'Draf Revisi RKA';
   win.document.write(`<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><title>${escapeHtml(title)}</title>
 <style>
-  body { font-family: 'Segoe UI', Arial, sans-serif; color: #111; line-height: 1.6; padding: 24px; font-size: 14.9px; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; color: #111; line-height: 1.6; padding: 24px; font-size: 17.6px; }
   h1, h2, h3, h4 { margin: 1.2em 0 0.5em; }
   table { border-collapse: collapse; width: 100%; margin: 12px 0; }
   th, td { border: 1px solid #999; padding: 6px 8px; text-align: left; vertical-align: top; }
@@ -729,7 +729,7 @@ function scrollToChatBottom() {
 
 .badge-ai {
   font-family: var(--font-body);
-  font-size: 0.782rem;
+  font-size: 0.969rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -755,7 +755,7 @@ function scrollToChatBottom() {
   border: 1px solid var(--border-color);
   padding: 6px 12px;
   border-radius: 999px;
-  font-size: 0.897rem;
+  font-size: 1.058rem;
   font-weight: 500;
   color: var(--text-secondary);
   box-shadow: var(--shadow-raised);
@@ -779,7 +779,7 @@ function scrollToChatBottom() {
   color: var(--aibot-teal-text);
   padding: 1px 7px;
   border-radius: 6px;
-  font-size: 0.805rem;
+  font-size: 0.969rem;
   font-family: var(--font-mono);
 }
 
@@ -821,7 +821,7 @@ function scrollToChatBottom() {
   display: grid;
   place-items: center;
   border-radius: 12px;
-  font-size: 1.265rem;
+  font-size: 1.391rem;
   color: var(--text-secondary);
   background: var(--bg-tertiary);
   box-shadow: var(--shadow-inset);
@@ -854,7 +854,7 @@ function scrollToChatBottom() {
 
 .tab-title {
   font-weight: 700;
-  font-size: 1.058rem;
+  font-size: 1.248rem;
   color: var(--text-primary);
 }
 
@@ -863,7 +863,7 @@ function scrollToChatBottom() {
 }
 
 .tab-desc {
-  font-size: 0.862rem;
+  font-size: 1.017rem;
   color: var(--text-secondary);
 }
 
@@ -899,7 +899,7 @@ function scrollToChatBottom() {
 
 .panel-title {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.265rem;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -941,18 +941,18 @@ function scrollToChatBottom() {
 }
 
 .drop-icon {
-  font-size: 2.185rem;
+  font-size: 2.404rem;
   color: var(--aibot-teal-text);
   margin-bottom: 6px;
 }
 
 .drop-text {
-  font-size: 1.012rem;
+  font-size: 1.194rem;
   color: var(--text-primary);
 }
 
 .drop-hint {
-  font-size: 0.862rem;
+  font-size: 1.017rem;
   color: var(--text-secondary);
   margin-top: 2px;
 }
@@ -963,7 +963,7 @@ function scrollToChatBottom() {
   justify-content: center;
   gap: 10px;
   color: var(--aibot-teal-text);
-  font-size: 1.012rem;
+  font-size: 1.194rem;
 }
 
 /* ── Form ───────────────────────────────────────────────────────────── */
@@ -973,7 +973,7 @@ function scrollToChatBottom() {
 
 .aibot-field label {
   display: block;
-  font-size: 0.92rem;
+  font-size: 1.086rem;
   font-weight: 600;
   color: var(--text-secondary);
   margin-bottom: 6px;
@@ -987,7 +987,7 @@ function scrollToChatBottom() {
   color: var(--text-primary);
   padding: 11px 14px;
   font-family: var(--font-body);
-  font-size: 0.977rem;
+  font-size: 1.153rem;
   outline: none;
   box-shadow: var(--shadow-inset);
   transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
@@ -1010,7 +1010,7 @@ function scrollToChatBottom() {
 .rka-textarea {
   height: 220px;
   font-family: var(--font-mono);
-  font-size: 0.92rem;
+  font-size: 1.086rem;
   line-height: 1.5;
   resize: vertical;
 }
@@ -1033,7 +1033,7 @@ function scrollToChatBottom() {
   border: none;
   color: var(--text-secondary);
   font-family: inherit;
-  font-size: 0.897rem;
+  font-size: 1.058rem;
   font-weight: 600;
   cursor: pointer;
   display: flex;
@@ -1097,20 +1097,20 @@ function scrollToChatBottom() {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.955rem;
+  font-size: 2.151rem;
   color: #fff;
   margin-bottom: 20px;
 }
 
 .loading-title {
   font-family: var(--font-heading);
-  font-size: 1.322rem;
+  font-size: 1.454rem;
   color: var(--text-primary);
   margin-bottom: 6px;
 }
 
 .loading-subtitle {
-  font-size: 0.977rem;
+  font-size: 1.153rem;
   color: var(--text-secondary);
   max-width: 420px;
 }
@@ -1124,20 +1124,20 @@ function scrollToChatBottom() {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.61rem;
+  font-size: 1.771rem;
   color: var(--aibot-teal-text);
   margin-bottom: 14px;
 }
 
 .empty-state h3 {
   font-family: var(--font-heading);
-  font-size: 1.265rem;
+  font-size: 1.391rem;
   color: var(--text-primary);
   margin-bottom: 6px;
 }
 
 .empty-state p {
-  font-size: 0.977rem;
+  font-size: 1.153rem;
   color: var(--text-secondary);
   max-width: 400px;
 }
@@ -1178,19 +1178,19 @@ function scrollToChatBottom() {
   display: grid;
   place-items: center;
   border-radius: 12px;
-  font-size: 1.38rem;
+  font-size: 1.518rem;
   color: #fff;
   background: var(--aibot-teal-solid);
 }
 
 .chat-title h3 {
-  font-size: 1.208rem;
+  font-size: 1.329rem;
   color: var(--text-primary);
   font-family: var(--font-heading);
 }
 
 .chat-title p {
-  font-size: 0.897rem;
+  font-size: 1.058rem;
   color: var(--text-secondary);
 }
 
@@ -1210,7 +1210,7 @@ function scrollToChatBottom() {
   padding: 5px 12px;
   border-radius: 999px;
   font-family: inherit;
-  font-size: 0.862rem;
+  font-size: 1.017rem;
   font-weight: 600;
   cursor: pointer;
   transition: color var(--transition-speed), border-color var(--transition-speed), background-color var(--transition-speed);
@@ -1268,7 +1268,7 @@ function scrollToChatBottom() {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.977rem;
+  font-size: 1.153rem;
   flex-shrink: 0;
   color: var(--aibot-teal-text);
   background: var(--gradient-brand-soft);
@@ -1296,7 +1296,7 @@ function scrollToChatBottom() {
 }
 
 .bubble-sender {
-  font-size: 0.782rem;
+  font-size: 0.969rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   color: var(--text-secondary);
@@ -1385,7 +1385,7 @@ function scrollToChatBottom() {
 /* Markdown (konten v-html tidak kena style scoped, jadi dibuat global tapi dibatasi ke .aibot-root) */
 .aibot-root .markdown-body {
   color: var(--text-primary);
-  font-size: 1.058rem;
+  font-size: 1.248rem;
   line-height: 1.7;
   overflow-wrap: break-word;
 }
@@ -1406,21 +1406,21 @@ function scrollToChatBottom() {
 }
 
 .aibot-root .markdown-body h1 {
-  font-size: 1.61rem;
+  font-size: 1.771rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--border-color);
   color: var(--aibot-teal-text);
 }
 
 .aibot-root .markdown-body h2 {
-  font-size: 1.322rem;
+  font-size: 1.454rem;
   color: var(--aibot-teal-text);
   border-left: 3px solid var(--accent-color);
   padding-left: 0.7rem;
 }
 
 .aibot-root .markdown-body h3 {
-  font-size: 1.173rem;
+  font-size: 1.29rem;
   color: var(--aibot-teal-text);
 }
 
@@ -1460,7 +1460,7 @@ function scrollToChatBottom() {
   width: 100%;
   border-collapse: collapse;
   margin: 1.1rem 0;
-  font-size: 0.977rem;
+  font-size: 1.153rem;
 }
 
 .aibot-root .markdown-body th {

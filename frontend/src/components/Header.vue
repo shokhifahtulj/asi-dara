@@ -70,7 +70,7 @@
  Hapus semua
  </button>
  </div>
- <div v-if="!notificationHistory || notificationHistory.length === 0" style="padding: 16px; text-align: center; color: var(--text-muted); font-size: 0.977rem;">
+ <div v-if="!notificationHistory || notificationHistory.length === 0" style="padding: 16px; text-align: center; color: var(--text-muted); font-size: 1.153rem;">
  Tidak ada notifikasi.
  </div>
  <div v-else style="display: flex; flex-direction: column;">
@@ -84,9 +84,9 @@
  >
  <i data-lucide="x"></i>
  </button>
- <div style="font-weight: bold; font-size: 0.977rem; padding-right: 20px;" :style="{ color: notif.type === 'danger' ? 'var(--danger-text)' : (notif.type === 'success' ? 'var(--success-text)' : 'var(--text-primary)') }">{{ notif.title }}</div>
- <div style="font-size: 0.862rem; color: var(--text-secondary); line-height: 1.3;">{{ notif.message }}</div>
- <div style="font-size: 0.747rem; color: var(--text-muted); text-align: right; margin-top: 4px;">
+ <div style="font-weight: bold; font-size: 1.153rem; padding-right: 20px;" :style="{ color: notif.type === 'danger' ? 'var(--danger-text)' : (notif.type === 'success' ? 'var(--success-text)' : 'var(--text-primary)') }">{{ notif.title }}</div>
+ <div style="font-size: 1.017rem; color: var(--text-secondary); line-height: 1.3;">{{ notif.message }}</div>
+ <div style="font-size: 0.969rem; color: var(--text-muted); text-align: right; margin-top: 4px;">
  {{ new Date(notif.time).toLocaleString('id-ID') }}
  </div>
  </div>
@@ -267,7 +267,7 @@ watch(theme, () => {
  display: flex;
  align-items: center;
  justify-content: center;
- font-size: 11.5px;
+ font-size: 15.5px;
  font-weight: 800;
  flex-shrink: 0;
  border: 1px solid var(--border-color);
@@ -287,7 +287,7 @@ watch(theme, () => {
 }
 
 .header-user-name {
- font-size: 0.943rem;
+ font-size: 1.113rem;
  font-weight: 700;
  color: var(--text-primary);
  white-space: nowrap;
@@ -297,7 +297,7 @@ watch(theme, () => {
 }
 
 .header-role-badge {
- font-size: 0.782rem;
+ font-size: 0.969rem;
  font-weight: 700;
  padding: 1px 7px;
  border-radius: 8px;
@@ -332,13 +332,13 @@ watch(theme, () => {
 }
 
 .pd-name {
- font-size: 1.012rem;
+ font-size: 1.194rem;
  font-weight: 700;
  color: var(--text-primary);
 }
 
 .pd-username {
- font-size: 0.862rem;
+ font-size: 1.017rem;
  color: var(--text-muted);
  margin-top: 2px;
 }
@@ -357,7 +357,7 @@ watch(theme, () => {
  border: none;
  background: none;
  cursor: pointer;
- font-size: 0.966rem;
+ font-size: 1.14rem;
  font-weight: 600;
  color: #ef4444;
  transition: background 0.15s;
@@ -375,7 +375,7 @@ watch(theme, () => {
  border: none;
  background: none;
  color: var(--text-muted);
- font-size: 0.805rem;
+ font-size: 0.969rem;
  font-weight: 700;
  cursor: pointer;
  padding: 2px 6px;

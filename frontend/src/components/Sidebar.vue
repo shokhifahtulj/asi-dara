@@ -198,7 +198,7 @@ watch([currentTab], () => {
 .admin-nav-badge {
  background: #1B4D46;
  color: #ffffff;
- font-size: 10.3px;
+ font-size: 15.5px;
  font-weight: 800;
  padding: 2px 7px;
  border-radius: 10px;
@@ -213,7 +213,7 @@ watch([currentTab], () => {
 .agent-badge-pulse {
  background: var(--gradient-brand);
  color: #ffffff;
- font-size: 11.5px;
+ font-size: 15.5px;
  font-weight: 800;
  padding: 2px 7px;
  border-radius: 10px;
@@ -265,13 +265,13 @@ watch([currentTab], () => {
 .dot-off { background: #ef4444; }
 
 .api-dot-label {
- font-size: 11.5px;
+ font-size: 15.5px;
  color: var(--text-muted);
  font-weight: 600;
 }
 
 .api-not-config-msg {
- font-size: 10.9px;
+ font-size: 15.5px;
  color: var(--text-muted);
  line-height: 1.4;
  margin: 0;
@@ -299,7 +299,7 @@ watch([currentTab], () => {
  display: flex;
  align-items: center;
  justify-content: center;
- font-size: 12.6px;
+ font-size: 15.5px;
  font-weight: 800;
  flex-shrink: 0;
  border: 1px solid var(--border-color);
@@ -338,7 +338,7 @@ watch([currentTab], () => {
 .menu-off-badge {
  background: rgba(239, 68, 68, 0.12);
  color: #ef4444;
- font-size: 10.3px;
+ font-size: 15.5px;
  font-weight: 800;
  padding: 2px 7px;
  border-radius: 10px;
@@ -353,7 +353,7 @@ watch([currentTab], () => {
 
 .user-name {
  display: block;
- font-size: 13.8px;
+ font-size: 16.3px;
  font-weight: 700;
  color: var(--text-primary);
  white-space: nowrap;
@@ -363,7 +363,7 @@ watch([currentTab], () => {
 
 .user-role {
  display: block;
- font-size: 11.5px;
+ font-size: 15.5px;
  color: var(--text-muted);
  margin-top: 2px;
 }
@@ -372,7 +372,7 @@ watch([currentTab], () => {
  display: inline-block;
  padding: 1px 6px;
  border-radius: 6px;
- font-size: 10.9px;
+ font-size: 15.5px;
  font-weight: 700;
 }
 

@@ -145,7 +145,7 @@ watch([isProcessing, progress], () => {
  justify-content: space-between;
  align-items: center;
  margin-bottom: 8px;
- font-size: 14.9px;
+ font-size: 17.6px;
  gap: 12px;
 }
 .queue-name {
@@ -163,7 +163,7 @@ watch([isProcessing, progress], () => {
  color: var(--text-muted);
 }
 .queue-percent-badge {
- font-size: 12.6px;
+ font-size: 15.5px;
  font-weight: 700;
  color: var(--primary-color, #0f766e);
  background: rgba(15, 118, 110, 0.12);

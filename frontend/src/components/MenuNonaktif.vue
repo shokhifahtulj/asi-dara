@@ -39,14 +39,14 @@ onMounted(() => {
 }
 
 .menu-inactive-title {
-  font-size: 1.265rem;
+  font-size: 1.391rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 .menu-inactive-text {
-  font-size: 0.977rem;
+  font-size: 1.153rem;
   color: var(--text-secondary);
   max-width: 420px;
   margin: 0 auto;

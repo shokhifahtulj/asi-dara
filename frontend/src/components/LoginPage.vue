@@ -204,7 +204,7 @@ onMounted(() => {
 
 /* Form title */
 .form-title {
-  font-size: 2.3rem;
+  font-size: 2.53rem;
   font-weight: 400;
   color: #1e2640;
   margin: 0 0 6px;
@@ -213,7 +213,7 @@ onMounted(() => {
 }
 
 .form-sub {
-  font-size: 0.943rem;
+  font-size: 1.113rem;
   color: #666c85; /* 4.64:1 di atas #f5f2ec (sebelumnya #7a8099 = 3.50:1) */
   margin: 0 0 24px;
   text-wrap: pretty;
@@ -222,7 +222,7 @@ onMounted(() => {
 /* Label */
 .field-label {
   display: block;
-  font-size: 0.92rem;
+  font-size: 1.086rem;
   font-weight: 500;
   color: #1e2640;
   margin: 0 0 6px 2px;
@@ -240,7 +240,7 @@ onMounted(() => {
   background: #ffffff;
   border: 1.5px solid #99876b; /* >= 3:1 di atas #fff (3.48) dan #f5f2ec (3.12); sebelumnya #e2ddd5 = 1.35:1 */
   border-radius: 12px;
-  font-size: 1.012rem;
+  font-size: 1.194rem;
   color: #1e2640;
   transition: border-color 0.2s, box-shadow 0.2s;
   box-sizing: border-box;
@@ -325,7 +325,7 @@ onMounted(() => {
 
 /* Field error */
 .field-err {
-  font-size: 0.92rem;
+  font-size: 1.086rem;
   color: #c0394b;
   margin: 0 0 10px 4px;
 }
@@ -340,7 +340,7 @@ onMounted(() => {
   border: 1px solid rgba(192, 57, 75, 0.22);
   border-radius: 10px;
   color: #a02a3a;
-  font-size: 0.977rem;
+  font-size: 1.153rem;
   margin: 12px 0;
 }
 
@@ -369,7 +369,7 @@ onMounted(() => {
   background: #1e2f5e;
   border: none;
   border-radius: 12px;
-  font-size: 1.035rem;
+  font-size: 1.221rem;
   font-weight: 500;
   color: #ffffff;
   cursor: pointer;
@@ -411,7 +411,7 @@ onMounted(() => {
 
 /* Credit */
 .login-credit {
-  font-size: 0.862rem;
+  font-size: 1.017rem;
   color: #746c60; /* 4.63:1 di atas #f5f2ec (sebelumnya #b0aaa0 = 2.06:1) */
   text-align: center;
   margin: 24px 0 0;
@@ -419,7 +419,7 @@ onMounted(() => {
 
 /* iOS Safari memperbesar halaman bila teks input < 16px */
 @media (hover: none) and (pointer: coarse) {
-  .field input { font-size: 18.4px; }
+  .field input { font-size: 20.2px; }
 }
 
 /* === RESPONSIVE === */
@@ -437,6 +437,6 @@ onMounted(() => {
     box-shadow: none;
     padding: 32px 24px;
   }
-  .form-title { font-size: 1.84rem; }
+  .form-title { font-size: 2.024rem; }
 }
 </style>

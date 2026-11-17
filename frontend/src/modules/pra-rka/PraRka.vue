@@ -55,7 +55,7 @@ const activeMenu = ref('ranwal');
   border: 1px solid var(--border-color);
   background: var(--bg-tertiary);
   color: var(--text-secondary);
-  font-size: 0.943rem;
+  font-size: 1.113rem;
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-speed);

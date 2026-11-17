@@ -485,7 +485,7 @@ function cetakDokumen() {
 }
 .ba-toolbar-title {
   font-family: var(--font-heading);
-  font-size: 1.092rem;
+  font-size: 1.289rem;
   font-weight: 700;
   color: var(--text-primary);
   display: flex;
@@ -595,7 +595,7 @@ function cetakDokumen() {
   .ba-inline-input,.ba-inline-textarea { border:none; background:transparent; padding:0; }
   .ba-fill-editable { background:transparent !important; box-shadow:none !important; outline:none !important; }
 }
-.ba-edit-hint { font-size: 0.897rem; color: var(--text-secondary); padding: 0 4px; }
+.ba-edit-hint { font-size: 1.058rem; color: var(--text-secondary); padding: 0 4px; }
 .ba-edit-warn { margin-left: 8px; color: #e03131; font-weight: 600; }
 .ba-edit-hint i { margin-right: 4px; }
 @media print { .ba-edit-hint { display: none !important; } }

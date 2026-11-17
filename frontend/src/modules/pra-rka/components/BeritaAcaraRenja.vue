@@ -474,7 +474,7 @@ function cetakDokumen() {
 }
 .ba-toolbar-title {
   font-family: var(--font-heading);
-  font-size: 1.092rem;
+  font-size: 1.289rem;
   font-weight: 700;
   color: var(--text-primary);
   display: flex;
@@ -497,7 +497,7 @@ function cetakDokumen() {
   gap: 8px;
   padding: 12px 18px;
   font-weight: 700;
-  font-size: 0.977rem;
+  font-size: 1.153rem;
   background: var(--bg-tertiary);
   border-bottom: 1px solid var(--border-color);
   color: var(--text-primary);
@@ -510,7 +510,7 @@ function cetakDokumen() {
 }
 .ba-field { display: flex; flex-direction: column; gap: 5px; }
 .ba-field-full { grid-column: 1 / -1; }
-.ba-label { font-size: 0.862rem; font-weight: 600; color: var(--text-secondary); }
+.ba-label { font-size: 1.017rem; font-weight: 600; color: var(--text-secondary); }
 
 /* ── Canvas (area cetak) ───────────────────────────────────────────── */
 .ba-canvas {
@@ -680,7 +680,7 @@ function cetakDokumen() {
     outline: none !important;
   }
 }
-.ba-edit-hint { font-size: 0.897rem; color: var(--text-secondary); padding: 0 4px; }
+.ba-edit-hint { font-size: 1.058rem; color: var(--text-secondary); padding: 0 4px; }
 .ba-edit-warn { margin-left: 8px; color: #e03131; font-weight: 600; }
 .ba-edit-hint i { margin-right: 4px; }
 @media print { .ba-edit-hint { display: none !important; } }

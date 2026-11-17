@@ -1,12 +1,12 @@
 <template>
   <div class="cbb-glass-panel" style="display: flex; flex-direction: column; height: calc(100vh - 250px); min-height: 520px; overflow: hidden; position: relative;">
     <!-- Slim toolbar: just clear chat -->
-    <div style="padding: 0.5rem 1.25rem; background: var(--bg-tertiary); border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; font-size: 0.891rem;">
-      <span style="color: var(--text-muted); font-size: 0.834rem;">Bapperida Kabupaten Cirebon · Asisten AI</span>
+    <div style="padding: 0.5rem 1.25rem; background: var(--bg-tertiary); border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; font-size: 1.051rem;">
+      <span style="color: var(--text-muted); font-size: 0.984rem;">Bapperida Kabupaten Cirebon · Asisten AI</span>
       <button
         @click="$emit('clear-chat')"
         title="Bersihkan riwayat percakapan"
-        style="background: transparent; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.862rem; display: flex; align-items: center; gap: 4px; padding: 2px 6px; border-radius: 4px;"
+        style="background: transparent; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.017rem; display: flex; align-items: center; gap: 4px; padding: 2px 6px; border-radius: 4px;"
         class="cbb-clear-btn"
       >
         🗑️ Bersihkan Chat
@@ -30,18 +30,18 @@
         class="cbb-animate-fade-in"
       >
         <!-- Message Header & Avatar -->
-        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem; font-size: 0.862rem; color: var(--text-secondary);">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem; font-size: 1.017rem; color: var(--text-secondary);">
           <template v-if="msg.role === 'user'">
             <span style="font-weight: 600; color: var(--text-secondary);">Anda</span>
-            <span style="width: 22px; height: 22px; border-radius: 50%; background: var(--info-color); display: flex; align-items: center; justify-content: center; font-size: 0.805rem;">👤</span>
+            <span style="width: 22px; height: 22px; border-radius: 50%; background: var(--info-color); display: flex; align-items: center; justify-content: center; font-size: 0.969rem;">👤</span>
           </template>
           <template v-else>
-            <span style="width: 22px; height: 22px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 0.805rem;">🏛️</span>
+            <span style="width: 22px; height: 22px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 0.969rem;">🏛️</span>
             <span style="font-weight: 700; color: var(--primary-color);">Asisten Bapperida</span>
-            <span v-if="msg.badge" class="cbb-badge cbb-badge-emerald" style="font-size: 0.747rem; padding: 1px 6px;">
+            <span v-if="msg.badge" class="cbb-badge cbb-badge-emerald" style="font-size: 0.969rem; padding: 1px 6px;">
               {{ msg.badge }}
             </span>
-            <span style="color: var(--text-muted); font-size: 0.805rem;">{{ msg.time }}</span>
+            <span style="color: var(--text-muted); font-size: 0.969rem;">{{ msg.time }}</span>
           </template>
         </div>
 
@@ -57,24 +57,24 @@
               : '1px solid var(--border-color)',
             color: msg.role === 'user' ? '#fff' : 'var(--text-primary)',
             boxShadow: '0 2px 6px -2px rgba(17, 24, 39, 0.12)',
-            fontSize: '1.006rem'
+            fontSize: '1.187rem'
           }"
         >
           <!-- Warning / Ethic Notice -->
-          <div v-if="msg.type === 'warning'" style="display: flex; align-items: center; gap: 0.5rem; background: color-mix(in srgb, var(--danger-color) 15%, transparent); border: 1px solid color-mix(in srgb, var(--danger-color) 30%, transparent); border-radius: 8px; padding: 0.5rem 0.75rem; margin-bottom: 0.75rem; color: var(--danger-text); font-size: 0.891rem;">
+          <div v-if="msg.type === 'warning'" style="display: flex; align-items: center; gap: 0.5rem; background: color-mix(in srgb, var(--danger-color) 15%, transparent); border: 1px solid color-mix(in srgb, var(--danger-color) 30%, transparent); border-radius: 8px; padding: 0.5rem 0.75rem; margin-bottom: 0.75rem; color: var(--danger-text); font-size: 1.051rem;">
             <span>⚠️</span>
             <span>Isu ini di luar kewenangan asisten — mohon arahkan ke pihak berwenang.</span>
           </div>
 
           <!-- Formula & Calculation Card (only when msg.data is set AND has items) -->
           <div v-if="msg.type === 'calculation' && msg.data && msg.data.length" style="margin-bottom: 0.85rem; background: var(--bg-secondary); border: 1px solid color-mix(in srgb, var(--primary-color) 30%, transparent); border-radius: 10px; padding: 0.75rem;">
-            <div v-if="msg.formula" style="font-size: 0.862rem; font-family: var(--font-mono); color: var(--primary-color); margin-bottom: 0.5rem; background: var(--bg-tertiary); padding: 4px 8px; border-radius: 6px;">
+            <div v-if="msg.formula" style="font-size: 1.017rem; font-family: var(--font-mono); color: var(--primary-color); margin-bottom: 0.5rem; background: var(--bg-tertiary); padding: 4px 8px; border-radius: 6px;">
               {{ msg.formula }}
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.5rem;">
               <div v-for="(item, i) in msg.data" :key="i" style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 0.5rem;">
-                <div style="font-size: 0.791rem; color: var(--text-secondary);">{{ item.label }}</div>
-                <div style="font-size: 1.092rem; font-weight: 700; color: var(--text-primary); font-family: var(--font-mono);">{{ item.value }}</div>
+                <div style="font-size: 0.969rem; color: var(--text-secondary);">{{ item.label }}</div>
+                <div style="font-size: 1.289rem; font-weight: 700; color: var(--text-primary); font-family: var(--font-mono);">{{ item.value }}</div>
               </div>
             </div>
           </div>
@@ -86,7 +86,7 @@
           <div v-if="msg.role !== 'user'" style="display: flex; justify-content: flex-end; margin-top: 0.5rem;">
             <button
               @click="copyText(msg.text, idx)"
-              style="background: transparent; border: none; font-size: 0.805rem; color: var(--text-muted); cursor: pointer; display: flex; align-items: center; gap: 4px;"
+              style="background: transparent; border: none; font-size: 0.969rem; color: var(--text-muted); cursor: pointer; display: flex; align-items: center; gap: 4px;"
               class="cbb-copy-btn"
             >
               <span>{{ copiedIndex === idx ? '✓ Tersalin' : '📋 Salin' }}</span>
@@ -97,24 +97,24 @@
 
       <!-- Typing Indicator -->
       <div v-if="isTyping" style="display: flex; align-items: center; gap: 0.5rem;" class="cbb-animate-fade-in">
-        <span style="width: 22px; height: 22px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 0.805rem;">🏛️</span>
+        <span style="width: 22px; height: 22px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 0.969rem;">🏛️</span>
         <div style="background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 0.5rem 0.85rem; display: flex; align-items: center; gap: 6px;">
           <span class="cbb-pulse-indicator" style="animation-delay: 0s;"></span>
           <span class="cbb-pulse-indicator" style="animation-delay: 0.2s;"></span>
           <span class="cbb-pulse-indicator" style="animation-delay: 0.4s;"></span>
-          <span style="font-size: 0.862rem; color: var(--text-secondary); margin-left: 4px;">sedang memproses...</span>
+          <span style="font-size: 1.017rem; color: var(--text-secondary); margin-left: 4px;">sedang memproses...</span>
         </div>
       </div>
     </div>
 
     <!-- Suggested Quick Prompts -->
     <div style="padding: 0.5rem 1.25rem; background: var(--bg-tertiary); border-top: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 0.5rem; overflow-x: auto; white-space: nowrap;">
-      <span style="font-size: 0.834rem; color: var(--text-muted); flex-shrink: 0;">💡</span>
+      <span style="font-size: 0.984rem; color: var(--text-muted); flex-shrink: 0;">💡</span>
       <button
         v-for="(chip, cIdx) in promptChips"
         :key="cIdx"
         @click="sendPrompt(chip)"
-        style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); color: var(--text-secondary); border-radius: 999px; padding: 0.3rem 0.75rem; font-size: 0.834rem; cursor: pointer; transition: all 0.2s; white-space: nowrap; flex-shrink: 0;"
+        style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); color: var(--text-secondary); border-radius: 999px; padding: 0.3rem 0.75rem; font-size: 0.984rem; cursor: pointer; transition: all 0.2s; white-space: nowrap; flex-shrink: 0;"
         class="cbb-chip"
       >
         {{ chip }}
@@ -130,7 +130,7 @@
             v-model="inputQuery"
             type="text"
             placeholder="Tanya apa saja — soal Bapperida, hitung kinerja anggaran, atau obrolan biasa..."
-            style="width: 100%; padding: 0.75rem 1rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); color: var(--text-primary); font-size: 1.006rem; outline: none; transition: all 0.2s;"
+            style="width: 100%; padding: 0.75rem 1rem; background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); color: var(--text-primary); font-size: 1.187rem; outline: none; transition: all 0.2s;"
             class="cbb-input"
             :disabled="isTyping"
           />
@@ -211,9 +211,9 @@ function formatMessageText(text) {
   if (!text) return '';
   return text
     // H3 headings (### text)
-    .replace(/^### (.+)$/gm, '<h3 style="font-size:1.092rem;font-weight:700;color:var(--primary-color);margin:0.75rem 0 0.35rem;line-height:1.3;">$1</h3>')
+    .replace(/^### (.+)$/gm, '<h3 style="font-size:1.289rem;font-weight:700;color:var(--primary-color);margin:0.75rem 0 0.35rem;line-height:1.3;">$1</h3>')
     // H4 headings (#### text)
-    .replace(/^#### (.+)$/gm, '<h4 style="font-size:0.977rem;font-weight:700;color:var(--text-secondary);margin:0.5rem 0 0.25rem;">$1</h4>')
+    .replace(/^#### (.+)$/gm, '<h4 style="font-size:1.153rem;font-weight:700;color:var(--text-secondary);margin:0.5rem 0 0.25rem;">$1</h4>')
     // Bold
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     // Italic

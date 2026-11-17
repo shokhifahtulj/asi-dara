@@ -67,7 +67,7 @@ watch(() => props.icon, renderIcons);
 .page-hero-title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: 1.495rem;
+  font-size: 1.645rem;
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.01em;
@@ -76,7 +76,7 @@ watch(() => props.icon, renderIcons);
 
 .page-hero-sub {
   margin: 2px 0 0;
-  font-size: 0.954rem;
+  font-size: 1.126rem;
   color: var(--text-muted);
   white-space: nowrap;
   overflow: hidden;

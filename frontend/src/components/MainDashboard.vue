@@ -26,7 +26,7 @@
         </div>
         <div class="stat-content">
           <div class="stat-label">Arsip Dokumen RKA</div>
-          <div class="stat-value">{{ rkis.length }} <span style="font-size: 1.15rem; color: var(--text-muted);">Dokumen</span></div>
+          <div class="stat-value">{{ rkis.length }} <span style="font-size: 1.265rem; color: var(--text-muted);">Dokumen</span></div>
           <div class="stat-subtext">Tersimpan</div>
         </div>
       </div>
@@ -52,7 +52,7 @@
         </div>
         <div class="stat-content">
           <div class="stat-label">Kecepatan Analisis AI</div>
-          <div class="stat-value">1.8s <span style="font-size: 1.035rem; color: var(--text-muted);">/ doc</span></div>
+          <div class="stat-value">1.8s <span style="font-size: 1.221rem; color: var(--text-muted);">/ doc</span></div>
           <div class="stat-subtext">Rata-rata per dokumen</div>
         </div>
       </div>
@@ -144,14 +144,14 @@ onMounted(() => {
 }
 
 .stat-label {
-  font-size: 0.977rem;
+  font-size: 1.153rem;
   color: var(--text-secondary);
   font-weight: 600;
   margin-bottom: 4px;
 }
 
 .stat-value {
-  font-size: 1.725rem;
+  font-size: 1.898rem;
   font-weight: 800;
   color: var(--text-primary);
   font-family: var(--font-heading);
@@ -159,7 +159,7 @@ onMounted(() => {
 }
 
 .stat-subtext {
-  font-size: 0.862rem;
+  font-size: 1.017rem;
   color: var(--text-muted);
 }
 
@@ -225,7 +225,7 @@ onMounted(() => {
   display: inline-block;
   padding: 4px 10px;
   border-radius: 20px;
-  font-size: 0.862rem;
+  font-size: 1.017rem;
   font-weight: 700;
   letter-spacing: 0.5px;
   margin-bottom: 12px;
@@ -233,13 +233,13 @@ onMounted(() => {
 
 .banner-title {
   font-family: var(--font-heading);
-  font-size: 2.07rem;
+  font-size: 2.277rem;
   font-weight: 800;
   margin-bottom: 12px;
 }
 
 .banner-text {
-  font-size: 1.092rem;
+  font-size: 1.289rem;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.5;
   margin-bottom: 24px;

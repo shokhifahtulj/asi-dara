@@ -12,12 +12,12 @@ export default {
   theme: {
     // Ukuran teks bawaan Tailwind diperbesar ~15% (tata letak kotak tidak diubah)
     fontSize: {
-      xs: ['0.8625rem', { lineHeight: '1.1rem' }],
-      sm: ['1.00625rem', { lineHeight: '1.4rem' }],
-      base: ['1.15rem', { lineHeight: '1.75rem' }],
-      lg: ['1.29375rem', { lineHeight: '1.9rem' }],
-      xl: ['1.4375rem', { lineHeight: '2rem' }],
-      '2xl': ['1.725rem', { lineHeight: '2.2rem' }]
+      xs: ['0.95rem', { lineHeight: '1.1rem' }],
+      sm: ['1.1rem', { lineHeight: '1.4rem' }],
+      base: ['1.25rem', { lineHeight: '1.75rem' }],
+      lg: ['1.4rem', { lineHeight: '1.9rem' }],
+      xl: ['1.55rem', { lineHeight: '2rem' }],
+      '2xl': ['1.85rem', { lineHeight: '2.2rem' }]
     },
     extend: {
       colors: {

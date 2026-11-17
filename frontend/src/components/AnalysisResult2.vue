@@ -824,7 +824,7 @@ const copyJson = async () => {
 }
 
 .rka-hero-label {
- font-size: 12.6px;
+ font-size: 15.5px;
  font-weight: 800;
  letter-spacing: 0.08em;
  text-transform: uppercase;
@@ -832,7 +832,7 @@ const copyJson = async () => {
 }
 
 .rka-hero-main-val {
- font-size: 20.7px;
+ font-size: 22.8px;
  font-weight: 800;
  color: #ffffff;
  line-height: 1.35;
@@ -867,14 +867,14 @@ const copyJson = async () => {
 }
 
 .rka-hero-text-val {
- font-size: 16.1px;
+ font-size: 19px;
  font-weight: 700;
  color: #ffffff;
  line-height: 1.4;
 }
 
 .rka-pagu-val {
- font-size: 20.7px;
+ font-size: 22.8px;
  font-weight: 800;
  color: #6ee7b7;
 }
@@ -901,7 +901,7 @@ const copyJson = async () => {
 }
 
 .tab-year-title {
- font-size: 13.8px;
+ font-size: 16.3px;
  font-weight: 800;
  letter-spacing: 0.05em;
  color: #475569;
@@ -911,7 +911,7 @@ const copyJson = async () => {
 .tab-year-badge {
  background: #16a34a;
  color: #ffffff;
- font-size: 11.5px;
+ font-size: 15.5px;
  font-weight: 800;
  padding: 3px 10px;
  border-radius: 12px;
@@ -919,7 +919,7 @@ const copyJson = async () => {
 }
 
 .tab-amount-num {
- font-size: 25.3px;
+ font-size: 27.8px;
  font-weight: 800;
  color: #0f172a;
  margin-bottom: 6px;
@@ -927,7 +927,7 @@ const copyJson = async () => {
 }
 
 .tab-delta-info {
- font-size: 13.8px;
+ font-size: 16.3px;
  font-weight: 700;
  display: flex;
  align-items: center;
@@ -947,7 +947,7 @@ const copyJson = async () => {
 }
 
 .tab-arrow {
- font-size: 12.6px;
+ font-size: 15.5px;
 }
 
 .sroi-result {
@@ -965,12 +965,12 @@ const copyJson = async () => {
  border-bottom: 1px solid var(--border-color);
 }
 .sroi-header-left { display: flex; align-items: center; gap: 10px; }
-.sroi-header-icon { color: var(--primary-color); font-size: 20.7px; }
-.sroi-header h2 { font-size: 18.4px; font-weight: 700; margin: 0; }
+.sroi-header-icon { color: var(--primary-color); font-size: 22.8px; }
+.sroi-header h2 { font-size: 20.2px; font-weight: 700; margin: 0; }
 .model-badge {
  background: var(--success-glow);
  color: var(--success-text);
- font-size: 12.6px;
+ font-size: 15.5px;
  font-weight: 700;
  padding: 4px 10px;
  border-radius: 20px;
@@ -1007,7 +1007,7 @@ const copyJson = async () => {
  margin-bottom: 8px;
 }
 .sroi-ratio-eyebrow {
- font-size: 12.6px;
+ font-size: 15.5px;
  font-weight: 700;
  letter-spacing: 0.05em;
  text-transform: uppercase;
@@ -1017,13 +1017,13 @@ const copyJson = async () => {
  background: rgba(255, 255, 255, 0.22);
  padding: 4px 10px;
  border-radius: 20px;
- font-size: 12.6px;
+ font-size: 15.5px;
  font-weight: 700;
  text-transform: uppercase;
 }
-.sroi-ratio-value { font-size: 55.2px; font-weight: 800; line-height: 1; margin: 6px 0 10px; }
-.sroi-ratio-formula { font-size: 13.8px; opacity: 0.85; margin-bottom: 10px; }
-.sroi-ratio-desc { font-size: 14.9px; font-weight: 600; margin: 0; line-height: 1.4; }
+.sroi-ratio-value { font-size: 60.7px; font-weight: 800; line-height: 1; margin: 6px 0 10px; }
+.sroi-ratio-formula { font-size: 16.3px; opacity: 0.85; margin-bottom: 10px; }
+.sroi-ratio-desc { font-size: 17.6px; font-weight: 600; margin: 0; line-height: 1.4; }
 
 /* Stat mini-cards */
 .sroi-stats-grid {
@@ -1038,14 +1038,14 @@ const copyJson = async () => {
  padding: 14px 16px;
 }
 .stat-label {
- font-size: 11.5px;
+ font-size: 15.5px;
  font-weight: 700;
  letter-spacing: 0.04em;
  text-transform: uppercase;
  color: var(--text-muted);
  margin-bottom: 6px;
 }
-.stat-value { font-size: 20.7px; font-weight: 700; color: var(--text-primary); }
+.stat-value { font-size: 22.8px; font-weight: 700; color: var(--text-primary); }
 .stat-value.deadweight { color: var(--danger-text); }
 .stat-value.positive { color: var(--success-hover); }
 
@@ -1057,7 +1057,7 @@ const copyJson = async () => {
  margin-top: 4px;
 }
 .efficiency-title {
- font-size: 14.9px;
+ font-size: 17.6px;
  font-weight: 700;
  color: var(--text-primary);
  margin-bottom: 12px;
@@ -1108,14 +1108,14 @@ const copyJson = async () => {
  align-items: center;
 }
 .efficiency-item-name {
- font-size: 13.8px;
+ font-size: 16.3px;
  color: var(--text-primary);
  flex: 1;
  padding-right: 10px;
  line-height: 1.3;
 }
 .efficiency-item-status {
- font-size: 12.1px;
+ font-size: 15.5px;
  font-weight: 700;
  padding: 4px 8px;
  border-radius: 12px;
@@ -1125,13 +1125,13 @@ const copyJson = async () => {
  gap: 4px;
 }
 .efficiency-item-chevron {
- font-size: 10.3px;
+ font-size: 15.5px;
  color: var(--text-muted);
  margin-left: 8px;
  flex-shrink: 0;
 }
 .efficiency-item-reason {
- font-size: 13.2px;
+ font-size: 15.6px;
  color: var(--text-secondary);
  line-height: 1.45;
  background: #ffffff;
@@ -1162,7 +1162,7 @@ const copyJson = async () => {
  height: 100%;
 }
 .sroi-chart-panel h3 {
- font-size: 14.9px;
+ font-size: 17.6px;
  font-weight: 700;
  margin: 0 0 14px;
  display: flex;
@@ -1174,14 +1174,14 @@ const copyJson = async () => {
 .pie-block { margin-bottom: 22px; }
 .pie-block:last-child { margin-bottom: 0; }
 .pie-block-title {
- font-size: 13.8px;
+ font-size: 16.3px;
  font-weight: 700;
  color: var(--text-secondary);
  text-align: center;
  margin-bottom: 8px;
 }
 .pie-canvas-wrap { position: relative; height: 170px; margin: 0 auto; max-width: 220px; }
-.pie-legend { list-style: none; margin: 10px 0 0; padding: 0; font-size: 13.2px; color: var(--text-secondary); }
+.pie-legend { list-style: none; margin: 10px 0 0; padding: 0; font-size: 15.6px; color: var(--text-secondary); }
 .pie-legend li { display: flex; align-items: center; gap: 6px; padding: 2px 0; }
 .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
@@ -1199,14 +1199,14 @@ const copyJson = async () => {
  background: none;
  border: none;
  padding: 12px 14px;
- font-size: 14.9px;
+ font-size: 17.6px;
  font-weight: 600;
  color: var(--text-muted);
  cursor: pointer;
  border-bottom: 2px solid transparent;
 }
 .tab-btn.active { color: var(--primary-hover); border-bottom-color: var(--primary-hover); }
-.tab-icon { font-size: 13.8px; }
+.tab-icon { font-size: 16.3px; }
 
 .tab-panel { padding: 20px; }
 
@@ -1218,7 +1218,7 @@ const copyJson = async () => {
  margin-bottom: 14px;
 }
 .info-box-label {
- font-size: 12.1px;
+ font-size: 15.5px;
  font-weight: 700;
  letter-spacing: 0.04em;
  text-transform: uppercase;
@@ -1228,14 +1228,14 @@ const copyJson = async () => {
  gap: 6px;
  margin-bottom: 6px;
 }
-.info-box-text { font-size: 16.1px; font-weight: 600; color: var(--text-primary); }
+.info-box-text { font-size: 19px; font-weight: 600; color: var(--text-primary); }
 .justifikasi-box .info-box-label,
 .justifikasi-box .info-box-text { background: var(--info-glow); }
 .justifikasi-box { background: var(--info-glow); }
 
 /* Kepatuhan */
 .kepatuhan-section { margin-bottom: 20px; }
-.kepatuhan-title { font-size: 14.9px; font-weight: 700; margin-bottom: 10px; }
+.kepatuhan-title { font-size: 17.6px; font-weight: 700; margin-bottom: 10px; }
 .kepatuhan-item {
  display: flex;
  align-items: flex-start;
@@ -1249,8 +1249,8 @@ const copyJson = async () => {
 .kepatuhan-item:not(.sesuai) { border-left-color: var(--danger-color); }
 .kepatuhan-icon { color: var(--success-text); font-weight: 700; }
 .kepatuhan-item:not(.sesuai) .kepatuhan-icon { color: var(--danger-text); }
-.kepatuhan-label { font-size: 14.9px; font-weight: 700; }
-.kepatuhan-desc { font-size: 14.4px; color: var(--text-muted); margin-top: 2px; }
+.kepatuhan-label { font-size: 17.6px; font-weight: 700; }
+.kepatuhan-desc { font-size: 17px; color: var(--text-muted); margin-top: 2px; }
 
 /* Realokasi grid */
 .realokasi-grid {
@@ -1265,7 +1265,7 @@ const copyJson = async () => {
  display: flex;
  align-items: center;
  gap: 6px;
- font-size: 14.4px;
+ font-size: 17px;
  font-weight: 700;
  padding: 10px 14px;
  border-radius: 8px;
@@ -1286,13 +1286,13 @@ const copyJson = async () => {
  align-items: center;
  margin-bottom: 4px;
 }
-.realokasi-kode { font-family: monospace; font-size: 13.2px; color: var(--text-muted); }
-.realokasi-nama { font-size: 14.9px; font-weight: 700; margin-bottom: 4px; }
-.realokasi-alasan { font-size: 13.8px; color: var(--text-muted); line-height: 1.4; }
-.realokasi-nilai { font-size: 14.9px; font-weight: 700; }
+.realokasi-kode { font-family: monospace; font-size: 15.6px; color: var(--text-muted); }
+.realokasi-nama { font-size: 17.6px; font-weight: 700; margin-bottom: 4px; }
+.realokasi-alasan { font-size: 16.3px; color: var(--text-muted); line-height: 1.4; }
+.realokasi-nilai { font-size: 17.6px; font-weight: 700; }
 .realokasi-nilai.minus { color: var(--danger-text); }
 .realokasi-nilai.plus { color: var(--success-hover); }
-.realokasi-empty { font-size: 13.8px; color: var(--text-muted); font-style: italic; }
+.realokasi-empty { font-size: 16.3px; color: var(--text-muted); font-style: italic; }
 
 /* JSON tab */
 .json-toolbar {
@@ -1301,14 +1301,14 @@ const copyJson = async () => {
  align-items: center;
  margin-bottom: 10px;
 }
-.json-toolbar-label { font-size: 13.8px; color: var(--text-muted); }
+.json-toolbar-label { font-size: 16.3px; color: var(--text-muted); }
 .btn-copy-json {
  background: var(--primary-hover);
  color: #fff;
  border: none;
  border-radius: 8px;
  padding: 6px 12px;
- font-size: 13.8px;
+ font-size: 16.3px;
  font-weight: 600;
  cursor: pointer;
 }
@@ -1317,7 +1317,7 @@ const copyJson = async () => {
  color: #a5f3fc;
  border-radius: 10px;
  padding: 16px;
- font-size: 13.8px;
+ font-size: 16.3px;
  line-height: 1.5;
 /* SROI Factors & Transparency (16 Rules) */
 .sroi-factors-card {
@@ -1328,7 +1328,7 @@ const copyJson = async () => {
  padding: 14px;
 }
 .sroi-factors-title {
- font-size: 14.4px;
+ font-size: 17px;
  font-weight: 700;
  margin-bottom: 10px;
  color: var(--text-primary);
@@ -1350,24 +1350,24 @@ const copyJson = async () => {
  flex-direction: column;
 }
 .factor-name {
- font-size: 11.5px;
+ font-size: 15.5px;
  font-weight: 700;
  color: var(--text-muted);
  text-transform: uppercase;
 }
 .factor-val {
- font-size: 16.1px;
+ font-size: 19px;
  font-weight: 800;
  color: var(--text-primary);
 }
 .factor-hint {
- font-size: 10.9px;
+ font-size: 15.5px;
  color: var(--text-muted);
  line-height: 1.25;
  margin-top: 2px;
 }
 .factor-loss {
- font-size: 11.5px;
+ font-size: 15.5px;
  font-weight: 700;
  color: #dc2626;
  margin-top: 2px;
@@ -1381,7 +1381,7 @@ const copyJson = async () => {
  padding: 14px;
 }
 .transparency-header {
- font-size: 14.4px;
+ font-size: 17px;
  font-weight: 700;
  color: var(--text-primary);
  margin-bottom: 12px;
@@ -1406,7 +1406,7 @@ const copyJson = async () => {
  border-color: #86efac;
 }
 .step-num {
- font-size: 10.3px;
+ font-size: 15.5px;
  font-weight: 800;
  width: 16px;
  height: 16px;
@@ -1423,20 +1423,20 @@ const copyJson = async () => {
  color: #ffffff;
 }
 .step-title {
- font-size: 10.9px;
+ font-size: 15.5px;
  font-weight: 700;
  color: var(--text-muted);
  margin-bottom: 2px;
 }
 .step-val {
- font-size: 12.6px;
+ font-size: 15.5px;
  font-weight: 800;
  color: var(--text-primary);
 }
 .flow-arrow {
  color: var(--text-muted);
  font-weight: 800;
- font-size: 16.1px;
+ font-size: 19px;
 }
 
 /* ══════ Rincian Multi-Tahun (Penyusutan & Diskonto) ══════ */
@@ -1446,7 +1446,7 @@ const copyJson = async () => {
  border-top: 1px dashed var(--border-color);
 }
 .sroi-yearly-title {
- font-size: 12.6px;
+ font-size: 15.5px;
  font-weight: 700;
  color: var(--text-muted);
  margin-bottom: 8px;
@@ -1454,7 +1454,7 @@ const copyJson = async () => {
 .sroi-yearly-table {
  width: 100%;
  border-collapse: collapse;
- font-size: 12.6px;
+ font-size: 15.5px;
 }
 .sroi-yearly-table th {
  text-align: left;
@@ -1482,13 +1482,13 @@ const copyJson = async () => {
  border-top: 1px dashed var(--border-color);
 }
 .sroi-formula-desc {
- font-size: 13.2px;
+ font-size: 15.6px;
  color: var(--text-secondary, var(--text-muted));
  line-height: 1.6;
  margin: 0 0 12px;
 }
 .sroi-formula-title {
- font-size: 14.9px;
+ font-size: 17.6px;
  font-weight: 800;
  color: var(--text-primary);
  margin-bottom: 8px;
@@ -1505,7 +1505,7 @@ const copyJson = async () => {
  border-top: 1px solid var(--border-color);
 }
 .sroi-formula-label {
- font-size: 13.8px;
+ font-size: 16.3px;
  font-weight: 700;
  color: var(--text-primary);
  white-space: nowrap;
@@ -1518,7 +1518,7 @@ const copyJson = async () => {
 }
 .sroi-formula-num,
 .sroi-formula-den {
- font-size: 13.2px;
+ font-size: 15.6px;
  font-weight: 700;
  color: var(--text-primary);
  padding: 0 6px;
@@ -1531,12 +1531,12 @@ const copyJson = async () => {
  margin: 3px 0;
 }
 .sroi-formula-result {
- font-size: 18.4px;
+ font-size: 20.2px;
  font-weight: 900;
  color: var(--success-hover, #10b981);
 }
 .sroi-formula-note {
- font-size: 12.6px;
+ font-size: 15.5px;
  color: var(--text-muted);
  line-height: 1.6;
  margin: 0;
@@ -1551,13 +1551,13 @@ const copyJson = async () => {
  border-radius: var(--radius-md, 10px);
 }
 .sroi-gap-title {
- font-size: 13.8px;
+ font-size: 16.3px;
  font-weight: 800;
  color: #c2410c;
  margin-bottom: 8px;
 }
 .sroi-gap-desc {
- font-size: 12.6px;
+ font-size: 15.5px;
  color: var(--text-secondary, var(--text-muted));
  line-height: 1.6;
  margin: 0 0 10px;
@@ -1571,7 +1571,7 @@ const copyJson = async () => {
  gap: 7px;
 }
 .sroi-gap-list li {
- font-size: 12.6px;
+ font-size: 15.5px;
  line-height: 1.5;
  padding-bottom: 7px;
  border-bottom: 1px dashed rgba(249, 115, 22, 0.3);
@@ -1595,7 +1595,7 @@ const copyJson = async () => {
  margin-top: 2px;
 }
 .sroi-gap-summary {
- font-size: 13.2px;
+ font-size: 15.6px;
  color: var(--text-primary);
  line-height: 1.6;
  margin: 0 0 8px;
@@ -1603,7 +1603,7 @@ const copyJson = async () => {
  border-top: 1px solid rgba(249, 115, 22, 0.3);
 }
 .sroi-gap-suggestion {
- font-size: 12.6px;
+ font-size: 15.5px;
  color: var(--text-secondary, var(--text-muted));
  line-height: 1.6;
  margin: 0;

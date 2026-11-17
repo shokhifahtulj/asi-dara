@@ -350,7 +350,7 @@ watch([statusMessage], () => {
 .required { color: #ef4444; margin-left: 2px; }
 .form-row { display: flex; gap: 12px; }
 .form-row .form-group { min-width: 0; }
-.contact-hint { font-size: 0.874rem; color: var(--text-muted); margin: -6px 0 0; }
+.contact-hint { font-size: 1.031rem; color: var(--text-muted); margin: -6px 0 0; }
 textarea.form-input { resize: vertical; min-height: 100px; }
 .laporan-dropzone {
   border: 2px dashed var(--border-color);
@@ -363,7 +363,7 @@ textarea.form-input { resize: vertical; min-height: 100px; }
   background: var(--primary-glow, rgba(46, 125, 116, 0.08));
 }
 .dropzone-icon { width: 28px; height: 28px; color: var(--primary-color); margin-bottom: 6px; }
-.dropzone-text { font-size: 0.943rem; color: var(--text-muted); margin: 0; }
+.dropzone-text { font-size: 1.113rem; color: var(--text-muted); margin: 0; }
 .image-preview-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   gap: 10px; margin-top: 12px; overflow-y: auto;
@@ -374,7 +374,7 @@ textarea.form-input { resize: vertical; min-height: 100px; }
 }
 .image-preview-item img { width: 100%; height: 70px; object-fit: cover; display: block; }
 .image-name {
-  display: block; font-size: 0.747rem; color: var(--text-muted);
+  display: block; font-size: 0.969rem; color: var(--text-muted);
   padding: 4px 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .image-remove-btn {
@@ -387,7 +387,7 @@ textarea.form-input { resize: vertical; min-height: 100px; }
 .laporan-status-msg {
   display: flex; align-items: center; gap: 8px;
   padding: 10px 14px; border-radius: var(--border-radius-md);
-  font-size: 0.943rem;
+  font-size: 1.113rem;
 }
 .laporan-status-msg i { width: 16px; height: 16px; flex-shrink: 0; }
 .laporan-status-msg.success { background: rgba(16,185,129,0.12); color: #10b981; }

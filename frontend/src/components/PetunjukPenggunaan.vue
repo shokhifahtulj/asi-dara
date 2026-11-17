@@ -39,7 +39,7 @@
               type="search"
               autocomplete="off"
               placeholder="Cari panduan penggunaan..."
-              class="pt-search w-full rounded-lg bg-white py-2.5 pl-10 pr-10 text-[17.2px] text-[#1A1D21] placeholder:text-[#5B6169]"
+              class="pt-search w-full rounded-lg bg-white py-2.5 pl-10 pr-10 text-[20.3px] text-[#1A1D21] placeholder:text-[#5B6169]"
               @keydown.esc="clearSearch"
               @keydown.enter.prevent="jumpToFirstMatch"
             />
@@ -97,8 +97,8 @@
             <!-- Judul bagian: lencana + judul + Unduh PDF -->
             <div class="flex flex-wrap items-center gap-x-4 gap-y-3 border-b border-line px-4 py-4 sm:px-6">
               <div class="pt-badge flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-lg">
-                <span class="text-[12.6px] font-semibold leading-none">Bagian</span>
-                <span class="mt-1 font-heading text-[32.2px] font-extrabold leading-none">{{ part.no }}</span>
+                <span class="text-[15.5px] font-semibold leading-none">Bagian</span>
+                <span class="mt-1 font-heading text-[35.4px] font-extrabold leading-none">{{ part.no }}</span>
               </div>
               <div class="min-w-0 flex-1 basis-60">
                 <h3 :id="part.id + '-judul'" class="m-0 font-heading text-xl font-extrabold leading-snug text-ink sm:text-2xl">
@@ -141,37 +141,37 @@
                     <span class="sr-only">{{ s.alt }}</span>
                     <div :aria-hidden="s.visual === 'modes' ? undefined : 'true'" class="flex w-full justify-center">
                       <!-- 1.1 Main Dashboard visual -->
-                      <div v-if="s.visual === 'main-dash'" class="pt-mock w-full max-w-[580px] space-y-3 p-3 text-[13.8px]">
+                      <div v-if="s.visual === 'main-dash'" class="pt-mock w-full max-w-[580px] space-y-3 p-3 text-[16.3px]">
                         <div class="flex items-center justify-between border-b border-line pb-2">
-                          <span class="flex items-center gap-1.5 font-heading text-[14.9px] font-bold text-brand">
+                          <span class="flex items-center gap-1.5 font-heading text-[17.6px] font-bold text-brand">
                             <Ico name="chart" :size="16" />Dasbor Utama ASI DARA
                           </span>
-                          <span class="rounded-full bg-ok-soft px-2.5 py-0.5 text-[12.6px] font-semibold text-ok-ink">Sistem Normal</span>
+                          <span class="rounded-full bg-ok-soft px-2.5 py-0.5 text-[15.5px] font-semibold text-ok-ink">Sistem Normal</span>
                         </div>
                         <div class="grid grid-cols-2 gap-2">
                           <div class="rounded-lg border border-line bg-surface p-2.5">
-                            <p class="m-0 text-[12.6px] font-semibold text-ink-3">Model Gemini 2.5 Flash</p>
+                            <p class="m-0 text-[15.5px] font-semibold text-ink-3">Model Gemini 2.5 Flash</p>
                             <p class="m-0 mt-1 flex items-center gap-1.5 font-bold text-ok-ink"><span class="h-2 w-2 rounded-full bg-ok"></span>Siap Digunakan</p>
                           </div>
                           <div class="rounded-lg border border-line bg-surface p-2.5">
-                            <p class="m-0 text-[12.6px] font-semibold text-ink-3">Arsip Dokumen RKA</p>
+                            <p class="m-0 text-[15.5px] font-semibold text-ink-3">Arsip Dokumen RKA</p>
                             <p class="m-0 mt-1 font-bold text-ink">42 Dokumen Tersimpan</p>
                           </div>
                         </div>
                         <div class="pt-hl flex items-center justify-between rounded-lg bg-brand p-3 text-white">
                           <div>
-                            <p class="m-0 text-[14.9px] font-bold">Mulai Analisis Dokumen RKA</p>
-                            <p class="m-0 text-[12.6px] opacity-85">Unggah RKA PDF dan dapatkan hasil evaluasi SROI otomatis</p>
+                            <p class="m-0 text-[17.6px] font-bold">Mulai Analisis Dokumen RKA</p>
+                            <p class="m-0 text-[15.5px] opacity-85">Unggah RKA PDF dan dapatkan hasil evaluasi SROI otomatis</p>
                           </div>
-                          <span class="shrink-0 rounded-md bg-white px-3 py-1.5 text-[12.6px] font-bold text-brand">Buka Menu</span>
+                          <span class="shrink-0 rounded-md bg-white px-3 py-1.5 text-[15.5px] font-bold text-brand">Buka Menu</span>
                         </div>
                       </div>
 
                       <!-- 1.2 Format berkas -->
-                      <div v-else-if="s.visual === 'files'" class="pt-mock w-full max-w-[480px] space-y-2 p-3 text-[13.8px]">
-                        <p class="m-0 px-1 font-heading text-[14.9px] font-bold">Berkas yang Anda siapkan</p>
+                      <div v-else-if="s.visual === 'files'" class="pt-mock w-full max-w-[480px] space-y-2 p-3 text-[16.3px]">
+                        <p class="m-0 px-1 font-heading text-[17.6px] font-bold">Berkas yang Anda siapkan</p>
                         <div class="pt-hl flex items-center gap-3 rounded-md border border-line bg-ok-soft px-3 py-2">
-                          <span class="grid h-8 w-8 shrink-0 place-items-center rounded bg-white text-[11.5px] font-extrabold text-bad-ink">PDF</span>
+                          <span class="grid h-8 w-8 shrink-0 place-items-center rounded bg-white text-[15.5px] font-extrabold text-bad-ink">PDF</span>
                           <div class="min-w-0 flex-1">
                             <p class="m-0 truncate font-semibold">RKA_Dinas_Kesehatan_Subkegiatan.pdf</p>
                             <p class="m-0 text-ink-3">2,4 MB, teks dapat diseleksi</p>
@@ -179,7 +179,7 @@
                           <span class="inline-flex shrink-0 items-center gap-1 font-semibold text-ok-ink"><Ico name="check" :size="14" />Diterima</span>
                         </div>
                         <div class="flex items-center gap-3 rounded-md border border-line bg-bad-soft px-3 py-2">
-                          <span class="grid h-8 w-8 shrink-0 place-items-center rounded bg-white text-[11.5px] font-extrabold text-ok-ink">XLS</span>
+                          <span class="grid h-8 w-8 shrink-0 place-items-center rounded bg-white text-[15.5px] font-extrabold text-ok-ink">XLS</span>
                           <div class="min-w-0 flex-1">
                             <p class="m-0 truncate font-semibold">Rincian_Belanja.xlsx</p>
                             <p class="m-0 text-ink-3">Bukan PDF</p>
@@ -187,7 +187,7 @@
                           <span class="inline-flex shrink-0 items-center gap-1 font-semibold text-bad-ink"><Ico name="x" :size="14" />Ditolak</span>
                         </div>
                         <div class="flex items-center gap-3 rounded-md border border-line bg-bad-soft px-3 py-2">
-                          <span class="grid h-8 w-8 shrink-0 place-items-center rounded bg-white text-[11.5px] font-extrabold text-ink-2">JPG</span>
+                          <span class="grid h-8 w-8 shrink-0 place-items-center rounded bg-white text-[15.5px] font-extrabold text-ink-2">JPG</span>
                           <div class="min-w-0 flex-1">
                             <p class="m-0 truncate font-semibold">Foto_halaman_RKA.jpg</p>
                             <p class="m-0 text-ink-3">Foto atau hasil pindai tidak terbaca</p>
@@ -198,7 +198,7 @@
                       </div>
 
                       <!-- 1.3 Menu + kotak unggah -->
-                      <div v-else-if="s.visual === 'dropzone'" class="pt-mock flex w-full max-w-[580px] overflow-hidden text-[13.8px]">
+                      <div v-else-if="s.visual === 'dropzone'" class="pt-mock flex w-full max-w-[580px] overflow-hidden text-[16.3px]">
                         <div class="hidden w-[150px] shrink-0 space-y-1 border-r border-line bg-inset p-2 sm:block">
                           <p class="pt-hl m-0 rounded-md bg-brand px-2 py-1.5 font-semibold text-white">Unggah Berkas RKA</p>
                           <p class="m-0 px-2 py-1.5 text-ink-2">Beranda</p>
@@ -207,11 +207,11 @@
                           <p class="m-0 px-2 py-1.5 text-ink-2">Arsip Dokumen RKA</p>
                         </div>
                         <div class="min-w-0 flex-1 p-3">
-                          <p class="m-0 font-heading text-[14.9px] font-bold">Unggah Dokumen RKA (PDF)</p>
-                          <p class="m-0 mb-2 text-[12.6px] text-ink-3">Mendukung format RKA Rencana Kerja &amp; Anggaran SKPD Kabupaten Cirebon</p>
+                          <p class="m-0 font-heading text-[17.6px] font-bold">Unggah Dokumen RKA (PDF)</p>
+                          <p class="m-0 mb-2 text-[15.5px] text-ink-3">Mendukung format RKA Rencana Kerja &amp; Anggaran SKPD Kabupaten Cirebon</p>
                           <div class="rounded-lg border-2 border-dashed border-line-strong bg-inset px-4 py-5 text-center">
                             <Ico name="upload" :size="26" class="mx-auto text-brand" />
-                            <p class="m-0 mt-1 text-[14.9px] font-semibold">Pilih atau Tarik Berkas RKA PDF di Sini</p>
+                            <p class="m-0 mt-1 text-[17.6px] font-semibold">Pilih atau Tarik Berkas RKA PDF di Sini</p>
                             <p class="m-0 mb-3 text-ink-3">Dokumen akan diproses langsung di browser secara aman</p>
                             <span class="pt-hl inline-flex items-center gap-1.5 rounded-md bg-brand px-3 py-1.5 font-semibold text-white">Pilih Dokumen RKA</span>
                           </div>
@@ -219,15 +219,15 @@
                       </div>
 
                       <!-- 1.4 Antrean -->
-                      <div v-else-if="s.visual === 'queue'" class="pt-mock w-full max-w-[480px] p-3 text-[13.8px]">
-                        <p class="m-0 mb-3 text-center font-heading text-[14.9px] font-bold">Memproses Antrean Dokumen...</p>
+                      <div v-else-if="s.visual === 'queue'" class="pt-mock w-full max-w-[480px] p-3 text-[16.3px]">
+                        <p class="m-0 mb-3 text-center font-heading text-[17.6px] font-bold">Memproses Antrean Dokumen...</p>
                         <div class="space-y-2">
                           <div v-for="q in QUEUE_MOCK" :key="q.name" class="rounded-md border border-line bg-inset p-2.5">
                             <div class="mb-1.5 flex items-center justify-between gap-3">
                               <span class="min-w-0 truncate font-semibold">{{ q.name }}</span>
                               <span class="flex shrink-0 items-center gap-2 text-ink-3">
                                 {{ q.status }}
-                                <span class="rounded-full bg-brand-soft px-2 py-0.5 text-[12.6px] font-bold text-brand">{{ q.pct }}%</span>
+                                <span class="rounded-full bg-brand-soft px-2 py-0.5 text-[15.5px] font-bold text-brand">{{ q.pct }}%</span>
                               </span>
                             </div>
                             <div class="h-2 overflow-hidden rounded-full bg-line">
@@ -241,20 +241,20 @@
                       </div>
 
                       <!-- 1.5 Edit OPD -->
-                      <div v-else-if="s.visual === 'opd'" class="pt-mock w-full max-w-[480px] overflow-hidden text-[13.8px]">
+                      <div v-else-if="s.visual === 'opd'" class="pt-mock w-full max-w-[480px] overflow-hidden text-[16.3px]">
                         <div class="flex items-center justify-between border-b border-line px-3 py-2">
-                          <p class="m-0 font-heading text-[14.9px] font-bold">Edit Manual Hasil Analisis</p>
-                          <span class="rounded-full bg-brand-soft px-2 py-0.5 text-[12.6px] font-semibold text-brand">Identitas &amp; Pagu</span>
+                          <p class="m-0 font-heading text-[17.6px] font-bold">Edit Manual Hasil Analisis</p>
+                          <span class="rounded-full bg-brand-soft px-2 py-0.5 text-[15.5px] font-semibold text-brand">Identitas &amp; Pagu</span>
                         </div>
                         <div class="space-y-3 p-3">
                           <div>
-                            <p class="m-0 font-heading text-[14.9px] font-bold">Identitas &amp; Pagu Anggaran</p>
+                            <p class="m-0 font-heading text-[17.6px] font-bold">Identitas &amp; Pagu Anggaran</p>
                             <p class="m-0 text-ink-3">Data pada kartu header halaman analisis.</p>
                           </div>
                           <div>
                             <p class="m-0 mb-1 font-semibold text-ink-2">Perangkat Daerah (OPD)</p>
                             <div class="pt-hl rounded-md border border-line-strong bg-surface px-2.5 py-2">Dinas Kesehatan</div>
-                            <p class="m-0 mt-1 text-[12.6px] text-ink-3">Terbaca otomatis dari dokumen. Ubah di sini bila keliru.</p>
+                            <p class="m-0 mt-1 text-[15.5px] text-ink-3">Terbaca otomatis dari dokumen. Ubah di sini bila keliru.</p>
                           </div>
                           <div>
                             <p class="m-0 mb-1 font-semibold text-ink-2">Pagu Anggaran (Rp)</p>
@@ -268,9 +268,9 @@
                       </div>
 
                       <!-- 2.1 Integrasi Arsip Dokumen CBB Chatbot -->
-                      <div v-else-if="s.visual === 'cbb-archive'" class="pt-mock w-full max-w-[600px] p-3 text-[13.8px] space-y-2.5">
+                      <div v-else-if="s.visual === 'cbb-archive'" class="pt-mock w-full max-w-[600px] p-3 text-[16.3px] space-y-2.5">
                         <div class="flex flex-wrap items-center justify-between gap-2 border-b border-line pb-2">
-                          <span class="flex items-center gap-1.5 font-heading text-[14.9px] font-bold text-brand">
+                          <span class="flex items-center gap-1.5 font-heading text-[17.6px] font-bold text-brand">
                             <Ico name="chat" :size="15" />Simulasi Percakapan Agen AI
                           </span>
                           <span class="inline-flex items-center gap-1.5 rounded-full bg-ok-soft px-2.5 py-0.5 font-semibold text-ok-ink">
@@ -280,7 +280,7 @@
                         <div class="rounded-lg border border-line bg-inset p-2.5">
                           <div class="flex flex-wrap items-center justify-between gap-2">
                             <span class="font-bold text-ink">📁 Integrasi Arsip Analisis ASI DARA</span>
-                            <span class="text-[12.6px] text-ink-3">Pilih dokumen arsip untuk ditanyakan</span>
+                            <span class="text-[15.5px] text-ink-3">Pilih dokumen arsip untuk ditanyakan</span>
                           </div>
                           <div class="pt-hl mt-2 flex items-center justify-between rounded-md border border-brand bg-surface px-3 py-1.5">
                             <span class="truncate font-semibold text-ink">Penyusunan Perencanaan RKA (Dinas Kesehatan) — Nilai Prakiraan Dampak: 1,24</span>
@@ -290,21 +290,21 @@
                         <div class="rounded-lg border-l-4 border-l-brand bg-brand-soft p-2.5 space-y-2">
                           <div class="flex items-center justify-between">
                             <span class="font-bold text-brand">📌 Arsip Ditanyakan: Dinas Kesehatan (Pagu: Rp 250 Jt)</span>
-                            <span class="rounded bg-ok px-2 py-0.5 text-[11.5px] font-extrabold text-white">Layak (1,24 : 1)</span>
+                            <span class="rounded bg-ok px-2 py-0.5 text-[15.5px] font-extrabold text-white">Layak (1,24 : 1)</span>
                           </div>
                           <div class="flex flex-wrap gap-1.5 pt-1">
-                            <span class="pt-hl rounded-full border border-brand bg-surface px-2.5 py-1 text-[12.6px] font-semibold text-brand">💡 Mengapa Rasio 1,24?</span>
-                            <span class="rounded-full border border-line bg-surface px-2.5 py-1 text-[12.6px] font-semibold text-ink-2">⚖️ Rincian 5 Faktor Penyesuaian</span>
-                            <span class="rounded-full border border-line bg-surface px-2.5 py-1 text-[12.6px] font-semibold text-ink-2">📝 Rekomendasi Strategis AI</span>
+                            <span class="pt-hl rounded-full border border-brand bg-surface px-2.5 py-1 text-[15.5px] font-semibold text-brand">💡 Mengapa Rasio 1,24?</span>
+                            <span class="rounded-full border border-line bg-surface px-2.5 py-1 text-[15.5px] font-semibold text-ink-2">⚖️ Rincian 5 Faktor Penyesuaian</span>
+                            <span class="rounded-full border border-line bg-surface px-2.5 py-1 text-[15.5px] font-semibold text-ink-2">📝 Rekomendasi Strategis AI</span>
                           </div>
                         </div>
                       </div>
 
                       <!-- 2.2 Kalkulasi Kinerja Real-time CBB Chatbot -->
-                      <div v-else-if="s.visual === 'cbb-calc'" class="pt-mock w-full max-w-[580px] p-3 text-[13.8px] space-y-2.5">
+                      <div v-else-if="s.visual === 'cbb-calc'" class="pt-mock w-full max-w-[580px] p-3 text-[16.3px] space-y-2.5">
                         <div class="flex items-center justify-between border-b border-line pb-2">
-                          <p class="m-0 font-heading text-[14.9px] font-bold">Kalkulasi Anggaran &amp; Valuasi SROI</p>
-                          <span class="rounded-full bg-brand-soft px-2 py-0.5 text-[12.6px] font-bold text-brand">Perhitungan Otomatis</span>
+                          <p class="m-0 font-heading text-[17.6px] font-bold">Kalkulasi Anggaran &amp; Valuasi SROI</p>
+                          <span class="rounded-full bg-brand-soft px-2 py-0.5 text-[15.5px] font-bold text-brand">Perhitungan Otomatis</span>
                         </div>
                         <div class="space-y-2">
                           <div class="flex justify-end">
@@ -316,26 +316,26 @@
                             <div class="max-w-[90%] rounded-lg rounded-tl-none border border-line bg-surface p-3 space-y-2">
                               <div class="flex items-center justify-between gap-2">
                                 <span class="font-bold text-brand">🏛️ Asisten Bapperida</span>
-                                <span class="rounded-full bg-ok-soft px-2 py-0.5 text-[11.5px] font-extrabold text-ok-ink">Rasio SROI Layak 🎉</span>
+                                <span class="rounded-full bg-ok-soft px-2 py-0.5 text-[15.5px] font-extrabold text-ok-ink">Rasio SROI Layak 🎉</span>
                               </div>
-                              <div class="pt-hl rounded-md bg-inset p-2 font-mono text-[12.6px] text-brand">
+                              <div class="pt-hl rounded-md bg-inset p-2 font-mono text-[15.5px] text-brand">
                                 SROI = Nilai Sekarang Dampak Bersih / Nilai Input Pagu
                               </div>
                               <div class="grid grid-cols-3 gap-1.5 text-center">
                                 <div class="rounded border border-line bg-inset p-1.5">
-                                  <p class="m-0 text-[11.5px] text-ink-3">Input Pagu</p>
+                                  <p class="m-0 text-[15.5px] text-ink-3">Input Pagu</p>
                                   <p class="m-0 font-bold">250 Jt</p>
                                 </div>
                                 <div class="rounded border border-line bg-inset p-1.5">
-                                  <p class="m-0 text-[11.5px] text-ink-3">Dampak Bersih</p>
+                                  <p class="m-0 text-[15.5px] text-ink-3">Dampak Bersih</p>
                                   <p class="m-0 font-bold">310 Jt</p>
                                 </div>
                                 <div class="rounded border border-line bg-ok-soft p-1.5">
-                                  <p class="m-0 text-[11.5px] text-ok-ink font-semibold">Rasio SROI</p>
+                                  <p class="m-0 text-[15.5px] text-ok-ink font-semibold">Rasio SROI</p>
                                   <p class="m-0 font-extrabold text-ok-ink">1,24 : 1</p>
                                 </div>
                               </div>
-                              <p class="m-0 text-[12.6px] text-ink-2">Hasil: Setiap Rp1 alokasi APBD menghasilkan estimasi nilai kemanfaatan sosial sebesar Rp1,24.</p>
+                              <p class="m-0 text-[15.5px] text-ink-2">Hasil: Setiap Rp1 alokasi APBD menghasilkan estimasi nilai kemanfaatan sosial sebesar Rp1,24.</p>
                             </div>
                           </div>
                         </div>
@@ -344,10 +344,10 @@
 
 
                       <!-- 2.3 Konsultasi Regulasi & Perencanaan Daerah CBB Chatbot -->
-                      <div v-else-if="s.visual === 'cbb-chat'" class="pt-mock w-full max-w-[580px] overflow-hidden text-[13.8px]">
+                      <div v-else-if="s.visual === 'cbb-chat'" class="pt-mock w-full max-w-[580px] overflow-hidden text-[16.3px]">
                         <div class="flex items-center justify-between border-b border-line bg-inset px-3 py-2">
-                          <span class="font-heading text-[14.9px] font-bold">Konsultasi Regulasi &amp; Perencanaan Daerah</span>
-                          <span class="inline-flex items-center gap-1 text-[12.6px] text-ink-3"><Ico name="trash" :size="12" />Bersihkan Chat</span>
+                          <span class="font-heading text-[17.6px] font-bold">Konsultasi Regulasi &amp; Perencanaan Daerah</span>
+                          <span class="inline-flex items-center gap-1 text-[15.5px] text-ink-3"><Ico name="trash" :size="12" />Bersihkan Chat</span>
                         </div>
                         <div class="space-y-2.5 bg-inset p-3">
                           <div class="flex justify-end">
@@ -358,28 +358,28 @@
                           <div class="flex">
                             <div class="max-w-[85%] rounded-lg rounded-tl-none border border-line bg-surface p-2.5 text-ink-2 space-y-1">
                               <p class="m-0 font-bold text-brand">🏛️ Asisten Bapperida</p>
-                              <p class="m-0 leading-relaxed text-[12.6px]"><strong>RPJMD</strong> berjangka 5 tahunan memuat visi-misi Kepala Daerah, sedangkan <strong>RKPD</strong> adalah dokumen tahunan operasional yang menjadi dasar KUA-PPAS &amp; RKA SKPD.</p>
+                              <p class="m-0 leading-relaxed text-[15.5px]"><strong>RPJMD</strong> berjangka 5 tahunan memuat visi-misi Kepala Daerah, sedangkan <strong>RKPD</strong> adalah dokumen tahunan operasional yang menjadi dasar KUA-PPAS &amp; RKA SKPD.</p>
                               <div class="flex justify-end pt-1">
-                                <span class="pt-hl inline-flex items-center gap-1 text-[11.5px] font-semibold text-ink-3"><Ico name="copy" :size="12" />Salin Jawaban</span>
+                                <span class="pt-hl inline-flex items-center gap-1 text-[15.5px] font-semibold text-ink-3"><Ico name="copy" :size="12" />Salin Jawaban</span>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="border-t border-line bg-inset px-3 py-2">
-                          <p class="m-0 mb-1.5 text-[11.5px] font-bold uppercase text-ink-3">Pertanyaan Cepat:</p>
+                          <p class="m-0 mb-1.5 text-[15.5px] font-bold uppercase text-ink-3">Pertanyaan Cepat:</p>
                           <div class="flex flex-wrap gap-1">
-                            <span class="rounded-full border border-line bg-surface px-2 py-0.5 text-[11.5px] font-medium text-ink-2">Alur Musrenbang</span>
-                            <span class="rounded-full border border-line bg-surface px-2 py-0.5 text-[11.5px] font-medium text-ink-2">Aturan SBM/SSH</span>
-                            <span class="rounded-full border border-line bg-surface px-2 py-0.5 text-[11.5px] font-medium text-ink-2">Hitung Pertumbuhan PDRB</span>
+                            <span class="rounded-full border border-line bg-surface px-2 py-0.5 text-[15.5px] font-medium text-ink-2">Alur Musrenbang</span>
+                            <span class="rounded-full border border-line bg-surface px-2 py-0.5 text-[15.5px] font-medium text-ink-2">Aturan SBM/SSH</span>
+                            <span class="rounded-full border border-line bg-surface px-2 py-0.5 text-[15.5px] font-medium text-ink-2">Hitung Pertumbuhan PDRB</span>
                           </div>
                         </div>
                       </div>
 
                       <!-- 3.1 Bilah atas Hasil Analisis -->
-                      <div v-else-if="s.visual === 'header'" class="pt-mock w-full max-w-[600px] space-y-3 p-3 text-[13.8px]">
+                      <div v-else-if="s.visual === 'header'" class="pt-mock w-full max-w-[600px] space-y-3 p-3 text-[16.3px]">
                         <div class="flex flex-wrap items-center gap-2">
                           <Ico name="trend" :size="20" class="shrink-0 text-brand" />
-                          <p class="m-0 font-heading text-[14.9px] font-bold">Analisis Valuasi Prakiraan Dampak Program</p>
+                          <p class="m-0 font-heading text-[17.6px] font-bold">Analisis Valuasi Prakiraan Dampak Program</p>
                           <span class="pt-hl ml-auto inline-flex items-center gap-1.5 rounded-md border border-line-strong bg-surface px-2 py-1">
                             <span class="text-ink-3">Versi:</span><span class="font-semibold">Versi 2</span>
                           </span>
@@ -394,7 +394,7 @@
                       </div>
 
                       <!-- 3.2 Kartu identitas + pagu -->
-                      <div v-else-if="s.visual === 'hero'" class="pt-mock w-full max-w-[600px] p-4 text-[13.8px]">
+                      <div v-else-if="s.visual === 'hero'" class="pt-mock w-full max-w-[600px] p-4 text-[16.3px]">
                         <div class="grid gap-x-4 gap-y-3 sm:grid-cols-2">
                           <div class="sm:col-span-2">
                             <p class="pt-field-label m-0">Subkeg</p>
@@ -408,7 +408,7 @@
                             <p class="pt-field-label m-0">Tahun Anggaran</p>
                             <p class="m-0 mt-0.5 font-semibold">
                               Tahun 2026
-                              <span class="ml-1 rounded-full bg-brand-soft px-2 py-0.5 text-[11.5px] font-bold text-brand">Tahun berjalan</span>
+                              <span class="ml-1 rounded-full bg-brand-soft px-2 py-0.5 text-[15.5px] font-bold text-brand">Tahun berjalan</span>
                             </p>
                           </div>
                           <div>
@@ -421,25 +421,25 @@
                           </div>
                           <div class="pt-hl rounded-md bg-inset px-3 py-2 sm:col-span-2">
                             <p class="pt-field-label m-0">Pagu Anggaran</p>
-                            <p class="m-0 mt-0.5 font-heading text-[23px] font-extrabold text-brand">Rp 250.000.000</p>
+                            <p class="m-0 mt-0.5 font-heading text-[25.3px] font-extrabold text-brand">Rp 250.000.000</p>
                           </div>
                         </div>
                       </div>
 
                       <!-- 3.3 Indikator + kesesuaian -->
-                      <div v-else-if="s.visual === 'indikator'" class="pt-mock grid w-full max-w-[640px] gap-0 overflow-hidden text-[13.8px] sm:grid-cols-2">
+                      <div v-else-if="s.visual === 'indikator'" class="pt-mock grid w-full max-w-[640px] gap-0 overflow-hidden text-[16.3px] sm:grid-cols-2">
                         <div class="space-y-2 border-b border-line p-3 sm:border-b-0 sm:border-r">
-                          <p class="m-0 font-heading text-[13.8px] font-bold">Target Kinerja per Indikator</p>
+                          <p class="m-0 font-heading text-[16.3px] font-bold">Target Kinerja per Indikator</p>
                           <div v-for="k in INDIKATOR_MOCK" :key="k.nama" class="rounded-md border border-line bg-inset p-2">
                             <div class="flex items-center justify-between gap-2">
-                              <span class="rounded bg-brand-soft px-1.5 py-0.5 text-[11.5px] font-bold text-brand">{{ k.level }}</span>
+                              <span class="rounded bg-brand-soft px-1.5 py-0.5 text-[15.5px] font-bold text-brand">{{ k.level }}</span>
                               <span class="font-bold">{{ k.target }}</span>
                             </div>
                             <p class="m-0 mt-1 leading-snug text-ink-2">{{ k.nama }}</p>
                           </div>
                         </div>
                         <div class="space-y-2 p-3">
-                          <p class="m-0 font-heading text-[13.8px] font-bold">Kesesuaian Anggaran Tahun 2026 dengan Target Kinerja</p>
+                          <p class="m-0 font-heading text-[16.3px] font-bold">Kesesuaian Anggaran Tahun 2026 dengan Target Kinerja</p>
                           <span class="inline-flex items-center gap-1 rounded-full bg-ok-soft px-2.5 py-0.5 font-semibold text-ok-ink"><Ico name="check" :size="12" />Sesuai</span>
                           <div class="pt-hl rounded-md border border-line bg-surface p-2">
                             <p class="m-0 font-semibold">Apakah anggaran ini akan menyentuh target?</p>
@@ -449,18 +449,18 @@
                       </div>
 
                       <!-- 3.4 Rasio Nilai Prakiraan Dampak -->
-                      <div v-else-if="s.visual === 'sroi'" class="pt-mock w-full max-w-[560px] space-y-3 p-3 text-[13.8px]">
+                      <div v-else-if="s.visual === 'sroi'" class="pt-mock w-full max-w-[560px] space-y-3 p-3 text-[16.3px]">
                         <div class="rounded-lg border border-line bg-ok-soft p-3">
                           <div class="flex flex-wrap items-center justify-between gap-2">
                             <span class="font-semibold text-ink-2">Rasio Nilai Prakiraan Dampak</span>
-                            <span class="rounded-full bg-white px-2.5 py-0.5 text-[12.6px] font-bold text-ok-ink">Layak</span>
+                            <span class="rounded-full bg-white px-2.5 py-0.5 text-[15.5px] font-bold text-ok-ink">Layak</span>
                           </div>
-                          <p class="pt-hl m-0 mt-1.5 inline-block px-1.5 py-0.5 font-heading text-[39.1px] font-extrabold leading-none text-ink">1,24</p>
+                          <p class="pt-hl m-0 mt-1.5 inline-block px-1.5 py-0.5 font-heading text-[43px] font-extrabold leading-none text-ink">1,24</p>
                           <p class="m-0 mt-1 text-ink-2">Setiap Rp1 investasi menghasilkan Rp1,24 nilai sosial.</p>
                         </div>
                         <div class="grid grid-cols-2 gap-2">
                           <div v-for="c in SROI_CARDS" :key="c.label" class="rounded-md border border-line bg-inset px-2.5 py-2">
-                            <p class="m-0 text-[12.6px] text-ink-3">{{ c.label }}</p>
+                            <p class="m-0 text-[15.5px] text-ink-3">{{ c.label }}</p>
                             <p class="m-0 font-bold">{{ c.value }}</p>
                           </div>
                         </div>
@@ -470,7 +470,7 @@
                             <span class="w-[30%] bg-warn"></span>
                             <span class="flex-1 bg-ok"></span>
                           </div>
-                          <div class="mt-1 flex text-[12.6px] text-ink-2">
+                          <div class="mt-1 flex text-[15.5px] text-ink-2">
                             <span class="w-[30%]">Kurang (di bawah 0,6)</span>
                             <span class="w-[30%]">Cukup (0,6 sampai 0,99)</span>
                             <span class="flex-1 text-right">Layak (1,0 ke atas)</span>
@@ -479,7 +479,7 @@
                       </div>
 
                       <!-- 3.5 Komponen belanja -->
-                      <div v-else-if="s.visual === 'belanja'" class="pt-mock w-full max-w-[600px] space-y-3 p-3 text-[13.8px]">
+                      <div v-else-if="s.visual === 'belanja'" class="pt-mock w-full max-w-[600px] space-y-3 p-3 text-[16.3px]">
                         <div class="grid grid-cols-2 gap-3">
                           <div class="flex items-center gap-3 rounded-md border border-line bg-inset p-2.5">
                             <span class="pt-donut" style="background: conic-gradient(var(--primary-color) 0 46%, var(--info-color) 46% 72%, var(--accent-color) 72% 90%, var(--warning-color) 90% 100%)"></span>
@@ -491,14 +491,14 @@
                           </div>
                         </div>
                         <div class="overflow-hidden rounded-md border border-line">
-                          <div class="grid grid-cols-[1fr_auto_auto] gap-x-3 bg-inset px-3 py-1.5 text-[12.6px] font-semibold text-ink-3">
+                          <div class="grid grid-cols-[1fr_auto_auto] gap-x-3 bg-inset px-3 py-1.5 text-[15.5px] font-semibold text-ink-3">
                             <span>Rekening belanja</span><span class="text-right">Alokasi</span><span class="text-right">Dikurangi</span>
                           </div>
                           <div v-for="r in BELANJA_MOCK" :key="r.nama" class="grid grid-cols-[1fr_auto_auto] items-center gap-x-3 border-t border-line px-3 py-2">
                             <span class="min-w-0">
                               <span class="block truncate font-semibold">{{ r.nama }}</span>
                               <span
-                                class="mt-0.5 inline-block rounded-full px-2 py-0.5 text-[11.5px] font-bold"
+                                class="mt-0.5 inline-block rounded-full px-2 py-0.5 text-[15.5px] font-bold"
                                 :class="r.efisien ? 'bg-ok-soft text-ok-ink' : 'bg-bad-soft text-bad-ink'"
                               >{{ r.efisien ? 'Efisien' : 'Inefisien' }}</span>
                             </span>
@@ -509,10 +509,10 @@
                       </div>
 
                       <!-- 3.6 Edit Modal & AI visual -->
-                      <div v-else-if="s.visual === 'edit-modal'" class="pt-mock w-full max-w-[560px] overflow-hidden text-[13.8px]">
+                      <div v-else-if="s.visual === 'edit-modal'" class="pt-mock w-full max-w-[560px] overflow-hidden text-[16.3px]">
                         <div class="flex items-center justify-between border-b border-line bg-inset px-3 py-2">
-                          <p class="m-0 font-heading text-[14.9px] font-bold">Modal Perbaikan &amp; Edit Analysis</p>
-                          <span class="rounded-md bg-brand-soft px-2 py-0.5 text-[12.6px] font-bold text-brand">Edit Manual / AI</span>
+                          <p class="m-0 font-heading text-[17.6px] font-bold">Modal Perbaikan &amp; Edit Analysis</p>
+                          <span class="rounded-md bg-brand-soft px-2 py-0.5 text-[15.5px] font-bold text-brand">Edit Manual / AI</span>
                         </div>
                         <div class="space-y-2.5 p-3">
                           <div class="flex flex-wrap gap-1.5">
@@ -523,11 +523,11 @@
                           </div>
                           <div class="space-y-2 rounded-md border border-line bg-surface p-2.5">
                             <div>
-                              <span class="block text-[12.6px] font-semibold text-ink-3">Nama Perangkat Daerah (OPD)</span>
+                              <span class="block text-[15.5px] font-semibold text-ink-3">Nama Perangkat Daerah (OPD)</span>
                               <div class="pt-hl rounded border border-line bg-inset px-2 py-1 font-semibold text-ink">Dinas Kesehatan Kab. Cirebon</div>
                             </div>
                             <div>
-                              <span class="block text-[12.6px] font-semibold text-ink-3">Pagu Anggaran Subkegiatan (Rp)</span>
+                              <span class="block text-[15.5px] font-semibold text-ink-3">Pagu Anggaran Subkegiatan (Rp)</span>
                               <div class="rounded border border-line bg-inset px-2 py-1 font-semibold text-ink">250.000.000</div>
                             </div>
                           </div>
@@ -535,7 +535,7 @@
                       </div>
 
                       <!-- 3.7 Unduh & ekspor -->
-                      <div v-else-if="s.visual === 'export'" class="pt-mock w-full max-w-[540px] space-y-3 p-3 text-[13.8px]">
+                      <div v-else-if="s.visual === 'export'" class="pt-mock w-full max-w-[540px] space-y-3 p-3 text-[16.3px]">
                         <div>
                           <p class="m-0 mb-1.5 font-semibold text-ink-3">Di halaman Hasil Analisis</p>
                           <div class="flex flex-wrap items-center gap-3">
@@ -557,11 +557,11 @@
                       </div>
 
                       <!-- 4.1 Visual Arsip Dokumen & Seleksi Massal -->
-                      <div v-else-if="s.visual === 'archive'" class="pt-mock w-full max-w-[620px] overflow-hidden p-3 text-[13.8px] space-y-2.5">
+                      <div v-else-if="s.visual === 'archive'" class="pt-mock w-full max-w-[620px] overflow-hidden p-3 text-[16.3px] space-y-2.5">
                         <div class="flex items-center justify-between gap-2 border-b border-line pb-2">
-                          <p class="m-0 font-heading text-[14.9px] font-bold">Arsip Dokumen RKA SKPD</p>
+                          <p class="m-0 font-heading text-[17.6px] font-bold">Arsip Dokumen RKA SKPD</p>
                           <div class="flex items-center gap-2">
-                            <span class="rounded bg-brand px-2 py-0.5 text-[12.6px] font-bold text-white">42 Dokumen</span>
+                            <span class="rounded bg-brand px-2 py-0.5 text-[15.5px] font-bold text-white">42 Dokumen</span>
                           </div>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-2">
@@ -569,18 +569,18 @@
                             <Ico name="search" :size="13" /><span>Cari dokumen, OPD, ID...</span>
                           </div>
                           <div class="flex items-center gap-1.5">
-                            <span class="pt-hl inline-flex items-center gap-1 rounded-md bg-brand px-2.5 py-1 text-[12.6px] font-bold text-white"><Ico name="refresh" :size="12" />Muat Ulang Semua (42)</span>
-                            <span class="rounded-md border border-bad bg-bad-soft px-2 py-1 text-[12.6px] font-bold text-bad-ink">Hapus Semua</span>
+                            <span class="pt-hl inline-flex items-center gap-1 rounded-md bg-brand px-2.5 py-1 text-[15.5px] font-bold text-white"><Ico name="refresh" :size="12" />Muat Ulang Semua (42)</span>
+                            <span class="rounded-md border border-bad bg-bad-soft px-2 py-1 text-[15.5px] font-bold text-bad-ink">Hapus Semua</span>
                           </div>
                         </div>
                         <div class="grid gap-2 sm:grid-cols-3">
                           <div v-for="f in [['OPD','Semua OPD'],['Tahun','Semua Tahun'],['Urutkan','Tanggal (terbaru)']]" :key="f[0]">
-                            <p class="m-0 mb-0.5 text-[11.5px] font-bold uppercase text-ink-3">{{ f[0] }}</p>
+                            <p class="m-0 mb-0.5 text-[15.5px] font-bold uppercase text-ink-3">{{ f[0] }}</p>
                             <div class="flex items-center justify-between rounded-md border border-line bg-surface px-2 py-1 text-ink-2"><span class="truncate">{{ f[1] }}</span><span aria-hidden="true">▾</span></div>
                           </div>
                         </div>
                         <div class="overflow-hidden rounded-md border border-line">
-                          <div class="grid grid-cols-[auto_1fr_auto_auto_auto] items-center gap-2 bg-inset px-2.5 py-1.5 text-[12.6px] font-bold text-ink-3">
+                          <div class="grid grid-cols-[auto_1fr_auto_auto_auto] items-center gap-2 bg-inset px-2.5 py-1.5 text-[15.5px] font-bold text-ink-3">
                             <input type="checkbox" checked class="h-3.5 w-3.5" />
                             <span>Nama Dokumen / Subkeg</span>
                             <span>OPD</span>
@@ -591,51 +591,51 @@
                             <input type="checkbox" checked class="h-3.5 w-3.5" />
                             <div class="min-w-0">
                               <p class="m-0 truncate font-bold text-ink">Penyusunan RKA Diskes</p>
-                              <p class="m-0 text-[11.5px] text-ink-3">Pagu: Rp 250 Jt • 2026</p>
+                              <p class="m-0 text-[15.5px] text-ink-3">Pagu: Rp 250 Jt • 2026</p>
                             </div>
                             <span class="truncate text-ink-2">Dinkes</span>
                             <span class="rounded bg-ok-soft px-1.5 py-0.5 font-bold text-ok-ink">1,24</span>
                             <div class="flex gap-1">
-                              <span class="pt-hl rounded bg-brand px-2 py-0.5 text-[11.5px] font-bold text-white">Lihat</span>
-                              <span class="rounded border border-line bg-inset px-1.5 py-0.5 text-[11.5px]"><Ico name="refresh" :size="10" /></span>
+                              <span class="pt-hl rounded bg-brand px-2 py-0.5 text-[15.5px] font-bold text-white">Lihat</span>
+                              <span class="rounded border border-line bg-inset px-1.5 py-0.5 text-[15.5px]"><Ico name="refresh" :size="10" /></span>
                             </div>
                           </div>
                         </div>
                       </div>
 
                       <!-- 4.2 Visual Tab Sampah (Trash) -->
-                      <div v-else-if="s.visual === 'trash'" class="pt-mock w-full max-w-[600px] overflow-hidden p-3 text-[13.8px] space-y-2.5">
+                      <div v-else-if="s.visual === 'trash'" class="pt-mock w-full max-w-[600px] overflow-hidden p-3 text-[16.3px] space-y-2.5">
                         <div class="flex items-center justify-between border-b border-line pb-2">
                           <div class="flex gap-1">
                             <span class="rounded-md border border-line bg-surface px-2.5 py-1 text-ink-2">Arsip Aktif (42)</span>
                             <span class="pt-hl rounded-md bg-bad px-2.5 py-1 font-bold text-white">Sampah (3)</span>
                           </div>
-                          <span class="rounded border border-bad bg-bad-soft px-2 py-0.5 text-[12.6px] font-bold text-bad-ink">Kosongkan Sampah</span>
+                          <span class="rounded border border-bad bg-bad-soft px-2 py-0.5 text-[15.5px] font-bold text-bad-ink">Kosongkan Sampah</span>
                         </div>
-                        <p class="m-0 text-[12.6px] text-ink-3">Dokumen yang dihapus tersimpan di sini dan dapat dipulihkan atau dihapus permanen.</p>
+                        <p class="m-0 text-[15.5px] text-ink-3">Dokumen yang dihapus tersimpan di sini dan dapat dipulihkan atau dihapus permanen.</p>
                         <div class="overflow-hidden rounded-md border border-line">
-                          <div class="grid grid-cols-[1fr_auto_auto] items-center gap-2 bg-inset px-3 py-1.5 text-[12.6px] font-bold text-ink-3">
+                          <div class="grid grid-cols-[1fr_auto_auto] items-center gap-2 bg-inset px-3 py-1.5 text-[15.5px] font-bold text-ink-3">
                             <span>Dokumen Dihapus</span><span>Dihapus Pada</span><span>Aksi</span>
                           </div>
                           <div class="grid grid-cols-[1fr_auto_auto] items-center gap-2 border-t border-line bg-surface px-3 py-2">
                             <div>
                               <p class="m-0 font-bold text-ink">RKA_Dinas_Pertanian_2026.pdf</p>
-                              <p class="m-0 text-[11.5px] text-ink-3">Dinas Pertanian • Rp 180 Jt</p>
+                              <p class="m-0 text-[15.5px] text-ink-3">Dinas Pertanian • Rp 180 Jt</p>
                             </div>
-                            <span class="text-[12.6px] text-ink-3">15 Okt 2026</span>
+                            <span class="text-[15.5px] text-ink-3">15 Okt 2026</span>
                             <div class="flex gap-1.5">
-                              <span class="pt-hl rounded bg-brand px-2 py-1 text-[11.5px] font-bold text-white">Pulihkan</span>
-                              <span class="rounded bg-bad px-2 py-1 text-[11.5px] font-bold text-white">Hapus Permanen</span>
+                              <span class="pt-hl rounded bg-brand px-2 py-1 text-[15.5px] font-bold text-white">Pulihkan</span>
+                              <span class="rounded bg-bad px-2 py-1 text-[15.5px] font-bold text-white">Hapus Permanen</span>
                             </div>
                           </div>
                         </div>
                       </div>
 
                       <!-- 4.2 Form Laporan -->
-                      <div v-else-if="s.visual === 'report-form'" class="pt-mock w-full max-w-[520px] space-y-2.5 p-3 text-[13.8px]">
+                      <div v-else-if="s.visual === 'report-form'" class="pt-mock w-full max-w-[520px] space-y-2.5 p-3 text-[16.3px]">
                         <div class="border-b border-line pb-2">
-                          <p class="m-0 font-heading text-[14.9px] font-bold">Formulir Laporan Kendala Pengguna</p>
-                          <p class="m-0 text-[12.6px] text-ink-3">Kirim masukan atau bantuan jika menu tertentu nonaktif</p>
+                          <p class="m-0 font-heading text-[17.6px] font-bold">Formulir Laporan Kendala Pengguna</p>
+                          <p class="m-0 text-[15.5px] text-ink-3">Kirim masukan atau bantuan jika menu tertentu nonaktif</p>
                         </div>
                         <div class="space-y-2">
                           <div>
@@ -651,29 +651,29 @@
                       </div>
 
                       <!-- 5.1 Admin Stats -->
-                      <div v-else-if="s.visual === 'admin-stats'" class="pt-mock w-full max-w-[600px] space-y-3 p-3 text-[13.8px]">
+                      <div v-else-if="s.visual === 'admin-stats'" class="pt-mock w-full max-w-[600px] space-y-3 p-3 text-[16.3px]">
                         <div class="flex items-center justify-between border-b border-line pb-2">
-                          <span class="flex items-center gap-1.5 font-heading text-[14.9px] font-bold text-brand">
+                          <span class="flex items-center gap-1.5 font-heading text-[17.6px] font-bold text-brand">
                             <Ico name="shield" :size="16" />Dasbor Admin &amp; Monitoring Server
                           </span>
-                          <span class="rounded-full bg-brand-soft px-2.5 py-0.5 text-[12.6px] font-extrabold text-brand">Role: Admin</span>
+                          <span class="rounded-full bg-brand-soft px-2.5 py-0.5 text-[15.5px] font-extrabold text-brand">Role: Admin</span>
                         </div>
                         <div class="grid grid-cols-3 gap-2">
                           <div class="rounded-md border border-line bg-surface p-2">
-                            <p class="m-0 text-[11.5px] font-semibold text-ink-3">Total User</p>
-                            <p class="m-0 font-bold text-[16.1px]">18 User</p>
+                            <p class="m-0 text-[15.5px] font-semibold text-ink-3">Total User</p>
+                            <p class="m-0 font-bold text-[19px]">18 User</p>
                           </div>
                           <div class="rounded-md border border-line bg-surface p-2">
-                            <p class="m-0 text-[11.5px] font-semibold text-ink-3">Penyimpanan DB</p>
-                            <p class="m-0 font-bold text-[16.1px] text-ok-ink">42% (Normal)</p>
+                            <p class="m-0 text-[15.5px] font-semibold text-ink-3">Penyimpanan DB</p>
+                            <p class="m-0 font-bold text-[19px] text-ok-ink">42% (Normal)</p>
                           </div>
                           <div class="rounded-md border border-line bg-surface p-2">
-                            <p class="m-0 text-[11.5px] font-semibold text-ink-3">Ambang Rotasi</p>
-                            <p class="m-0 font-bold text-[16.1px] text-warn-ink">85% Limit</p>
+                            <p class="m-0 text-[15.5px] font-semibold text-ink-3">Ambang Rotasi</p>
+                            <p class="m-0 font-bold text-[19px] text-warn-ink">85% Limit</p>
                           </div>
                         </div>
                         <div class="rounded-md border border-line bg-inset p-2">
-                          <div class="mb-1 flex justify-between text-[12.6px] font-semibold">
+                          <div class="mb-1 flex justify-between text-[15.5px] font-semibold">
                             <span>Status Kapasitas Storage Failover</span>
                             <span class="font-bold text-ok-ink">2.1 GB / 5.0 GB</span>
                           </div>
@@ -684,57 +684,57 @@
                       </div>
 
                       <!-- 5.2 Admin Users -->
-                      <div v-else-if="s.visual === 'admin-users'" class="pt-mock w-full max-w-[560px] space-y-2.5 p-3 text-[13.8px]">
+                      <div v-else-if="s.visual === 'admin-users'" class="pt-mock w-full max-w-[560px] space-y-2.5 p-3 text-[16.3px]">
                         <div class="flex items-center justify-between border-b border-line pb-2">
-                          <p class="m-0 font-heading text-[14.9px] font-bold">Manajemen Akun &amp; Role Pengguna</p>
-                          <span class="pt-hl rounded bg-brand px-2 py-1 text-[12.6px] font-semibold text-white">+ Tambah User</span>
+                          <p class="m-0 font-heading text-[17.6px] font-bold">Manajemen Akun &amp; Role Pengguna</p>
+                          <span class="pt-hl rounded bg-brand px-2 py-1 text-[15.5px] font-semibold text-white">+ Tambah User</span>
                         </div>
                         <div class="space-y-1.5">
                           <div class="flex items-center justify-between rounded border border-line bg-surface p-2">
                             <div>
-                              <p class="m-0 font-bold">admin_bapperida <span class="rounded bg-brand-soft px-1.5 py-0.5 text-[11.5px] font-extrabold text-brand">Admin</span></p>
-                              <p class="m-0 text-[11.5px] text-ink-3">Akses penuh sistem &amp; audit</p>
+                              <p class="m-0 font-bold">admin_bapperida <span class="rounded bg-brand-soft px-1.5 py-0.5 text-[15.5px] font-extrabold text-brand">Admin</span></p>
+                              <p class="m-0 text-[15.5px] text-ink-3">Akses penuh sistem &amp; audit</p>
                             </div>
-                            <span class="rounded-full bg-ok-soft px-2 py-0.5 text-[11.5px] font-bold text-ok-ink">Aktif</span>
+                            <span class="rounded-full bg-ok-soft px-2 py-0.5 text-[15.5px] font-bold text-ok-ink">Aktif</span>
                           </div>
                           <div class="flex items-center justify-between rounded border border-line bg-surface p-2">
                             <div>
-                              <p class="m-0 font-bold">evaluator_diskes <span class="rounded border border-line bg-inset px-1.5 py-0.5 text-[11.5px] font-bold text-ink-2">User</span></p>
-                              <p class="m-0 text-[11.5px] text-ink-3">Operator OPD Dinas Kesehatan</p>
+                              <p class="m-0 font-bold">evaluator_diskes <span class="rounded border border-line bg-inset px-1.5 py-0.5 text-[15.5px] font-bold text-ink-2">User</span></p>
+                              <p class="m-0 text-[15.5px] text-ink-3">Operator OPD Dinas Kesehatan</p>
                             </div>
-                            <span class="rounded-full bg-ok-soft px-2 py-0.5 text-[11.5px] font-bold text-ok-ink">Aktif</span>
+                            <span class="rounded-full bg-ok-soft px-2 py-0.5 text-[15.5px] font-bold text-ok-ink">Aktif</span>
                           </div>
                         </div>
                       </div>
 
                       <!-- 5.3 Admin Menu Toggle -->
-                      <div v-else-if="s.visual === 'admin-menu'" class="pt-mock w-full max-w-[540px] space-y-2.5 p-3 text-[13.8px]">
+                      <div v-else-if="s.visual === 'admin-menu'" class="pt-mock w-full max-w-[540px] space-y-2.5 p-3 text-[16.3px]">
                         <div class="border-b border-line pb-2">
-                          <p class="m-0 font-heading text-[14.9px] font-bold">Kontrol Sakelar Akses Menu Global</p>
-                          <p class="m-0 text-[12.6px] text-ink-3">Aktifkan atau batasi fitur aplikasi untuk role biasa</p>
+                          <p class="m-0 font-heading text-[17.6px] font-bold">Kontrol Sakelar Akses Menu Global</p>
+                          <p class="m-0 text-[15.5px] text-ink-3">Aktifkan atau batasi fitur aplikasi untuk role biasa</p>
                         </div>
                         <div class="space-y-2">
                           <div class="flex items-center justify-between rounded border border-line bg-surface p-2">
                             <span class="font-semibold">Unggah Berkas RKA</span>
-                            <span class="pt-hl rounded-full bg-brand px-3 py-1 text-[11.5px] font-extrabold text-white">Aktif</span>
+                            <span class="pt-hl rounded-full bg-brand px-3 py-1 text-[15.5px] font-extrabold text-white">Aktif</span>
                           </div>
                           <div class="flex items-center justify-between rounded border border-line bg-surface p-2">
                             <span class="font-semibold text-ink-3">Simulasi Percakapan Agen AI</span>
-                            <span class="rounded-full bg-bad-soft px-3 py-1 text-[11.5px] font-extrabold text-bad-ink">Nonaktif</span>
+                            <span class="rounded-full bg-bad-soft px-3 py-1 text-[15.5px] font-extrabold text-bad-ink">Nonaktif</span>
                           </div>
                         </div>
                       </div>
 
                       <!-- 5.4 Admin API Pool -->
-                      <div v-else-if="s.visual === 'admin-api' || s.visual === 'admin-config'" class="pt-mock w-full max-w-[580px] space-y-2.5 p-3 text-[13.8px]">
+                      <div v-else-if="s.visual === 'admin-api' || s.visual === 'admin-config'" class="pt-mock w-full max-w-[580px] space-y-2.5 p-3 text-[16.3px]">
                         <div class="flex items-center justify-between border-b border-line pb-2">
                           <div>
-                            <p class="m-0 font-heading text-[14.9px] font-bold">Pool Manajemen Kunci API (Gemini &amp; OpenAI)</p>
-                            <p class="m-0 text-[12.6px] text-ink-3">Rotasi otomatis antar-kunci untuk menghindari kuota habis (rate-limit)</p>
+                            <p class="m-0 font-heading text-[17.6px] font-bold">Pool Manajemen Kunci API (Gemini &amp; OpenAI)</p>
+                            <p class="m-0 text-[15.5px] text-ink-3">Rotasi otomatis antar-kunci untuk menghindari kuota habis (rate-limit)</p>
                           </div>
                           <div class="flex gap-1">
-                            <span class="pt-hl rounded bg-brand px-2 py-0.5 text-[11.5px] font-bold text-white">+ Tambah</span>
-                            <span class="rounded border border-line bg-inset px-2 py-0.5 text-[11.5px] font-semibold text-ink-2">Batch Import</span>
+                            <span class="pt-hl rounded bg-brand px-2 py-0.5 text-[15.5px] font-bold text-white">+ Tambah</span>
+                            <span class="rounded border border-line bg-inset px-2 py-0.5 text-[15.5px] font-semibold text-ink-2">Batch Import</span>
                           </div>
                         </div>
                         <div class="space-y-1.5">
@@ -742,89 +742,89 @@
                             <div class="min-w-0">
                               <div class="flex items-center gap-1.5">
                                 <span class="font-bold text-ink">Gemini 2.5 Flash Utama</span>
-                                <span class="rounded bg-accent-soft px-1.5 py-0.2 text-[10.3px] font-bold text-accent-ink">Utama</span>
-                                <span class="rounded bg-ok-soft px-1.5 py-0.2 text-[10.3px] font-bold text-ok-ink">Aktif</span>
+                                <span class="rounded bg-accent-soft px-1.5 py-0.2 text-[15.5px] font-bold text-accent-ink">Utama</span>
+                                <span class="rounded bg-ok-soft px-1.5 py-0.2 text-[15.5px] font-bold text-ok-ink">Aktif</span>
                               </div>
-                              <p class="m-0 font-mono text-[11.5px] text-ink-3 truncate">AIzaSyB3X...9Kq8P (Google AI Studio)</p>
+                              <p class="m-0 font-mono text-[15.5px] text-ink-3 truncate">AIzaSyB3X...9Kq8P (Google AI Studio)</p>
                             </div>
-                            <span class="rounded border border-line bg-inset px-2 py-1 text-[11.5px] text-ink-2">Salin</span>
+                            <span class="rounded border border-line bg-inset px-2 py-1 text-[15.5px] text-ink-2">Salin</span>
                           </div>
                           <div class="flex items-center justify-between rounded border border-line bg-surface p-2">
                             <div class="min-w-0">
                               <div class="flex items-center gap-1.5">
                                 <span class="font-bold text-ink">OpenAI GPT-4o Cadangan</span>
-                                <span class="rounded bg-ok-soft px-1.5 py-0.2 text-[10.3px] font-bold text-ok-ink">Aktif</span>
+                                <span class="rounded bg-ok-soft px-1.5 py-0.2 text-[15.5px] font-bold text-ok-ink">Aktif</span>
                               </div>
-                              <p class="m-0 font-mono text-[11.5px] text-ink-3 truncate">sk-proj-7mN...v8Xz1 (OpenAI Pool)</p>
+                              <p class="m-0 font-mono text-[15.5px] text-ink-3 truncate">sk-proj-7mN...v8Xz1 (OpenAI Pool)</p>
                             </div>
-                            <span class="rounded border border-line bg-inset px-2 py-1 text-[11.5px] text-ink-2">Jadikan Utama</span>
+                            <span class="rounded border border-line bg-inset px-2 py-1 text-[15.5px] text-ink-2">Jadikan Utama</span>
                           </div>
                         </div>
                       </div>
 
                       <!-- 5.5 Admin Logs SSE -->
-                      <div v-else-if="s.visual === 'admin-logs'" class="pt-mock w-full max-w-[580px] space-y-2.5 p-3 text-[13.8px]">
+                      <div v-else-if="s.visual === 'admin-logs'" class="pt-mock w-full max-w-[580px] space-y-2.5 p-3 text-[16.3px]">
                         <div class="flex items-center justify-between border-b border-line pb-2">
                           <div class="flex items-center gap-2">
                             <span class="flex h-2 w-2 rounded-full bg-ok animate-pulse"></span>
-                            <p class="m-0 font-heading text-[14.9px] font-bold">Log Aktivitas Server (SSE Real-time)</p>
+                            <p class="m-0 font-heading text-[17.6px] font-bold">Log Aktivitas Server (SSE Real-time)</p>
                           </div>
-                          <span class="text-[11.5px] text-ink-3">Live Stream Terhubung</span>
+                          <span class="text-[15.5px] text-ink-3">Live Stream Terhubung</span>
                         </div>
-                        <div class="space-y-1 font-mono text-[12.6px]">
+                        <div class="space-y-1 font-mono text-[15.5px]">
                           <div class="flex items-center justify-between rounded bg-surface p-1.5 border border-line">
                             <span class="text-ok-ink font-bold">[LOGIN] user 'evaluator_diskes'</span>
-                            <span class="text-ink-3 text-[11.5px]">192.168.1.42 • 10:14:02</span>
+                            <span class="text-ink-3 text-[15.5px]">192.168.1.42 • 10:14:02</span>
                           </div>
                           <div class="flex items-center justify-between rounded bg-surface p-1.5 border border-line">
                             <span class="text-brand font-bold">[UPDATE] doc 'RKA_Diskes_2026' (Edit AI)</span>
-                            <span class="text-ink-3 text-[11.5px]">admin • 10:12:15</span>
+                            <span class="text-ink-3 text-[15.5px]">admin • 10:12:15</span>
                           </div>
                           <div class="flex items-center justify-between rounded bg-surface p-1.5 border border-line">
                             <span class="text-warn-ink font-bold">[TRASH] doc 'RKA_Pertanian' dipindah</span>
-                            <span class="text-ink-3 text-[11.5px]">admin • 09:58:30</span>
+                            <span class="text-ink-3 text-[15.5px]">admin • 09:58:30</span>
                           </div>
                         </div>
                       </div>
 
                       <!-- 5.6 Admin Backup & Snapshot -->
-                      <div v-else-if="s.visual === 'admin-backup'" class="pt-mock w-full max-w-[580px] space-y-2.5 p-3 text-[13.8px]">
+                      <div v-else-if="s.visual === 'admin-backup'" class="pt-mock w-full max-w-[580px] space-y-2.5 p-3 text-[16.3px]">
                         <div class="flex items-center justify-between border-b border-line pb-2">
-                          <p class="m-0 font-heading text-[14.9px] font-bold">Pencadangan, Snapshot &amp; Pemulihan</p>
-                          <span class="pt-hl rounded bg-brand px-2.5 py-1 text-[11.5px] font-bold text-white">Buat Snapshot Manual</span>
+                          <p class="m-0 font-heading text-[17.6px] font-bold">Pencadangan, Snapshot &amp; Pemulihan</p>
+                          <span class="pt-hl rounded bg-brand px-2.5 py-1 text-[15.5px] font-bold text-white">Buat Snapshot Manual</span>
                         </div>
                         <div class="space-y-1.5">
                           <div class="flex items-center justify-between rounded border border-line bg-surface p-2">
                             <div>
                               <p class="m-0 font-bold text-ink">Snapshot_Otomatis_Harian.json</p>
-                              <p class="m-0 text-[11.5px] text-ink-3">Ukuran: 4.2 MB • 42 Dokumen RKA • 15 Okt 2026</p>
+                              <p class="m-0 text-[15.5px] text-ink-3">Ukuran: 4.2 MB • 42 Dokumen RKA • 15 Okt 2026</p>
                             </div>
                             <div class="flex gap-1">
-                              <span class="pt-hl rounded bg-ok px-2 py-0.5 text-[11.5px] font-bold text-white">Pulihkan</span>
-                              <span class="rounded border border-line bg-inset px-2 py-0.5 text-[11.5px] text-ink-2">Unduh</span>
+                              <span class="pt-hl rounded bg-ok px-2 py-0.5 text-[15.5px] font-bold text-white">Pulihkan</span>
+                              <span class="rounded border border-line bg-inset px-2 py-0.5 text-[15.5px] text-ink-2">Unduh</span>
                             </div>
                           </div>
                         </div>
                       </div>
 
                       <!-- 5.7 Admin Reports Inbox -->
-                      <div v-else-if="s.visual === 'admin-reports'" class="pt-mock w-full max-w-[580px] space-y-2.5 p-3 text-[13.8px]">
+                      <div v-else-if="s.visual === 'admin-reports'" class="pt-mock w-full max-w-[580px] space-y-2.5 p-3 text-[16.3px]">
                         <div class="flex items-center justify-between border-b border-line pb-2">
                           <div>
-                            <p class="m-0 font-heading text-[14.9px] font-bold">Kotak Masuk Laporan Kendala Pengguna</p>
-                            <p class="m-0 text-[12.6px] text-ink-3">Tanggapi laporan langsung lewat tautan resmi WhatsApp</p>
+                            <p class="m-0 font-heading text-[17.6px] font-bold">Kotak Masuk Laporan Kendala Pengguna</p>
+                            <p class="m-0 text-[15.5px] text-ink-3">Tanggapi laporan langsung lewat tautan resmi WhatsApp</p>
                           </div>
-                          <span class="rounded-full bg-warn-soft px-2 py-0.5 text-[11.5px] font-bold text-warn-ink">2 Laporan Baru</span>
+                          <span class="rounded-full bg-warn-soft px-2 py-0.5 text-[15.5px] font-bold text-warn-ink">2 Laporan Baru</span>
                         </div>
                         <div class="rounded border border-line bg-surface p-2 space-y-1.5">
                           <div class="flex items-center justify-between">
                             <span class="font-bold text-ink">Permohonan Pengaktifan Menu Unggah RKA</span>
-                            <span class="rounded bg-accent-soft px-1.5 py-0.2 text-[10.3px] font-bold text-accent-ink">Kendala Fitur</span>
+                            <span class="rounded bg-accent-soft px-1.5 py-0.2 text-[15.5px] font-bold text-accent-ink">Kendala Fitur</span>
                           </div>
-                          <p class="m-0 text-[12.6px] text-ink-2">Pelapor: Hj. Siti Nurjanah (Dinkes) • 0812-3456-7890</p>
+                          <p class="m-0 text-[15.5px] text-ink-2">Pelapor: Hj. Siti Nurjanah (Dinkes) • 0812-3456-7890</p>
                           <div class="flex items-center justify-between pt-1 border-t border-line">
-                            <span class="text-[11.5px] text-ink-3">Lampiran: 1 Screenshot Bukti</span>
-                            <span class="pt-hl inline-flex items-center gap-1 rounded bg-[#25D366] px-2.5 py-1 text-[11.5px] font-bold text-white">
+                            <span class="text-[15.5px] text-ink-3">Lampiran: 1 Screenshot Bukti</span>
+                            <span class="pt-hl inline-flex items-center gap-1 rounded bg-[#25D366] px-2.5 py-1 text-[15.5px] font-bold text-white">
                               Balas via WhatsApp
                             </span>
                           </div>
@@ -832,18 +832,18 @@
                       </div>
                     </div>
                   </template>
-                  <figcaption class="absolute bottom-2 right-3 text-[12.6px] font-semibold text-ink-3">{{ s.caption }}</figcaption>
+                  <figcaption class="absolute bottom-2 right-3 text-[15.5px] font-semibold text-ink-3">{{ s.caption }}</figcaption>
                 </figure>
 
                 <!-- Nomor besar + judul langkah + rincian -->
                 <div class="flex gap-3 px-4 py-6 sm:gap-5 sm:px-6">
-                  <span class="w-10 shrink-0 font-heading text-[3.737rem] font-extrabold leading-[0.9] text-brand sm:w-14 sm:text-[4.312rem]" aria-hidden="true">{{ s.no }}</span>
+                  <span class="w-10 shrink-0 font-heading text-[4.111rem] font-extrabold leading-[0.9] text-brand sm:w-14 sm:text-[4.743rem]" aria-hidden="true">{{ s.no }}</span>
                   <div class="min-w-0 flex-1">
-                    <p class="m-0 max-w-[68ch] text-[19.5px] font-normal leading-7 text-ink-2">
+                    <p class="m-0 max-w-[68ch] text-[21.5px] font-normal leading-7 text-ink-2">
                       <strong class="font-bold text-ink" v-html="rich(s.title)"></strong>
                       <span v-html="' ' + rich(s.text)"></span>
                     </p>
-                    <ul class="m-0 mt-3 max-w-[68ch] list-disc space-y-2 pl-5 text-[17.2px] leading-7 text-ink-2 marker:text-accent">
+                    <ul class="m-0 mt-3 max-w-[68ch] list-disc space-y-2 pl-5 text-[20.3px] leading-7 text-ink-2 marker:text-accent">
                       <li v-for="(b, bi) in s.bullets" :key="bi" class="pl-1" v-html="rich(b)"></li>
                     </ul>
                   </div>
@@ -876,7 +876,7 @@
           <section v-if="hasQuery && !visibleParts.length" class="rounded-xl border border-line bg-surface px-6 py-12 text-center">
             <Ico name="search" :size="32" class="mx-auto text-ink-3" />
             <h3 class="m-0 mt-3 font-heading text-xl font-extrabold">Tidak ada langkah yang cocok</h3>
-            <p class="m-0 mx-auto mt-2 max-w-[46ch] text-[17.2px] leading-7 text-ink-2">
+            <p class="m-0 mx-auto mt-2 max-w-[46ch] text-[20.3px] leading-7 text-ink-2">
               Tidak ada panduan yang memuat “{{ query.trim() }}”. Coba kata lain, misalnya
               <template v-for="(k, ki) in SUGGESTIONS" :key="k"><button type="button" class="pt-focus rounded font-semibold text-brand underline" @click="query = k">{{ k }}</button><span v-if="ki < SUGGESTIONS.length - 1">, </span></template>.
             </p>
@@ -906,7 +906,7 @@
                 <li v-for="s in part.steps" :key="s.id">
                   <button
                     type="button"
-                    class="pt-focus w-full rounded-r-md border-l-2 py-1 pl-3 pr-2 text-left text-[14.9px] leading-5"
+                    class="pt-focus w-full rounded-r-md border-l-2 py-1 pl-3 pr-2 text-left text-[17.6px] leading-5"
                     :class="activeId === s.id ? 'border-brand bg-brand-soft font-semibold text-ink' : 'border-line text-ink-2 hover:border-line-strong hover:text-ink'"
                     :aria-current="activeId === s.id ? 'step' : undefined"
                     @click="goTo(s.id)"
@@ -932,7 +932,7 @@
             <h3 id="pt-catatan-judul" class="m-0 flex items-center gap-2 font-heading text-base font-extrabold">
               <Ico name="info" :size="18" class="text-accent" />Catatan penting
             </h3>
-            <ul class="m-0 mt-3 list-disc space-y-2 pl-5 text-[14.9px] leading-5 text-ink-2 marker:text-accent">
+            <ul class="m-0 mt-3 list-disc space-y-2 pl-5 text-[17.6px] leading-5 text-ink-2 marker:text-accent">
               <li v-for="n in CATATAN" :key="n">{{ n }}</li>
             </ul>
           </section>
@@ -942,7 +942,7 @@
             <h3 id="pt-batas-judul" class="m-0 flex items-center gap-2 font-heading text-base font-extrabold">
               <Ico name="file" :size="18" class="text-brand" />Format dan batas berkas
             </h3>
-            <dl class="m-0 mt-3 space-y-3 text-[14.9px] leading-5">
+            <dl class="m-0 mt-3 space-y-3 text-[17.6px] leading-5">
               <div v-for="f in FORMAT_CARDS" :key="f.menu">
                 <dt class="font-bold text-ink">{{ f.menu }}</dt>
                 <dd class="m-0 mt-0.5 text-ink-2">{{ f.format }}</dd>
@@ -1767,7 +1767,7 @@ async function downloadPdf(scope) {
 #petunjuk-root .pt-hl-key { outline: 2px solid var(--accent-color); outline-offset: 0; }
 
 #petunjuk-root .pt-field-label {
-  font-size: 11.5px;
+  font-size: 15.5px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
