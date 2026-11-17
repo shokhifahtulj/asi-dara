@@ -1542,7 +1542,7 @@ const pieUsulanEl = ref(null);
 let pieAwalChart = null;
 let pieUsulanChart = null;
 
-const buildPieConfig = (dataset, chartPalette) => ({
+const buildPieConfig = (dataset, chartPalette, animate = true) => ({
  type: 'pie',
  data: {
  labels: dataset.map((d) => d.nama),
@@ -1552,14 +1552,23 @@ const buildPieConfig = (dataset, chartPalette) => ({
  backgroundColor: dataset.map((_, i) => chartPalette[i % chartPalette.length]),
  borderWidth: 2,
  borderColor: '#ffffff',
- hoverBorderWidth: 3,
+ hoverBorderWidth: 2,
+ hoverOffset: 0,
  },
  ],
  },
  options: {
  responsive: true,
  maintainAspectRatio: false,
- animation: { animateRotate: true, duration: 600 },
+ // Animasi HANYA saat pertama kali tampil. Setelah itu grafik diam (tanpa
+ // animasi saat hover, resize, atau redraw ulang).
+ animation: animate ? { animateRotate: true, duration: 600 } : false,
+ transitions: {
+ active: { animation: { duration: 0 } },
+ resize: { animation: { duration: 0 } },
+ show: { animations: { colors: { duration: 0 }, visible: { duration: 0 } } },
+ hide: { animations: { colors: { duration: 0 }, visible: { duration: 0 } } },
+ },
  plugins: {
  legend: { display: false },
  tooltip: {
@@ -1571,18 +1580,33 @@ const buildPieConfig = (dataset, chartPalette) => ({
  },
 });
 
+// Tanda tangan data: grafik hanya digambar ulang bila isi datanya benar-benar
+// berubah (bukan sekadar identitas array baru), dan animasi hanya di render pertama.
+let lastChartSignature = '';
+let chartsAnimatedOnce = false;
 const renderCharts = () => {
+ const signature = JSON.stringify([
+ awalData.value.map((d) => [d.nama, d.persen]),
+ usulanData.value.map((d) => [d.nama, d.persen]),
+ ]);
+ if (signature === lastChartSignature && pieAwalChart && pieUsulanChart) return;
+ lastChartSignature = signature;
+
  if (pieAwalChart) pieAwalChart.destroy();
  if (pieUsulanChart) pieUsulanChart.destroy();
+ pieAwalChart = null;
+ pieUsulanChart = null;
 
  const chartPalette = buildChartPalette();
+ const animate = !chartsAnimatedOnce;
 
  if (pieAwalEl.value && awalData.value.length) {
- pieAwalChart = new Chart(pieAwalEl.value, buildPieConfig(awalData.value, chartPalette));
+ pieAwalChart = new Chart(pieAwalEl.value, buildPieConfig(awalData.value, chartPalette, animate));
  }
  if (pieUsulanEl.value && usulanData.value.length) {
- pieUsulanChart = new Chart(pieUsulanEl.value, buildPieConfig(usulanData.value, chartPalette));
+ pieUsulanChart = new Chart(pieUsulanEl.value, buildPieConfig(usulanData.value, chartPalette, animate));
  }
+ if (pieAwalChart || pieUsulanChart) chartsAnimatedOnce = true;
 };
 
 // Render setelah DOM ter-update (nextTick) DAN dua frame rAF berurutan agar
