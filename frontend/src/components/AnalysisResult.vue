@@ -314,15 +314,6 @@
  <span class="indikator-item-target">{{ row.target }}</span>
  </div>
  <div class="indikator-item-nama">{{ row.tolok_ukur }}</div>
- <details v-if="Array.isArray(row.rincian) && row.rincian.length" class="indikator-rincian">
-   <summary>Lihat rincian isi ({{ row.rincian.length }} item)</summary>
-   <ol class="indikator-rincian-list">
-     <li v-for="(it, j) in row.rincian" :key="'rc' + i + '-' + j">
-       <strong>{{ it.nama }}</strong>
-       <span v-if="it.isi">{{ it.isi }}</span>
-     </li>
-   </ol>
- </details>
  </div>
  <p v-if="!hasIndikatorKinerja" class="indikator-empty">
  Tabel Indikator &amp; Tolok Ukur Kinerja tidak ditemukan pada dokumen ini.

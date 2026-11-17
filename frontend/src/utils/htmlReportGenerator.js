@@ -1086,7 +1086,6 @@ export function generateAnalysisHtml(doc) {
  <span class="indikator-item-target">${row.target || '-'}</span>
  </div>
  <div class="indikator-item-nama">${row.tolok_ukur || row.indikator || row.nama || '-'}</div>
- ${Array.isArray(row.rincian) && row.rincian.length ? `<details class="indikator-rincian"><summary>Lihat rincian isi (${row.rincian.length} item)</summary><ol class="indikator-rincian-list">${row.rincian.map(it => `<li><strong>${escRincian(it.nama)}</strong>${it.isi ? `<span>${escRincian(it.isi)}</span>` : ''}</li>`).join('')}</ol></details>` : ''}
  </div>
  `).join('') : `
  <div class="indikator-item-card">
