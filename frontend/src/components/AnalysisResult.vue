@@ -565,8 +565,8 @@
 
  <!-- Faktor Penyesuaian Dampak SROI (Rule 11 & 12) -->
  <div class="sroi-factors-card">
- <div class="sroi-factors-title"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:5px;"><line x1="4" y1="6" x2="20" y2="6" stroke="#1B4D46" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="12" x2="14" y2="12" stroke="#1B4D46" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="18" x2="17" y2="18" stroke="#1B4D46" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="6" r="2" fill="#1B4D46"/><circle cx="17" cy="12" r="2" fill="#1B4D46"/><circle cx="20" cy="18" r="2" fill="#1B4D46"/></svg> Faktor Penyesuaian Dampak Sosial</div>
- <div class="sroi-factors-grid">
+ <div class="sroi-factors-title sroi-factors-toggle" role="button" tabindex="0" :aria-expanded="showFactorDetail" @click="showFactorDetail = !showFactorDetail" @keydown.enter.prevent="showFactorDetail = !showFactorDetail" @keydown.space.prevent="showFactorDetail = !showFactorDetail"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:5px;"><line x1="4" y1="6" x2="20" y2="6" stroke="#1B4D46" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="12" x2="14" y2="12" stroke="#1B4D46" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="18" x2="17" y2="18" stroke="#1B4D46" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="6" r="2" fill="#1B4D46"/><circle cx="17" cy="12" r="2" fill="#1B4D46"/><circle cx="20" cy="18" r="2" fill="#1B4D46"/></svg> Faktor Penyesuaian Dampak Sosial <span class="sroi-gap-hint">{{ showFactorDetail ? '(klik untuk menyembunyikan rincian)' : '(klik untuk melihat rincian)' }}</span><span class="factors-chevron" :class="{ open: showFactorDetail }">▾</span></div>
+ <div class="sroi-factors-grid" :class="{ collapsed: !showFactorDetail }">
  <div class="sroi-factor-item">
  <span class="factor-name">Kerugian Bobot</span>
  <span class="factor-val">{{ sroiMetrics.deadweight }}%</span>
@@ -1588,6 +1588,7 @@ const prettyJson = computed(() =>
 );
 
 const copied = ref(false);
+const showFactorDetail = ref(false);
 const copyJson = async () => {
  try {
  await navigator.clipboard.writeText(prettyJson.value);
@@ -2196,6 +2197,13 @@ const copyJson = async () => {
  color: var(--c-gray-800);
  margin-bottom: 12px;
 }
+.sroi-factors-toggle { cursor: pointer; user-select: none; display: flex; align-items: center; gap: 4px; }
+.sroi-factors-toggle:focus-visible { outline: 2px solid var(--c-gray-400); outline-offset: 3px; border-radius: 4px; }
+.factors-chevron { margin-left: auto; font-size: 1.1em; transition: transform .2s; }
+.factors-chevron.open { transform: rotate(180deg); }
+.sroi-factors-grid.collapsed .factor-hint,
+.sroi-factors-grid.collapsed .factor-loss { display: none; }
+.sroi-factors-grid.collapsed { align-items: start; }
 .sroi-factors-grid {
  display: grid;
  grid-template-columns: repeat(5, 1fr);
