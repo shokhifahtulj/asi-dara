@@ -285,9 +285,9 @@
  </div>
  </div>
 
- <!-- ══════════ 2. INDIKATOR & TARGET KINERJA ══════════ -->
+ <!-- ══════════ 2. TARGET KINERJA & TAHUN ANGGARAN BERJALAN PER TAHUN ══════════ -->
  <div class="rka-section">
- <div class="rka-section-title"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:8px;flex-shrink:0;"><circle cx="12" cy="12" r="9" stroke="#1B4D46" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="#1B4D46" stroke-width="2"/><circle cx="12" cy="12" r="1.5" fill="#1B4D46"/></svg> Indikator &amp; Target Kinerja</div>
+ <div class="rka-section-title"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:8px;flex-shrink:0;"><circle cx="12" cy="12" r="9" stroke="#1B4D46" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="#1B4D46" stroke-width="2"/><circle cx="12" cy="12" r="1.5" fill="#1B4D46"/></svg> Target Kinerja &amp; Tahun Anggaran Berjalan per Tahun</div>
  <div class="indikator-anggaran-card">
  <p
  v-if="!hasIndikatorKinerja && !hasAnggaranTahunan"

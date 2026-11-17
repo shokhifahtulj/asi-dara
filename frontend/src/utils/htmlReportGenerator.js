@@ -26,7 +26,7 @@ export function generateAnalysisHtml(doc) {
  const program = doc.namaProgram || doc.program || '-';
  const kegiatan = doc.kegiatan || doc.namaKegiatan || '-';
 
- // 1. Indikator & Target Kinerja
+ // 1. Target Kinerja & Tahun Anggaran Berjalan per Tahun
  const indikatorList = Array.isArray(doc.indikatorKinerja) ? doc.indikatorKinerja : [];
  const escRincian = (v) => String(v ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -430,7 +430,7 @@ export function generateAnalysisHtml(doc) {
  font-size: 18px;
  }
 
- /* 2. Indikator & Target Kinerja */
+ /* 2. Target Kinerja & Tahun Anggaran Berjalan per Tahun */
  .indikator-anggaran-card {
  background: #fff;
  border: 1px solid var(--border-color);
@@ -1072,9 +1072,9 @@ export function generateAnalysisHtml(doc) {
  </div>
  </div>
 
- <!-- ══════════ 2. INDIKATOR & TARGET KINERJA ══════════ -->
+ <!-- ══════════ 2. TARGET KINERJA & TAHUN ANGGARAN BERJALAN PER TAHUN ══════════ -->
  <div class="rka-section">
- <div class="rka-section-title"><span class="icon-badge"></span> Indikator &amp; Target Kinerja</div>
+ <div class="rka-section-title"><span class="icon-badge"></span> Target Kinerja &amp; Tahun Anggaran Berjalan per Tahun</div>
  <div class="indikator-anggaran-card">
  <div class="indikator-col-header">
  <span></span> Target Kinerja per Indikator

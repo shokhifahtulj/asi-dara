@@ -1082,7 +1082,7 @@ export function generateHtmlBackup(backupPayload, isFullBackup = false) {
 
  <!-- Indikator Kinerja Input -->
  <div class="sub-section-title">
- <span></span> Indikator &amp; Target Kinerja (Input RKA)
+ <span></span> Target Kinerja &amp; Tahun Anggaran Berjalan per Tahun (Input RKA)
  </div>
  ${indikatorList.length === 0 ? `
  <p style="font-size: 12.5px; color: var(--text-muted); font-style: italic;">Tidak ada rincian indikator kinerja pada dokumen ini.</p>

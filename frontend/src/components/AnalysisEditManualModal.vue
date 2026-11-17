@@ -100,9 +100,9 @@
               </div>
             </section>
 
-            <!-- 2. INDIKATOR & TARGET KINERJA -->
+            <!-- 2. TARGET KINERJA & TAHUN ANGGARAN BERJALAN PER TAHUN -->
             <section v-show="tab === 'kinerja'">
-              <h4 class="ae-section-title">Indikator &amp; Target Kinerja</h4>
+              <h4 class="ae-section-title">Target Kinerja &amp; Tahun Anggaran Berjalan per Tahun</h4>
 
               <div class="ae-field">
                 <label for="ae-target-kuant">Target Kuantitatif</label>
@@ -633,7 +633,7 @@ const draft = reactive(createDraft(props.analysis));
 
 const SECTIONS = [
   { id: 'identitas', label: 'Identitas & Pagu' },
-  { id: 'kinerja', label: 'Indikator & Target' },
+  { id: 'kinerja', label: 'Target & Tahun Anggaran' },
   { id: 'kesesuaian', label: 'Kesesuaian & Outcome' },
   { id: 'belanja', label: 'Analisis Komponen Belanja & Rekomendasi Belanja' },
   { id: 'sroi', label: 'Parameter Nilai Prakiraan Dampak' },

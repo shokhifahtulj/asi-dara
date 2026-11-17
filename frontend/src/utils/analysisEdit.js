@@ -53,7 +53,7 @@ export const AI_EDIT_SCOPES = [
   },
   {
     id: 'kinerja',
-    label: 'Indikator & Target Kinerja',
+    label: 'Target Kinerja & Tahun Anggaran Berjalan per Tahun',
     hint: 'Tolok ukur, target, dan target kuantitatif',
     keys: ['indikatorKinerja', 'targetKuantitatif'],
     defaultOn: true
@@ -74,7 +74,7 @@ const FIELD_META = {
   subKegiatan: { label: 'Sub Kegiatan', group: 'Identitas & Pagu' },
   tahunRencana: { label: 'Tahun Anggaran', group: 'Identitas & Pagu' },
   pagu: { label: 'Pagu Anggaran', group: 'Identitas & Pagu', kind: 'rupiah' },
-  targetKuantitatif: { label: 'Target Kuantitatif', group: 'Indikator & Target Kinerja' },
+  targetKuantitatif: { label: 'Target Kuantitatif', group: 'Target Kinerja & Tahun Anggaran Berjalan per Tahun' },
   justifikasiOutcome: { label: 'Justifikasi Outcome', group: 'Kesesuaian & Justifikasi' },
   outcome: { label: 'Total Nilai Dampak Sosial', group: 'Parameter SROI', kind: 'rupiah' },
   deadweight: { label: 'Deadweight', group: 'Parameter SROI', kind: 'persen' },
@@ -555,7 +555,7 @@ export function diffDrafts(before, after) {
   });
 
   diffKeyed(list, {
-    group: 'Indikator & Target Kinerja',
+    group: 'Target Kinerja & Tahun Anggaran Berjalan per Tahun',
     noun: 'Indikator',
     before: (before.indikatorKinerja || []).map((r) => ({ ...r, rincianText: rincianToText(r.rincian) })),
     after: (after.indikatorKinerja || []).map((r) => ({ ...r, rincianText: rincianToText(r.rincian) })),

@@ -626,7 +626,7 @@ const ARTICLES = [
     title: 'Memahami Indikator Capaian dan Target Kinerja pada Hasil Analisis',
     keywords: 'indikator target kinerja tolok ukur kesesuaian anggaran outcome output capaian level sasaran tujuan',
     intro: [
-      'Bagian **Indikator & Target Kinerja** pada halaman hasil analisis menampilkan tolok ukur dan target capaian dari dokumen RKA/DPA, disusul penilaian kecukupan anggaran secara objektif.'
+      'Bagian **Target Kinerja & Tahun Anggaran Berjalan per Tahun** pada halaman hasil analisis menampilkan tolok ukur dan target capaian dari dokumen RKA/DPA, disusul penilaian kecukupan anggaran secara objektif.'
     ],
     sections: [
       {
