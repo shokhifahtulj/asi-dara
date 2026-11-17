@@ -1,3 +1,4 @@
+import { extractAnggaranTahunanFromText } from './anggaranTahunanExtractor.js';
 // utils/rkaFallbackParser.js
 // Parser heuristik cerdas untuk dokumen RKA daerah jika AI Gemini belum diset atau offline.
 
@@ -124,11 +125,12 @@ export function parseRkaHeuristic(text, fileName = 'Dokumen RKA.pdf', rules = []
  ];
 
  // 8. Anggaran Tahunan
- const anggaranTahunan = [
- { tahun: tahunRencana - 1, jumlah: Math.round(pagu * 0.9) },
- { tahun: tahunRencana, jumlah: pagu },
- { tahun: tahunRencana + 1, jumlah: Math.round(pagu * 1.1) }
- ];
+ // Dibaca langsung dari teks dokumen; tidak lagi mengarang tahun lain dari pagu.
+ let anggaranTahunan = extractAnggaranTahunanFromText(text).map(({ tahun, jumlah }) => ({ tahun, jumlah }));
+ if (!anggaranTahunan.some(r => r.tahun === tahunRencana)) {
+ anggaranTahunan.push({ tahun: tahunRencana, jumlah: pagu });
+ anggaranTahunan.sort((a, b) => a.tahun - b.tahun);
+ }
 
  // 9. Indikator Kinerja
  const indikatorKinerja = [
