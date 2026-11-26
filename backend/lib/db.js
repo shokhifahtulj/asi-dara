@@ -53,7 +53,10 @@ const backupDir = path.join(localDataDir, 'backups');
 // sehingga ikut terpindah otomatis saat failover antar-slot Neon.
 const IS_VERCEL = Boolean(process.env.VERCEL);
 const SNAPSHOT_PREFIX = '__snapshot_';
+<<<<<<< HEAD
 const RKA_FILE_PREFIX = 'rka_file:'; // berkas asli RKA (base64) — tidak ikut cache/snapshot/export, tapi ikut dipindah saat failover
+=======
+>>>>>>> origin/main
 const SNAPSHOT_KEEP = Math.max(1, Number(process.env.DB_SNAPSHOT_KEEP || 5));
 const SNAPSHOT_MIN_INTERVAL_MS = Math.max(0, Number(process.env.DB_SNAPSHOT_INTERVAL_MS || 12 * 60 * 60 * 1000));
 
@@ -74,8 +77,12 @@ function isInternalKey(key) {
     || key === '__db_migration_history'
     || key === CROSS_BACKUP_KEY
     || key === SLOT_CONFIG_KEY
+<<<<<<< HEAD
     || String(key).startsWith(SNAPSHOT_PREFIX)
     || String(key).startsWith(RKA_FILE_PREFIX);
+=======
+    || String(key).startsWith(SNAPSHOT_PREFIX);
+>>>>>>> origin/main
 }
 
 /** Tolak penulisan ke disk sementara di Vercel — lebih baik error jelas daripada data hilang diam-diam. */
@@ -423,6 +430,7 @@ export async function setStore(key, data) {
     writeLocalStore(localDb);
   } catch {}
 
+<<<<<<< HEAD
   if (key === 'users_db') {
     console.warn('[DB] Data "users_db" diamankan di cadangan lokal karena database sedang tidak dapat diakses.');
     return;
@@ -430,6 +438,13 @@ export async function setStore(key, data) {
 
   // Jangan pura-pura sukses: disk lokal (Vercel /tmp / Render) bersifat sementara, sehingga
   // data yang "tersimpan" hanya di sana akan hilang. Beri tahu pengguna bahwa simpan gagal.
+=======
+  if (key === 'users_db' || key === 'main_db') {
+    console.warn(`[DB] Data "${key}" berhasil diamankan di cadangan lokal karena database sedang tidak dapat diakses.`);
+    return;
+  }
+
+>>>>>>> origin/main
   throw markDbUnavailable(new Error(
     `Gagal menyimpan data ke database (kemungkinan kuota terlampaui). Perubahan BELUM tersimpan — coba lagi beberapa saat lagi. Detail teknis: ${err.message}`
   ));
@@ -669,6 +684,7 @@ export async function getActiveStorageInfo() {
  };
  }
 }
+<<<<<<< HEAD
 
 
 // ─── Berkas asli RKA (PDF) — bisa diunduh dari arsip ────────────────────────
@@ -738,3 +754,5 @@ export async function deleteRkaFileBlob(id) {
     console.warn('[DB] Gagal menghapus berkas asli RKA:', err.message);
   }
 }
+=======
+>>>>>>> origin/main

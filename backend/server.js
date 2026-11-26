@@ -27,7 +27,11 @@ import dbPoolRouter from './routes/dbPoolRouter.js';
 import settingsRouter from './routes/settingsRouter.js';
 import laporanRouter from './routes/laporanRouter.js';
 import aibotRouter from './routes/aibotRouter.js';
+<<<<<<< HEAD
 import { getStore, setStore, dbRequestContext, createDbSnapshot, getStoreUpdatedAt, checkDbConnection, initPool, startQuotaMonitor, checkQuotaAndRotate, getPoolStatus, isServingFallbackData, getFallbackBackupInfo, saveRkaFileBlob, getRkaFileBlob, deleteRkaFileBlob } from './lib/db.js';
+=======
+import { getStore, setStore, dbRequestContext, createDbSnapshot, getStoreUpdatedAt, checkDbConnection, initPool, startQuotaMonitor, checkQuotaAndRotate, getPoolStatus, isServingFallbackData, getFallbackBackupInfo } from './lib/db.js';
+>>>>>>> origin/main
 import { logActivity, getActivityLogs, clearActivityLogs } from './utils/activityLogger.js';
 import { realtimeHub } from './utils/realtimeHub.js';
 import { startStorageOptimizer, runStorageOptimizer, getOptimizerStats } from './utils/storageOptimizer.js';
@@ -38,6 +42,7 @@ import { startStorageOptimizer, runStorageOptimizer, getOptimizerStats } from '.
 async function readDb() {
  let db = await getStore('main_db');
  if (!db) {
+<<<<<<< HEAD
   // PENTING: jika database sedang tidak terbaca (mode cadangan) JANGAN membuat main_db kosong —
   // penulisan struktur kosong itu bisa menimpa seluruh arsip begitu database pulih.
   if (isServingFallbackData()) {
@@ -52,6 +57,17 @@ async function readDb() {
   } catch (err) {
    console.warn('[DB] Tidak dapat membuat "main_db" baru saat ini:', err.message);
   }
+=======
+ db = { rkis: [], ssh_databases: [] };
+ try {
+ await setStore('main_db', db);
+ } catch (err) {
+ // Database sedang tidak dapat ditulis (mis. kuota habis & belum ada
+ // cadangan sama sekali). Jangan gagalkan pembacaan hanya karena inisialisasi
+ // gagal — tetap kembalikan struktur kosong agar aplikasi tidak crash.
+ console.warn('[DB] Tidak dapat membuat "main_db" baru saat ini:', err.message);
+ }
+>>>>>>> origin/main
  }
  if (!db.rkis) db.rkis = [];
  if (!db.ssh_databases) db.ssh_databases = [];
@@ -59,6 +75,7 @@ async function readDb() {
 }
 
 async function writeDb(data) {
+<<<<<<< HEAD
  // Tolak penulisan bila data yang dipegang berasal dari cadangan lama (bukan dari database) —
  // kalau tidak, data basi akan menimpa data terbaru di database dan dokumen "hilang".
  if (isServingFallbackData()) {
@@ -67,6 +84,8 @@ async function writeDb(data) {
   err.status = 503;
   throw err;
  }
+=======
+>>>>>>> origin/main
  await setStore('main_db', data);
  // Publish after Neon confirms the write. This keeps local clients instant
  // and also updates the hub baseline so the cross-instance poller won't
@@ -134,8 +153,12 @@ app.use(cors({
  }
  callback(new Error(`CORS: origin tidak diizinkan — ${origin}`));
  },
+<<<<<<< HEAD
  credentials: true,
  allowedHeaders: ['Content-Type', 'Authorization', 'X-File-Name']
+=======
+ credentials: true
+>>>>>>> origin/main
 }));
 app.use(express.json({ limit: '50mb' }));
 
@@ -1045,6 +1068,7 @@ async function moveRkaToTrash(rka, deletedBy) {
  const cutoff = Date.now() - TRASH_RETENTION_DAYS * 24 * 60 * 60 * 1000;
  const pruned = trash.filter(t => new Date(t.deletedAt).getTime() >= cutoff);
  await setStore(RKA_TRASH_KEY, pruned);
+<<<<<<< HEAD
  // Dokumen yang kedaluwarsa dari sampah: hapus juga berkas aslinya (kecuali ID-nya dipakai dokumen aktif).
  try {
   const expired = trash.filter(t => !pruned.includes(t));
@@ -1055,6 +1079,8 @@ async function moveRkaToTrash(rka, deletedBy) {
    }
   }
  } catch {}
+=======
+>>>>>>> origin/main
  } catch (err) {
  console.warn('[Backup] Gagal memindahkan dokumen ke sampah:', err.message);
  }
@@ -1871,11 +1897,14 @@ app.delete('/api/v1/trash/:id', requireAuth, requireRole('admin'), async (req, r
  const trash = await readTrashStore();
  const filtered = trash.filter(t => String(t.id) !== String(req.params.id));
  await setStore(RKA_TRASH_KEY, filtered);
+<<<<<<< HEAD
  // Hapus juga berkas asli — kecuali ID yang sama kini dipakai dokumen aktif.
  try {
   const activeDb = await readDb();
   if (!activeDb.rkis.some(r => String(r.id) === String(req.params.id))) await deleteRkaFileBlob(req.params.id);
  } catch {}
+=======
+>>>>>>> origin/main
  await logActivity({
  req,
  action: 'DELETE_RKA',
@@ -1889,6 +1918,7 @@ app.delete('/api/v1/trash/:id', requireAuth, requireRole('admin'), async (req, r
  }
 });
 
+<<<<<<< HEAD
 // ── ENDPOINT: Berkas asli RKA (PDF) — simpan & unduh, seperti kolom "File" di Mendeley ──
 // Berkas disimpan di Neon (pool database) lewat lib/db.js. Hak akses sama dengan PUT /api/v1/rkis/:id.
 app.put('/api/v1/rkis/:id/file', requireAuth, express.raw({ type: () => true, limit: '30mb' }), async (req, res) => {
@@ -1945,6 +1975,8 @@ app.get('/api/v1/rkis/:id/file', requireAuth, async (req, res) => {
  }
 });
 
+=======
+>>>>>>> origin/main
 // ── ENDPOINT: Ambil teks PDF yang tersimpan (untuk tombol "Muat Ulang PDF") ──
 // Frontend memakai teks ini untuk analisis ulang lewat alur AI yang sama seperti unggah PDF
 // (POST /api/v1/evaluate), jadi pengguna TIDAK perlu mengunggah PDF lagi.
