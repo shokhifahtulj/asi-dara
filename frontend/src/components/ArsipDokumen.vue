@@ -129,21 +129,14 @@
  <th>Tanggal Unggah</th>
  <th style="text-align:center;">Prakiraan Dampak</th>
  <th style="text-align:right;">Ukuran File</th>
-<<<<<<< HEAD
  <th style="text-align:center;">File</th>
-=======
->>>>>>> origin/main
  <th style="text-align:center;">Aksi</th>
  </tr>
  </thead>
  <tbody>
  <!-- Empty state -->
  <tr v-if="filteredRkis.length === 0">
-<<<<<<< HEAD
  <td colspan="10" class="arsip-empty-state">
-=======
- <td colspan="9" class="arsip-empty-state">
->>>>>>> origin/main
  <div class="arsip-empty-content">
  <i data-lucide="folder-open" style="width: 52px; height: 52px; opacity: 0.25; margin-bottom: 16px;"></i>
  <p v-if="searchQuery || hasActiveFilter">
@@ -231,7 +224,6 @@
  {{ formatFileSize(item.ukuranFile) }}
  </td>
 
-<<<<<<< HEAD
  <!-- File asli (unduh seperti kolom File di Mendeley) -->
  <td style="text-align:center;">
  <button
@@ -247,8 +239,6 @@
  <span v-else class="arsip-file-none" data-tip="Berkas asli belum tersimpan. Gunakan Unggah Ulang PDF.">—</span>
  </td>
 
-=======
->>>>>>> origin/main
  <!-- Aksi -->
  <td style="text-align:center;">
  <div class="arsip-actions" style="display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap;">
@@ -999,12 +989,8 @@ const {
  refreshArsip,
  realtimeConnected,
  fetchTrash,
-<<<<<<< HEAD
  restoreTrashBulk,
  downloadRkaOriginalFile
-=======
- restoreTrashBulk
->>>>>>> origin/main
 } = useAnalysis();
 
 // ── Search & Filter ──────────────────────────────────────────────────
@@ -2389,7 +2375,6 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
 }
 .trash-scope-opt:disabled { opacity: 0.5; cursor: not-allowed; }
 .trash-scope-opt.active { color: #fff; background: var(--primary-color); }
-<<<<<<< HEAD
 
 /* Kolom File: ikon unduh + tooltip gelap ala Mendeley */
 .arsip-file-btn, .arsip-file-none { position: relative; }
@@ -2424,7 +2409,5 @@ tr.arsip-row-selected:hover { background-color: rgba(var(--primary-rgb), 0.13); 
   z-index: 50;
 }
 .arsip-file-btn:hover::after, .arsip-file-btn:focus-visible::after, .arsip-file-none:hover::after { opacity: 1; }
-=======
->>>>>>> origin/main
 </style>
 

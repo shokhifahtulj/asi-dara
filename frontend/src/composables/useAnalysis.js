@@ -1590,11 +1590,8 @@ async function handleRkaFiles(files) {
           } else {
             state.rkis[existIdx] = { ...state.rkis[existIdx], ...savedObj };
           }
-<<<<<<< HEAD
           updateProgressBar(92, 'Menyimpan berkas asli ke server...', queueItem);
           await uploadRkaOriginalFile(savedObj.id, file);
-=======
->>>>>>> origin/main
           updateProgressBar(100, 'Selesai diproses', queueItem);
           queueItem.status = 'done';
           // Backup otomatis setiap kali ada dokumen baru berhasil diunggah —
@@ -1610,13 +1607,8 @@ async function handleRkaFiles(files) {
         console.error(saveError);
         queueItem.status = 'error';
         queueItem.statusText = 'Gagal menyimpan ke server';
-<<<<<<< HEAD
         showNotification("Gagal Menyimpan " + file.name, saveError.message + ' Dokumen BELUM tersimpan di server — unggah ulang.', "danger");
         // Sengaja tidak dimasukkan ke state.rkis: dokumen yang tidak ada di server akan hilang saat refresh.
-=======
-        showNotification("Gagal Menyimpan " + file.name, saveError.message, "danger");
-        state.rkis.unshift(analysisObj);
->>>>>>> origin/main
         try {
           await apiFetch('/api/v1/activity-logs', {
             method: 'POST',
@@ -2278,7 +2270,6 @@ async function updateRkiMetadata(id, updates) {
 }
 
 // Fitur Re-analisis / Unggah Ulang Berkas PDF untuk memperbaiki analisis yang kacau (Dapat diakses seluruh role)
-<<<<<<< HEAD
 // ── Berkas asli RKA: simpan ke server (Neon) & unduh dari Arsip ──────────────
 async function uploadRkaOriginalFile(id, file) {
   if (!id || !file) return false;
@@ -2344,8 +2335,6 @@ async function downloadRkaOriginalFile(item) {
   }
 }
 
-=======
->>>>>>> origin/main
 async function reanalyzeDocWithPdf(targetId, file, onProgress = () => { }) {
   if (!file || !targetId) {
     throw new Error("Berkas PDF atau target dokumen tidak valid.");
@@ -2431,11 +2420,8 @@ async function reanalyzeDocWithPdf(targetId, file, onProgress = () => { }) {
     state.activeAnalysis = updatedDoc;
   }
 
-<<<<<<< HEAD
   onProgress(95, "Menyimpan berkas asli ke server...");
   await uploadRkaOriginalFile(targetId, file);
-=======
->>>>>>> origin/main
   onProgress(100, "Selesai dianalisis ulang!");
   showNotification(
     "Analisis Ulang Selesai",
@@ -3051,11 +3037,8 @@ export function useAnalysis() {
     // OPD Sanitizer & Re-Upload Analysis
     cleanOpdName,
     reanalyzeDocWithPdf,
-<<<<<<< HEAD
     downloadRkaOriginalFile,
     uploadRkaOriginalFile,
-=======
->>>>>>> origin/main
     regenerateDocFromStoredText
   };
 }

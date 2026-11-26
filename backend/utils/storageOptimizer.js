@@ -227,14 +227,9 @@ const before = await readVersions();
 if (before !== null && before === lastSeenVersions) return; // tidak ada perubahan → lewati
 
  const logResult = await compactActivityLogs();
-<<<<<<< HEAD
  // Data dokumen RKA bersifat PERMANEN (hanya hilang jika dihapus pengguna) — tidak dipangkas.
  const rkaResult = { trimmed: 0 };
  const sshResult = { removed: 0 }; // SSH arsip juga tidak diubah otomatis
-=======
- const rkaResult = await trimRkaRawText();
- const sshResult = await deduplicateSshItems();
->>>>>>> origin/main
 
  stats.lastRun = new Date().toISOString();
 stats.totalRuns++;
@@ -296,11 +291,7 @@ export function getOptimizerStats() {
  logMaxAgeFull: '7 hari',
  logMaxAgeDelete: '30 hari',
  logHardLimit: LOG_HARD_LIMIT,
-<<<<<<< HEAD
  rkaRawTextAge: 'tidak dipangkas (permanen)'
-=======
- rkaRawTextAge: '24 jam'
->>>>>>> origin/main
  }
  };
 }
