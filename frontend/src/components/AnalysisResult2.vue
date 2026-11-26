@@ -130,6 +130,7 @@
  </div>
  </div>
 
+
  <!-- Cara Menghitung SROI (penjabaran rumus awal sampai akhir) -->
     <details class="sroi-howto-card">
       <summary class="sroi-howto-title">Cara Menghitung SROI <span class="sroi-howto-sub">(klik untuk melihat penjabaran rumus)</span></summary>
@@ -176,6 +177,9 @@
     </details>
 
     <!-- Rantai Transparansi Perhitungan SROI -->
+
+ <!-- Rantai Transparansi Perhitungan SROI -->
+
  <div class="sroi-transparency-card">
  <div class="transparency-header">
  <span class="icon"></span> Rantai Transparansi Perhitungan Nilai Prakiraan Dampak
@@ -449,7 +453,6 @@
  </div>
  </div>
  </div>
-
 
 
  </div>
@@ -1418,6 +1421,7 @@ const copyJson = async () => {
  margin-top: 2px;
 }
 
+
 .sroi-howto-card {
   margin-top: 14px;
   background: var(--bg-card);
@@ -1453,6 +1457,7 @@ const copyJson = async () => {
   font-size: 15px;
   color: var(--text-muted);
 }
+
 
 .sroi-transparency-card {
  margin-top: 14px;
