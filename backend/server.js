@@ -1039,16 +1039,24 @@ async function saveRkaSnapshot(rkaId, rkaData, reason, by) {
 
 // Pindahkan dokumen yang dihapus ke "sampah" alih-alih dihapus permanen,
 // supaya masih bisa dipulihkan kalau tak sengaja terhapus di panel Admin/User.
-async function moveRkaToTrash(rka, deletedBy) {
- try {
+async function moveRkaToTrash(rkaOrList, deletedBy) {
+ // PENTING: fungsi ini MELEMPAR error bila sampah gagal disimpan. Pemanggil wajib memanggilnya
+ // SEBELUM menghapus dokumen dari arsip, supaya dokumen tidak pernah hilang tanpa masuk sampah.
+ const list = Array.isArray(rkaOrList) ? rkaOrList : [rkaOrList];
  const trash = await readTrashStore();
- trash.unshift({ ...rka, deletedAt: new Date().toISOString(), deletedBy: deletedBy || 'system' });
+ const deletedAt = new Date().toISOString();
+ const incoming = list.map(rka => ({ ...rka, deletedAt, deletedBy: deletedBy || 'system' }));
+ const merged = [...incoming, ...trash];
  const cutoff = Date.now() - TRASH_RETENTION_DAYS * 24 * 60 * 60 * 1000;
- const pruned = trash.filter(t => new Date(t.deletedAt).getTime() >= cutoff);
+ // Hanya buang entri yang BENAR-BENAR lebih tua dari 30 hari. Tanggal rusak/kosong dianggap baru (tidak dibuang).
+ const pruned = merged.filter(t => {
+  const ts = new Date(t.deletedAt).getTime();
+  return Number.isNaN(ts) || ts >= cutoff;
+ });
  await setStore(RKA_TRASH_KEY, pruned);
  // Dokumen yang kedaluwarsa dari sampah: hapus juga berkas aslinya (kecuali ID-nya dipakai dokumen aktif).
  try {
-  const expired = trash.filter(t => !pruned.includes(t));
+  const expired = merged.filter(t => !pruned.includes(t));
   if (expired.length) {
    const activeDb = await readDb();
    for (const t of expired) {
@@ -1056,9 +1064,6 @@ async function moveRkaToTrash(rka, deletedBy) {
    }
   }
  } catch {}
- } catch (err) {
- console.warn('[Backup] Gagal memindahkan dokumen ke sampah:', err.message);
- }
 }
 
 // Taruh dokumen hasil pemulihan dari sampah ke arsip aktif. ID dokumen dibuat dari jumlah dokumen
@@ -1610,7 +1615,12 @@ app.delete('/api/v1/rkis/:id', requireAuth, async (req, res) => {
  // Jangan hapus permanen — pindahkan ke "sampah" dulu, supaya kalau
  // ini tidak sengaja (baik dari panel Admin maupun panel User), dokumen
  // masih bisa dipulihkan lewat POST /api/v1/trash/:id/restore.
- await moveRkaToTrash(rka, req.user.name || req.user.username);
+ try {
+  await moveRkaToTrash(rka, req.user.name || req.user.username);
+ } catch (trashErr) {
+  console.error('[Sampah] Gagal menyimpan ke sampah, penghapusan dibatalkan:', trashErr.message);
+  return res.status(503).json({ error: 'Sampah gagal disimpan, dokumen TIDAK dihapus agar tidak hilang. Coba lagi sebentar lagi.' });
+ }
 
  db.rkis.splice(idx, 1);
  await writeDb(db);
@@ -1658,15 +1668,15 @@ app.post('/api/v1/rkis/bulk-delete', requireAuth, async (req, res) => {
 
  if (deleted.length > 0) {
  const gone = new Set(deleted);
+ // Simpan ke sampah DULU (satu kali tulis). Bila gagal, tidak ada dokumen yang dihapus.
+ try {
+  await moveRkaToTrash(deletedDocs, req.user.name || req.user.username);
+ } catch (trashErr) {
+  console.error('[Sampah] Gagal menyimpan ke sampah, penghapusan massal dibatalkan:', trashErr.message);
+  return res.status(503).json({ error: 'Sampah gagal disimpan, dokumen TIDAK dihapus agar tidak hilang. Coba lagi sebentar lagi.' });
+ }
  db.rkis = db.rkis.filter(r => !gone.has(String(r.id)));
  await writeDb(db);
-
- // Sama seperti hapus satuan: pindahkan semua dokumen ke "sampah" dulu
- // (bukan dihapus permanen), supaya penghapusan massal yang tidak
- // sengaja tetap bisa dipulihkan.
- for (const doc of deletedDocs) {
- await moveRkaToTrash(doc, req.user.name || req.user.username);
- }
 
  await logActivity({
  req,
