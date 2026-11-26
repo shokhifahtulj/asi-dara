@@ -744,7 +744,7 @@ const state = reactive({
       opdChartData: {
         labels: opdLabels,
         datasets: [{
-          label: 'Rata-rata SROI',
+          label: 'Rata-rata Nilai Prakiraan Dampak',
           data: opdSroiData,
           backgroundColor: 'rgba(59, 130, 246, 0.6)',
           borderColor: 'rgb(59, 130, 246)',
@@ -830,8 +830,8 @@ function getSroiKelayakanColor(sroi, status) {
 }
 
 /**
- * Kalkulator 16 Aturan Baku SROI
- * SROI Ratio = Present Value (PV) of Impact ÷ Value of Inputs
+ * Kalkulator 16 Aturan Baku Nilai Prakiraan Dampak
+ * Rasio Nilai Prakiraan Dampak = Present Value (PV) of Impact ÷ Value of Inputs
  */
 export function computeSroi16Rules(params = {}) {
   if (!params) params = {};
@@ -860,7 +860,7 @@ export function computeSroi16Rules(params = {}) {
       sroiRatioWithBanding: 'Belum Dapat Dinilai',
       shortLabel: 'Belum Dinilai',
       sroiStatus: 'Belum Dapat Dinilai',
-      sroiInterpretation: 'Data investasi, outcome, atau financial proxy belum memadai untuk menghitung SROI secara bertanggung jawab.',
+      sroiInterpretation: 'Data investasi, outcome, atau financial proxy belum memadai untuk menghitung Nilai Prakiraan Dampak secara bertanggung jawab.',
       kelayakan: 'Abu-abu',
       tone: 'tone-gray',
       isValid: false,
@@ -913,13 +913,13 @@ export function computeSroi16Rules(params = {}) {
   const netImpact = Math.round(dampakBersihTahun1);
   const pvImpact = Math.round(pvTotal);
 
-  // 7. SROI Ratio = PV of Impact ÷ Value of Inputs
+  // 7. Rasio Nilai Prakiraan Dampak = PV of Impact ÷ Value of Inputs
   const sroiRatio = Number((pvImpact / valueOfInputs).toFixed(2));
   const sroiScore = sroiRatio.toFixed(2);
   const sroiRatioText = sroiScore;
   const sroiRatioWithBanding = `${sroiScore} : 1`;
 
-  // 8. Pemisahan Status SROI Resmi & Keringanan Ambang Batas 0.6
+  // 8. Pemisahan Status Nilai Prakiraan Dampak Resmi & Keringanan Ambang Batas 0.6
   let sroiStatus = 'Nilai Sosial Positif (Layak)';
   let shortLabel = 'Layak';
   let tone = 'tone-green';
@@ -1142,7 +1142,7 @@ function getRealokasiDatabase(opdLower, programLower, pagu, sroi) {
       nama: 'Belanja Jasa Konsultansi Pengawasan Tidak Wajib',
       icon: 'eye',
       alasan: isLowSroi
-        ? 'Untuk proyek bernilai sosial rendah (SROI < 1), anggaran konsultan pengawas dapat dikurangi atau digabung dengan tenaga teknis internal.'
+        ? 'Untuk proyek bernilai sosial rendah (Nilai Prakiraan Dampak < 1), anggaran konsultan pengawas dapat dikurangi atau digabung dengan tenaga teknis internal.'
         : 'Pertimbangkan menggunakan UPTD teknis internal untuk pengawasan rutin guna menekan biaya konsultansi.',
       nilai: Math.round(pagu * 0.04)
     });
@@ -1520,7 +1520,7 @@ async function handleRkaFiles(files) {
       const progressInterval = setInterval(() => {
         if (queueItem.progress < 94) {
           const nextProg = Math.min(94, queueItem.progress + Math.floor(Math.random() * 3) + 2);
-          updateProgressBar(nextProg, nextProg >= 85 ? 'Layanan AI sedang mengevaluasi SROI...' : 'Layanan AI mengevaluasi...', queueItem);
+          updateProgressBar(nextProg, nextProg >= 85 ? 'Layanan AI sedang mengevaluasi Nilai Prakiraan Dampak...' : 'Layanan AI mengevaluasi...', queueItem);
         }
       }, 600);
 
@@ -1748,16 +1748,16 @@ async function processWithAIService(pdfText, fileName, fileSize) {
     .map((r, i) => `${i + 1}. ${r.name}: ${r.desc}`)
     .join('\n');
 
-  const systemPrompt = `Anda adalah AI Asisten Evaluator Anggaran & Dampak Sosial (SROI) khusus untuk BAPPERIDA Kabupaten Cirebon.
-Tugas Anda adalah melakukan audit atas dokumen RKA (Rencana Kerja dan Anggaran) daerah dan memproyeksikan rasio SROI (Social Return on Investment).
+  const systemPrompt = `Anda adalah AI Asisten Evaluator Anggaran & Dampak Sosial (Nilai Prakiraan Dampak) khusus untuk BAPPERIDA Kabupaten Cirebon.
+Tugas Anda adalah melakukan audit atas dokumen RKA (Rencana Kerja dan Anggaran) daerah dan memproyeksikan rasio Nilai Prakiraan Dampak (Social Return on Investment).
 
 Lakukan 3 Lapis Penalaran (Reasoning) sekaligus:
 1. Ekstraksi Komponen: Temukan nama OPD/Satuan Kerja, sub-kegiatan utama, PAGU ANGGARAN (nilai total anggaran) sebagai TOTAL INVESTASI.
 2. Ekstraksi Target: Temukan target keluaran kuantitatif program.
-3. Analisis & Proyeksi SROI:
+3. Analisis & Proyeksi Nilai Prakiraan Dampak:
  - Proyeksikan estimasi manfaat sosial-ekonomi (Outcome) dalam nilai Rupiah. Justifikasi logis berdasarkan target.
  - Estimasi Deadweight (faktor pengurangan dalam persentase, biasanya berkisar antara 10% s.d. 30%).
- - Hitung SROI Ratio = (Outcome * (100 - Deadweight) / 100) / Pagu Anggaran.
+ - Hitung Rasio Nilai Prakiraan Dampak = (Outcome * (100 - Deadweight) / 100) / Pagu Anggaran.
 4. Analisis Proporsi Rekening: Identifikasi kode rekening belanja utama dan distribusi persentasenya dari total pagu. Minimal 4-6 rekening.
 5. Justifikasi Realokasi Berpasangan: Alasan spesifik kurangi/tambah rekening.
 6. Ekstraksi Anggaran per Tahun (anggaran_tahunan): BACA SEMUA TAHUN yang tercantum pada dokumen RKA, jangan hanya tahun berjalan — termasuk tahun sebelumnya (n-1), tahun berjalan (n), dan tahun berikutnya/prakiraan maju (n+1, n+2, dst.). Masukkan setiap tahun sebagai { "tahun": angka, "jumlah": rupiah tanpa titik }, urut dari tahun terkecil, tanpa melewatkan tahun dan tanpa mengarang tahun yang tidak ada di dokumen. "pagu" harus sama dengan "jumlah" pada tahun_rencana.
@@ -1797,7 +1797,7 @@ Format JSON kaku dan valid:
   let jsonResult = null;
 
   try {
-    updateProgressBar(80, "Layanan AI sedang mengevaluasi SROI...");
+    updateProgressBar(80, "Layanan AI sedang mengevaluasi Nilai Prakiraan Dampak...");
 
     const apiKey = localStorage.getItem('GEMINI_API_KEY') || '';
 
@@ -2781,7 +2781,7 @@ async function regenerateAnalysisWithAiTemplate(rkaItem) {
     const result = await saveManualVersion(rkaItem.id, {
       parentVersionId: rkaItem.activeVersionId,
       versionName: 'Disusun Ulang AI (Template)',
-      changesSummary: 'Hasil analisis disusun ulang otomatis oleh AI agar sesuai format template standar hasil analisis SROI, tanpa mengunggah ulang PDF.',
+      changesSummary: 'Hasil analisis disusun ulang otomatis oleh AI agar sesuai format template standar hasil analisis Nilai Prakiraan Dampak, tanpa mengunggah ulang PDF.',
       data: regenerated,
       createdBy: (currentUser.value && (currentUser.value.username || currentUser.value.name)) || 'AI Template Generator',
       source: 'ai-template',

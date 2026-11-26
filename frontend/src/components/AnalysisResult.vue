@@ -24,7 +24,7 @@
  class="btn btn-secondary btn-sm"
  @click="showEditManual = true"
  title="Edit manual seluruh bagian hasil analisis (disimpan sebagai versi baru)"
- style="display: flex; align-items: center; gap: 5px; padding: 6px 14px; font-size: 16.3px; font-weight: 600; color: var(--primary-color, #1B4D46); background: var(--primary-glow, rgba(27,77,70,0.12)); border-color: var(--primary-color, #1B4D46);"
+ style="display: flex; align-items: center; gap: 5px; padding: 6px 14px; font-size: 20.4px; font-weight: 600; color: var(--primary-color, #1B4D46); background: var(--primary-glow, rgba(27,77,70,0.12)); border-color: var(--primary-color, #1B4D46);"
  >
  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4z"/></svg> Edit Manual
  </button>
@@ -32,7 +32,7 @@
  class="btn btn-secondary btn-sm"
  @click="showEditAi = true"
  title="Minta AI merevisi hasil analisis berdasarkan instruksi Anda (ada pratinjau sebelum disimpan)"
- style="display: flex; align-items: center; gap: 5px; padding: 6px 14px; font-size: 16.3px; font-weight: 600; color: #7c3aed; background: #f5f3ff; border-color: #ddd6fe;"
+ style="display: flex; align-items: center; gap: 5px; padding: 6px 14px; font-size: 20.4px; font-weight: 600; color: #7c3aed; background: #f5f3ff; border-color: #ddd6fe;"
  >
  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg> Edit dengan AI
  </button>
@@ -40,7 +40,7 @@
  class="btn btn-secondary btn-sm"
  @click="openReuploadModal"
  title="Unggah Ulang PDF & Analisis Ulang (Perbaiki Hasil Analisis)"
- style="display: flex; align-items: center; gap: 5px; padding: 6px 14px; font-size: 16.3px; font-weight: 600; color: #0284c7; background: #f0f9ff; border-color: #bae6fd;"
+ style="display: flex; align-items: center; gap: 5px; padding: 6px 14px; font-size: 20.4px; font-weight: 600; color: #0284c7; background: #f0f9ff; border-color: #bae6fd;"
  >
  <i data-lucide="refresh-cw" style="width:14px;height:14px;"></i> Unggah Ulang PDF
  </button>
@@ -49,7 +49,7 @@
  :disabled="isMuatUlang"
  @click="handleMuatUlangPdf"
  title="Generate ulang analisis AI tanpa unggah PDF lagi"
- style="display: flex; align-items: center; gap: 5px; padding: 6px 14px; font-size: 16.3px; font-weight: 600; color: #0284c7; background: #f0f9ff; border-color: #bae6fd;"
+ style="display: flex; align-items: center; gap: 5px; padding: 6px 14px; font-size: 20.4px; font-weight: 600; color: #0284c7; background: #f0f9ff; border-color: #bae6fd;"
  :style="isMuatUlang ? 'opacity:0.6; cursor:not-allowed;' : ''"
  >
  <i :data-lucide="isMuatUlang ? 'loader-2' : 'rotate-cw'" :class="{ 'spin-anim': isMuatUlang }" style="width:14px;height:14px;"></i>
@@ -59,7 +59,7 @@
  class="btn btn-secondary btn-sm"
  @click="handleDownloadReport"
  title="Unduh Hasil Analisis Lengkap"
- style="display: flex; align-items: center; gap: 5px; padding: 6px 14px; font-size: 16.3px; font-weight: 600;"
+ style="display: flex; align-items: center; gap: 5px; padding: 6px 14px; font-size: 20.4px; font-weight: 600;"
  >
  <i data-lucide="download" style="width:14px;height:14px;"></i> Unduh Laporan
  </button>
@@ -67,12 +67,12 @@
  class="btn btn-delete-rka"
  @click="openDeleteConfirm"
  title="Hapus dokumen ini dari arsip"
- style="display: flex; align-items: center; gap: 5px; padding: 6px 14px; font-size: 16.3px; background: #ef4444; color: #fff; border: none; border-radius: 7px; cursor: pointer; font-weight: 600;"
+ style="display: flex; align-items: center; gap: 5px; padding: 6px 14px; font-size: 20.4px; background: #ef4444; color: #fff; border: none; border-radius: 7px; cursor: pointer; font-weight: 600;"
  >
  <i data-lucide="trash-2" style="width:14px;height:14px;"></i> Hapus
  </button>
  <span v-if="analysis.model" class="model-badge">{{ analysis.model }}</span>
- <button class="btn btn-secondary btn-sm" @click="goBack" style="display: flex; align-items: center; gap: 4px; padding: 6px 12px; font-size: 16.3px;">
+ <button class="btn btn-secondary btn-sm" @click="goBack" style="display: flex; align-items: center; gap: 4px; padding: 6px 12px; font-size: 20.4px;">
  <i data-lucide="arrow-left" style="width: 14px; height: 14px;"></i> Kembali ke Arsip
  </button>
  </div>
@@ -97,16 +97,16 @@
  <div style="background:var(--bg-card,#fff);border-radius:14px;padding:32px 28px;max-width:440px;width:90%;box-shadow:0 8px 40px rgba(0,0,0,0.18);">
  <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
  <i data-lucide="alert-triangle" style="color:#ef4444;width:24px;height:24px;"></i>
- <h3 style="margin:0;font-size:1.391rem;color:var(--text-primary,#111);">Hapus 1 dokumen?</h3>
+ <h3 style="margin:0;font-size:1.739rem;color:var(--text-primary,#111);">Hapus 1 dokumen?</h3>
  </div>
- <p style="margin:0 0 8px;color:var(--text-secondary,#555);font-size:1.221rem;">
+ <p style="margin:0 0 8px;color:var(--text-secondary,#555);font-size:1.526rem;">
  Dokumen berikut akan dihapus dari arsip secara permanen.
  </p>
- <ul style="margin:0 0 8px;padding-left:20px;color:var(--text-primary,#111);font-size:1.194rem;">
+ <ul style="margin:0 0 8px;padding-left:20px;color:var(--text-primary,#111);font-size:1.492rem;">
  <li>{{ analysis.namaDokumen || analysis.id }}{{ analysis.subKegiatan ? ' — ' + analysis.subKegiatan : '' }}</li>
  </ul>
- <p style="margin:0 0 16px;color:#ef4444;font-size:1.113rem;">Data yang telah dihapus tidak dapat dikembalikan.</p>
- <p style="margin:0 0 8px;color:var(--text-secondary,#555);font-size:1.153rem;">
+ <p style="margin:0 0 16px;color:#ef4444;font-size:1.391rem;">Data yang telah dihapus tidak dapat dikembalikan.</p>
+ <p style="margin:0 0 8px;color:var(--text-secondary,#555);font-size:1.441rem;">
  Untuk mengonfirmasi, ketik <strong style="color:var(--text-primary,#111);">{{ deleteConfirmTarget }}</strong> di bawah ini:
  </p>
  <input
@@ -115,11 +115,11 @@
  autocomplete="off"
  spellcheck="false"
  :placeholder="deleteConfirmTarget"
- style="width:100%;box-sizing:border-box;padding:8px 12px;border-radius:7px;border:1px solid var(--border-color,#ddd);font-size:1.194rem;margin-bottom:22px;"
+ style="width:100%;box-sizing:border-box;padding:8px 12px;border-radius:7px;border:1px solid var(--border-color,#ddd);font-size:1.492rem;margin-bottom:22px;"
  @keyup.enter="handleDelete"
  />
  <div style="display:flex;gap:10px;justify-content:flex-end;">
- <button @click="closeDeleteConfirm" style="padding:8px 18px;border-radius:7px;border:1px solid var(--border-color,#ddd);background:transparent;cursor:pointer;font-size:1.194rem;">Batal</button>
+ <button @click="closeDeleteConfirm" style="padding:8px 18px;border-radius:7px;border:1px solid var(--border-color,#ddd);background:transparent;cursor:pointer;font-size:1.492rem;">Batal</button>
  <button
  @click="handleDelete"
  :disabled="deleteConfirmInput !== deleteConfirmTarget"
@@ -146,15 +146,15 @@
  <i data-lucide="refresh-cw" style="width: 18px; height: 18px;"></i>
  </div>
  <div>
- <h3 style="margin: 0; font-size: 1.391rem; color: var(--text-primary, #111);">Unggah Ulang PDF & Analisis Ulang</h3>
- <span style="font-size: 1.086rem; color: var(--text-secondary, #666);">
+ <h3 style="margin: 0; font-size: 1.739rem; color: var(--text-primary, #111);">Unggah Ulang PDF & Analisis Ulang</h3>
+ <span style="font-size: 1.358rem; color: var(--text-secondary, #666);">
  Perbaiki hasil analisis dengan mengevaluasi ulang berkas PDF dokumen ini
  </span>
  </div>
  </div>
 
  <!-- Info Dokumen -->
- <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px; margin: 14px 0; font-size: 1.113rem; display: flex; flex-direction: column; gap: 4px;">
+ <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px; margin: 14px 0; font-size: 1.391rem; display: flex; flex-direction: column; gap: 4px;">
  <div style="display: flex; justify-content: space-between;">
  <span style="color: #64748b;">ID Dokumen:</span>
  <span style="font-weight: 700; font-family: monospace;">{{ analysis.id }}</span>
@@ -169,7 +169,7 @@
  </div>
  <div style="display: flex; justify-content: space-between; align-items: center;">
  <span style="color: #64748b;">Nilai Prakiraan Dampak Saat Ini:</span>
- <span :style="reuploadSroiBadgeStyle" style="padding: 2px 8px; border-radius: 999px; font-size: 15.5px; font-weight: 700;">
+ <span :style="reuploadSroiBadgeStyle" style="padding: 2px 8px; border-radius: 999px; font-size: 19.4px; font-weight: 700;">
  {{ reuploadSroiBadge.scoreText }} · {{ reuploadSroiBadge.label }}
  </span>
  </div>
@@ -190,26 +190,26 @@
  />
  <div v-if="!selectedReuploadFile" style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
  <i data-lucide="upload-cloud" style="width: 36px; height: 36px; color: var(--primary-color, #1B4D46);"></i>
- <div style="font-size: 1.194rem; color: #334155;"><strong>Klik untuk memilih berkas PDF</strong> atau seret ke sini</div>
- <div style="font-size: 1.017rem; color: #94a3b8;">Format berkas PDF RKA (Maksimal 25MB)</div>
+ <div style="font-size: 1.492rem; color: #334155;"><strong>Klik untuk memilih berkas PDF</strong> atau seret ke sini</div>
+ <div style="font-size: 1.271rem; color: #94a3b8;">Format berkas PDF RKA (Maksimal 25MB)</div>
  </div>
  <div v-else style="display: flex; align-items: center; justify-content: space-between; padding: 6px 10px; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;" @click.stop>
  <div style="display: flex; align-items: center; gap: 8px; text-align: left;">
  <i data-lucide="file-text" style="width: 20px; height: 20px; color: var(--primary-color, #1B4D46);"></i>
  <div>
- <div style="font-weight: 700; font-size: 1.153rem; color: #1e293b;">{{ selectedReuploadFile.name }}</div>
- <div style="font-size: 0.977rem; color: #64748b;">{{ (selectedReuploadFile.size / 1024).toFixed(1) }} KB</div>
+ <div style="font-weight: 700; font-size: 1.441rem; color: #1e293b;">{{ selectedReuploadFile.name }}</div>
+ <div style="font-size: 1.221rem; color: #64748b;">{{ (selectedReuploadFile.size / 1024).toFixed(1) }} KB</div>
  </div>
  </div>
- <button class="btn btn-secondary btn-sm" @click="selectedReuploadFile = null" style="font-size: 1.017rem; padding: 3px 8px;">Ganti</button>
+ <button class="btn btn-secondary btn-sm" @click="selectedReuploadFile = null" style="font-size: 1.271rem; padding: 3px 8px;">Ganti</button>
  </div>
  </div>
 
  <!-- Progress -->
  <div v-else style="background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; margin: 10px 0;">
  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
- <span style="font-size: 1.113rem; font-weight: 600; color: #1e293b;">{{ reuploadProgressText }}</span>
- <span style="font-size: 1.113rem; font-weight: 800; color: var(--primary-color, #1B4D46);">{{ reuploadProgress }}%</span>
+ <span style="font-size: 1.391rem; font-weight: 600; color: #1e293b;">{{ reuploadProgressText }}</span>
+ <span style="font-size: 1.391rem; font-weight: 800; color: var(--primary-color, #1B4D46);">{{ reuploadProgress }}%</span>
  </div>
  <div style="height: 6px; border-radius: 3px; background: #f1f5f9; overflow: hidden;">
  <div :style="{ width: reuploadProgress + '%' }" style="height: 100%; background: var(--primary-color, #1B4D46); transition: width 0.3s ease;"></div>
@@ -218,8 +218,8 @@
 
  <!-- Actions -->
  <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px;">
- <button :disabled="isReanalyzing" @click="showReuploadModal = false" style="padding: 7px 16px; border-radius: 7px; border: 1px solid #ddd; background: transparent; cursor: pointer; font-size: 1.153rem;">Batal</button>
- <button :disabled="!selectedReuploadFile || isReanalyzing" @click="executeReanalysis" style="display: flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: 7px; background: var(--primary-color, #1B4D46); color: #fff; border: none; cursor: pointer; font-size: 1.153rem; font-weight: 600;">
+ <button :disabled="isReanalyzing" @click="showReuploadModal = false" style="padding: 7px 16px; border-radius: 7px; border: 1px solid #ddd; background: transparent; cursor: pointer; font-size: 1.441rem;">Batal</button>
+ <button :disabled="!selectedReuploadFile || isReanalyzing" @click="executeReanalysis" style="display: flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: 7px; background: var(--primary-color, #1B4D46); color: #fff; border: none; cursor: pointer; font-size: 1.441rem; font-weight: 600;">
  <i :data-lucide="isReanalyzing ? 'loader-2' : 'play-circle'" :class="{ 'spin-anim': isReanalyzing }" style="width: 15px; height: 15px;"></i>
  <span>{{ isReanalyzing ? 'Menganalisis...' : 'Mulai Analisis Ulang' }}</span>
  </button>
@@ -1699,8 +1699,8 @@ const copyJson = async () => {
  --c-gray-50: var(--bg-primary);
  --c-gray-100: var(--bg-tertiary);
  --c-gray-200: var(--border-color);
- --c-gray-400: var(--text-muted);
- --c-gray-500: var(--text-muted);
+ --c-gray-400: var(--text-secondary);
+ --c-gray-500: var(--text-secondary);
  --c-gray-700: var(--text-primary);
  --c-gray-900: var(--text-primary);
  --c-green: var(--success-hover);
@@ -1731,8 +1731,8 @@ const copyJson = async () => {
  gap: 12px;
 }
 .sroi-header-left { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.sroi-header-icon { color: var(--c-navy); font-size: 22.8px; }
-.sroi-header h2 { font-size: 20.2px; font-weight: 700; margin: 0; color: var(--c-navy-deep); }
+.sroi-header-icon { color: var(--c-navy); font-size: 28.5px; }
+.sroi-header h2 { font-size: 25.2px; font-weight: 700; margin: 0; color: var(--c-navy-deep); }
 
 .version-selector-wrap {
  display: flex;
@@ -1745,7 +1745,7 @@ const copyJson = async () => {
 }
 
 .version-label {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  color: var(--text-muted);
 }
@@ -1753,7 +1753,7 @@ const copyJson = async () => {
 .sroi-version-select {
  border: none;
  background: transparent;
- font-size: 16.3px;
+ font-size: 20.4px;
  font-weight: 700;
  color: var(--info-color);
  outline: none;
@@ -1769,7 +1769,7 @@ const copyJson = async () => {
 .model-badge {
  background: var(--c-green-bg);
  color: var(--c-green-text);
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  padding: 4px 10px;
  border-radius: 20px;
@@ -1785,7 +1785,7 @@ const copyJson = async () => {
 
 /* ══════ Section title helper ══════ */
 .rka-section-title {
- font-size: 20.3px;
+ font-size: 25.4px;
  font-weight: 800;
  color: var(--c-navy-deep);
  display: flex;
@@ -1801,11 +1801,11 @@ const copyJson = async () => {
  display: inline-flex;
  align-items: center;
  justify-content: center;
- font-size: 20.3px;
+ font-size: 25.4px;
  flex-shrink: 0;
 }
 .rka-section-sub {
- font-size: 17px;
+ font-size: 21.2px;
  color: var(--c-gray-500);
  margin: 2px 0 14px;
 }
@@ -1838,7 +1838,7 @@ const copyJson = async () => {
 }
 
 .rka-hero-label {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 800;
  letter-spacing: 0.08em;
  text-transform: uppercase;
@@ -1846,7 +1846,7 @@ const copyJson = async () => {
 }
 
 .rka-hero-main-val {
- font-size: 22.8px;
+ font-size: 28.5px;
  font-weight: 800;
  color: #ffffff;
  line-height: 1.35;
@@ -1881,7 +1881,7 @@ const copyJson = async () => {
 }
 
 .rka-hero-text-val {
- font-size: 19px;
+ font-size: 23.8px;
  font-weight: 700;
  color: #ffffff;
  line-height: 1.4;
@@ -1903,7 +1903,7 @@ const copyJson = async () => {
 }
 
 .tab-amount-num {
- font-size: 27.8px;
+ font-size: 34.8px;
  font-weight: 800;
  color: #15803d;
  margin-bottom: 6px;
@@ -1911,7 +1911,7 @@ const copyJson = async () => {
 }
 
 .tab-delta-info {
- font-size: 16.3px;
+ font-size: 20.4px;
  font-weight: 700;
  display: flex;
  align-items: center;
@@ -1931,7 +1931,7 @@ const copyJson = async () => {
 }
 
 .tab-arrow {
- font-size: 15.5px;
+ font-size: 19.4px;
 }
 
 /* TAHUN ANGGARAN — mengikuti gaya font field lain (bold, putih) */
@@ -1943,7 +1943,7 @@ const copyJson = async () => {
 }
 
 .tahun-anggaran-year {
- font-size: 22.8px;
+ font-size: 28.5px;
  font-weight: 800;
  color: #ffffff;
  line-height: 1.35;
@@ -1952,7 +1952,7 @@ const copyJson = async () => {
 .tab-year-badge {
  background: #16a34a;
  color: #ffffff;
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 800;
  padding: 3px 10px;
  border-radius: 12px;
@@ -1973,7 +1973,7 @@ const copyJson = async () => {
  padding: 16px 18px;
 }
 .justifikasi-label {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  letter-spacing: 0.04em;
  text-transform: uppercase;
@@ -1981,7 +1981,7 @@ const copyJson = async () => {
  margin-bottom: 8px;
 }
 .justifikasi-text {
- font-size: 18.3px;
+ font-size: 22.9px;
  color: var(--c-gray-700);
  line-height: 1.6;
  margin: 0;
@@ -1997,7 +1997,7 @@ const copyJson = async () => {
  max-width: 380px;
 }
 .pie-block-title {
- font-size: 17px;
+ font-size: 21.2px;
  font-weight: 700;
  color: var(--c-gray-700);
  text-align: center;
@@ -2009,7 +2009,7 @@ const copyJson = async () => {
 }
 .pie-block-title.accent-ai { color: var(--accent-color, #C97B3D); }
 .pie-canvas-wrap { position: relative; width: 100%; height: 190px; margin: 0 auto; max-width: 230px; }
-.pie-legend { list-style: none; margin: 14px 0 0; padding: 0; font-size: 16.3px; color: var(--c-gray-700); }
+.pie-legend { list-style: none; margin: 14px 0 0; padding: 0; font-size: 20.4px; color: var(--c-gray-700); }
 .pie-legend li {
  display: flex;
  align-items: center;
@@ -2030,7 +2030,7 @@ const copyJson = async () => {
  padding: 18px 20px;
 }
 .efficiency-title {
- font-size: 17.6px;
+ font-size: 22px;
  font-weight: 700;
  color: var(--c-gray-700);
  margin-bottom: 12px;
@@ -2057,9 +2057,9 @@ const copyJson = async () => {
  align-items: center;
  gap: 12px;
 }
-.efficiency-item-name { font-size: 17px; color: var(--c-gray-700); flex: 1; line-height: 1.35; }
+.efficiency-item-name { font-size: 21.2px; color: var(--c-gray-700); flex: 1; line-height: 1.35; }
 .efficiency-item-status {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  padding: 4px 10px;
  border-radius: 12px;
@@ -2072,12 +2072,12 @@ const copyJson = async () => {
 .efficiency-item-status.tone-green { background: var(--c-green-bg); color: var(--c-green-text); }
 .efficiency-item-status.tone-blue { background: var(--info-glow); color: var(--info-hover); }
 .efficiency-item-chevron {
- font-size: 15.5px;
+ font-size: 19.4px;
  color: var(--c-gray-500, var(--text-muted));
  flex-shrink: 0;
 }
 .efficiency-item-reason {
- font-size: 15.6px;
+ font-size: 19.5px;
  color: var(--c-gray-700);
  line-height: 1.5;
  background: var(--c-gray-50);
@@ -2100,7 +2100,7 @@ const copyJson = async () => {
  display: inline-flex;
  align-items: center;
  gap: 6px;
- font-size: 17px;
+ font-size: 21.2px;
  font-weight: 700;
  padding: 8px 16px;
  border-radius: 20px;
@@ -2125,16 +2125,16 @@ const copyJson = async () => {
  margin-bottom: 6px;
  flex-wrap: wrap;
 }
-.realokasi-kode { font-family: monospace; font-size: 15.6px; color: var(--c-gray-500); }
+.realokasi-kode { font-family: monospace; font-size: 19.5px; color: var(--c-gray-500); }
 .realokasi-nilai-group { display: flex; align-items: center; gap: 8px; }
-.realokasi-nilai-awal { text-decoration: line-through; color: var(--c-gray-400); font-size: 15.6px; }
+.realokasi-nilai-awal { text-decoration: line-through; color: var(--c-gray-400); font-size: 19.5px; }
 .realokasi-col.tambah .realokasi-nilai-awal { text-decoration: none; }
-.realokasi-nama { font-size: 17.6px; font-weight: 700; margin-bottom: 4px; color: var(--c-gray-900); }
-.realokasi-alasan { font-size: 16.3px; color: var(--c-gray-500); line-height: 1.5; }
-.realokasi-nilai { font-size: 17.6px; font-weight: 700; }
+.realokasi-nama { font-size: 22px; font-weight: 700; margin-bottom: 4px; color: var(--c-gray-900); }
+.realokasi-alasan { font-size: 20.4px; color: var(--c-gray-500); line-height: 1.5; }
+.realokasi-nilai { font-size: 22px; font-weight: 700; }
 .realokasi-nilai.minus { color: var(--c-red); }
 .realokasi-nilai.plus { color: var(--c-green); }
-.realokasi-empty { font-size: 16.3px; color: var(--c-gray-400); font-style: italic; }
+.realokasi-empty { font-size: 20.4px; color: var(--c-gray-400); font-style: italic; }
 
 /* ══════ 4. Analisis Komponen Belanja & Rekomendasi Belanja (dua kolom berdampingan) ══════ */
 .belanja-rekomendasi-grid {
@@ -2157,7 +2157,7 @@ const copyJson = async () => {
  display: flex;
  align-items: center;
  gap: 7px;
- font-size: 17.6px;
+ font-size: 22px;
  font-weight: 800;
  color: var(--c-navy-deep);
  padding-bottom: 10px;
@@ -2166,7 +2166,7 @@ const copyJson = async () => {
 }
 .belanja-col-header.accent-ai { color: var(--accent-color, #C97B3D); border-bottom-color: rgba(220,122,42,0.18); }
 .belanja-subblock-label {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  letter-spacing: 0.03em;
  text-transform: uppercase;
@@ -2195,7 +2195,7 @@ const copyJson = async () => {
  gap: 12px;
  margin: 4px 0;
  color: var(--c-gray-400);
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  letter-spacing: 0.06em;
  text-transform: uppercase;
@@ -2227,7 +2227,7 @@ const copyJson = async () => {
  margin-bottom: 8px;
 }
 .sroi-ratio-eyebrow {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  letter-spacing: 0.05em;
  text-transform: uppercase;
@@ -2237,14 +2237,14 @@ const copyJson = async () => {
  background: rgba(255, 255, 255, 0.22);
  padding: 4px 12px;
  border-radius: 20px;
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  text-transform: uppercase;
  white-space: nowrap;
 }
-.sroi-ratio-value { font-size: 65.8px; font-weight: 800; line-height: 1; margin: 8px 0 12px; }
-.sroi-ratio-formula { font-size: 16.3px; opacity: 0.85; margin-bottom: 10px; }
-.sroi-ratio-desc { font-size: 18.3px; font-weight: 600; margin: 0; line-height: 1.45; max-width: 620px; }
+.sroi-ratio-value { font-size: 72px; font-weight: 800; line-height: 1; margin: 8px 0 12px; }
+.sroi-ratio-formula { font-size: 20.4px; opacity: 0.85; margin-bottom: 10px; }
+.sroi-ratio-desc { font-size: 22.9px; font-weight: 600; margin: 0; line-height: 1.45; max-width: 620px; }
 
 .sroi-stats-grid {
  display: grid;
@@ -2262,14 +2262,14 @@ const copyJson = async () => {
  padding: 14px 16px;
 }
 .stat-label {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  letter-spacing: 0.04em;
  text-transform: uppercase;
  color: var(--c-gray-500);
  margin-bottom: 6px;
 }
-.stat-value { font-size: 22.8px; font-weight: 700; color: var(--c-gray-900); }
+.stat-value { font-size: 28.5px; font-weight: 700; color: var(--c-gray-900); }
 .stat-value.deadweight { color: var(--c-red); }
 .stat-value.positive { color: var(--c-green); }
 
@@ -2282,7 +2282,7 @@ const copyJson = async () => {
  padding: 16px;
 }
 .sroi-factors-title {
- font-size: 17.6px;
+ font-size: 22px;
  font-weight: 700;
  color: var(--c-gray-800);
  margin-bottom: 12px;
@@ -2312,23 +2312,23 @@ const copyJson = async () => {
  gap: 2px;
 }
 .factor-name {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  color: var(--c-gray-600);
  text-transform: uppercase;
 }
 .factor-val {
- font-size: 20.2px;
+ font-size: 25.2px;
  font-weight: 800;
  color: var(--c-gray-900);
 }
 .factor-hint {
- font-size: 15.5px;
+ font-size: 19.4px;
  color: var(--c-gray-500);
  line-height: 1.2;
 }
 .factor-loss {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  color: #dc2626;
  margin-top: 2px;
@@ -2341,8 +2341,8 @@ const copyJson = async () => {
   border-radius: var(--radius-md);
   padding: 16px;
 }
-.sroi-howto-title { font-size: 17px; font-weight: 700; color: var(--c-gray-800); cursor: pointer; }
-.sroi-howto-sub { font-size: 14px; font-weight: 400; color: var(--c-gray-500, #6b7280); }
+.sroi-howto-title { font-size: 21.2px; font-weight: 700; color: var(--c-gray-800); cursor: pointer; }
+.sroi-howto-sub { font-size: 18px; font-weight: 400; color: var(--c-gray-500, #6b7280); }
 .sroi-howto-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2365,13 +2365,13 @@ const copyJson = async () => {
 .howto-step {
   width: 22px; height: 22px; border-radius: 50%;
   background: #10b981; color: #fff;
-  font-size: 13px; font-weight: 700;
+  font-size: 18px; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
 }
-.howto-name { font-size: 15.5px; font-weight: 700; text-transform: uppercase; color: var(--c-gray-500, #6b7280); }
-.howto-formula { font-size: 15px; color: var(--c-gray-800); line-height: 1.35; }
-.howto-num { font-size: 18px; font-weight: 800; color: var(--c-gray-800); }
-.howto-note { font-size: 14.5px; color: var(--c-gray-500, #6b7280); line-height: 1.3; }
+.howto-name { font-size: 19.4px; font-weight: 700; text-transform: uppercase; color: var(--c-gray-500, #6b7280); }
+.howto-formula { font-size: 18.8px; color: var(--c-gray-800); line-height: 1.35; }
+.howto-num { font-size: 22.5px; font-weight: 800; color: var(--c-gray-800); }
+.howto-note { font-size: 18.1px; color: var(--c-gray-500, #6b7280); line-height: 1.3; }
 
 /* ══════ SROI Transparency Flow (Rule 16) ══════ */
 .sroi-transparency-card {
@@ -2382,7 +2382,7 @@ const copyJson = async () => {
  padding: 16px;
 }
 .transparency-header {
- font-size: 17.6px;
+ font-size: 22px;
  font-weight: 700;
  color: var(--c-gray-800);
  margin-bottom: 14px;
@@ -2428,7 +2428,7 @@ const copyJson = async () => {
  border-color: #86efac;
 }
 .step-num {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 800;
  width: 18px;
  height: 18px;
@@ -2445,20 +2445,20 @@ const copyJson = async () => {
  color: #ffffff;
 }
 .step-title {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  color: var(--c-gray-600);
  margin-bottom: 4px;
 }
 .step-val {
- font-size: 17px;
+ font-size: 21.2px;
  font-weight: 800;
  color: var(--c-gray-900);
 }
 .flow-arrow {
  color: var(--c-gray-400);
  font-weight: 800;
- font-size: 20.2px;
+ font-size: 25.2px;
  flex-shrink: 0;
 }
 
@@ -2469,7 +2469,7 @@ const copyJson = async () => {
  border-top: 1px dashed var(--c-gray-200);
 }
 .sroi-yearly-title {
- font-size: 16.3px;
+ font-size: 20.4px;
  font-weight: 700;
  color: var(--c-gray-700);
  margin-bottom: 8px;
@@ -2477,7 +2477,7 @@ const copyJson = async () => {
 .sroi-yearly-table {
  width: 100%;
  border-collapse: collapse;
- font-size: 16.3px;
+ font-size: 20.4px;
 }
 .sroi-yearly-table th {
  text-align: left;
@@ -2505,13 +2505,13 @@ const copyJson = async () => {
  border-top: 1px dashed var(--c-gray-200);
 }
 .sroi-formula-desc {
- font-size: 17px;
+ font-size: 21.2px;
  color: var(--c-gray-700);
  line-height: 1.65;
  margin: 0 0 14px;
 }
 .sroi-formula-title {
- font-size: 19px;
+ font-size: 23.8px;
  font-weight: 800;
  color: var(--c-gray-900);
  margin-bottom: 10px;
@@ -2528,7 +2528,7 @@ const copyJson = async () => {
  border-top: 1px solid var(--c-gray-200);
 }
 .sroi-formula-label {
- font-size: 17.6px;
+ font-size: 22px;
  font-weight: 700;
  color: var(--c-gray-800);
  white-space: nowrap;
@@ -2541,7 +2541,7 @@ const copyJson = async () => {
 }
 .sroi-formula-num,
 .sroi-formula-den {
- font-size: 17px;
+ font-size: 21.2px;
  font-weight: 700;
  color: var(--c-gray-900);
  padding: 0 6px;
@@ -2554,12 +2554,12 @@ const copyJson = async () => {
  margin: 3px 0;
 }
 .sroi-formula-result {
- font-size: 21.5px;
+ font-size: 26.9px;
  font-weight: 900;
  color: var(--c-green);
 }
 .sroi-formula-note {
- font-size: 16.3px;
+ font-size: 20.4px;
  color: var(--c-gray-600);
  line-height: 1.6;
  margin: 0;
@@ -2579,13 +2579,13 @@ const copyJson = async () => {
 .sroi-gap-details[open] > summary { margin-bottom: 8px; }
 .sroi-gap-hint { font-weight: 400; opacity: .7; font-size: 0.85em; }
 .sroi-gap-title {
- font-size: 17.6px;
+ font-size: 22px;
  font-weight: 800;
  color: #9a3412;
  margin-bottom: 8px;
 }
 .sroi-gap-desc {
- font-size: 16.3px;
+ font-size: 20.4px;
  color: var(--c-gray-700);
  line-height: 1.6;
  margin: 0 0 10px;
@@ -2599,7 +2599,7 @@ const copyJson = async () => {
  gap: 8px;
 }
 .sroi-gap-list li {
- font-size: 16.3px;
+ font-size: 20.4px;
  line-height: 1.5;
  padding-bottom: 8px;
  border-bottom: 1px dashed #fed7aa;
@@ -2623,7 +2623,7 @@ const copyJson = async () => {
  margin-top: 2px;
 }
 .sroi-gap-summary {
- font-size: 17px;
+ font-size: 21.2px;
  color: var(--c-gray-800);
  line-height: 1.6;
  margin: 0 0 10px;
@@ -2631,7 +2631,7 @@ const copyJson = async () => {
  border-top: 1px solid #fed7aa;
 }
 .sroi-gap-suggestion {
- font-size: 16.3px;
+ font-size: 20.4px;
  color: var(--c-gray-700);
  line-height: 1.65;
  margin: 0;
@@ -2693,13 +2693,13 @@ const copyJson = async () => {
  display: flex;
  align-items: center;
  justify-content: center;
- font-size: 16.3px;
+ font-size: 20.4px;
  flex-shrink: 0;
  margin-top: 1px;
 }
 .kepatuhan-item:not(.sesuai) .kepatuhan-icon { background: var(--c-red); }
-.kepatuhan-label { font-size: 17.6px; font-weight: 700; color: var(--c-gray-900); }
-.kepatuhan-desc { font-size: 17px; color: var(--c-gray-500); margin-top: 3px; line-height: 1.5; }
+.kepatuhan-label { font-size: 22px; font-weight: 700; color: var(--c-gray-900); }
+.kepatuhan-desc { font-size: 21.2px; color: var(--c-gray-500); margin-top: 3px; line-height: 1.5; }
 
 /* ══════ 10. Jadwal Penarikan Dana (RPD) ══════ */
 .rpd-display-grid {
@@ -2718,7 +2718,7 @@ const copyJson = async () => {
  text-align: center;
 }
 .rpd-card-q {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  color: var(--c-gray-500);
  text-transform: uppercase;
@@ -2726,13 +2726,13 @@ const copyJson = async () => {
  margin-bottom: 6px;
 }
 .rpd-card-pct {
- font-size: 30.4px;
+ font-size: 38px;
  font-weight: 800;
  color: var(--info-color);
  margin-bottom: 4px;
 }
 .rpd-card-rp {
- font-size: 16.3px;
+ font-size: 20.4px;
  font-weight: 700;
  color: var(--c-gray-700);
 }
@@ -2760,7 +2760,7 @@ const copyJson = async () => {
  display: flex;
  align-items: center;
  gap: 6px;
- font-size: 17px;
+ font-size: 21.2px;
  font-weight: 700;
  padding: 10px 14px;
  border-radius: 8px;
@@ -2784,19 +2784,19 @@ const copyJson = async () => {
 }
 .indikator-item-level {
  font-family: monospace;
- font-size: 15.5px;
+ font-size: 19.4px;
  color: var(--text-muted);
  text-transform: uppercase;
  letter-spacing: 0.02em;
 }
 .indikator-item-target {
- font-size: 17.6px;
+ font-size: 22px;
  font-weight: 700;
  color: #4338ca;
  white-space: nowrap;
 }
 .indikator-item-nama {
- font-size: 17.6px;
+ font-size: 22px;
  font-weight: 700;
  color: var(--text-primary);
  line-height: 1.4;
@@ -2804,7 +2804,7 @@ const copyJson = async () => {
 .tahun-tag-inline {
  background: var(--success-hover);
  color: #fff;
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  letter-spacing: 0.03em;
  text-transform: uppercase;
@@ -2813,7 +2813,7 @@ const copyJson = async () => {
  white-space: nowrap;
 }
 .indikator-empty {
- font-size: 16.3px;
+ font-size: 20.4px;
  color: var(--text-muted);
  font-style: italic;
  margin: 0;
@@ -2840,19 +2840,19 @@ const copyJson = async () => {
 }
 .anggaran-year-label {
  font-family: monospace;
- font-size: 15.5px;
+ font-size: 19.4px;
  color: var(--text-muted);
  text-transform: uppercase;
  letter-spacing: 0.02em;
 }
 .anggaran-year-body { display: flex; align-items: baseline; gap: 8px; }
-.anggaran-year-jumlah { font-size: 20.2px; font-weight: 700; color: var(--success-text); }
+.anggaran-year-jumlah { font-size: 25.2px; font-weight: 700; color: var(--success-text); }
 .anggaran-year-delta {
  display: flex;
  align-items: center;
  gap: 5px;
  margin-top: 6px;
- font-size: 16.3px;
+ font-size: 20.4px;
  font-weight: 700;
  padding: 4px 9px;
  border-radius: 7px;
@@ -2860,10 +2860,10 @@ const copyJson = async () => {
 }
 .anggaran-year-delta.up { color: var(--success-text); background: var(--success-glow); }
 .anggaran-year-delta.down { color: var(--danger-text); background: var(--danger-glow); }
-.delta-arrow { font-size: 15.5px; }
+.delta-arrow { font-size: 19.4px; }
 
 .indikator-anggaran-note {
- font-size: 16.3px;
+ font-size: 20.4px;
  color: var(--text-muted);
  margin: 14px 0 0;
  line-height: 1.5;
@@ -2888,13 +2888,13 @@ const copyJson = async () => {
  margin-bottom: 8px;
  flex-wrap: wrap;
 }
-.kesesuaian-icon { font-size: 20.3px; font-weight: 700; }
+.kesesuaian-icon { font-size: 25.4px; font-weight: 700; }
 .kesesuaian-card.ok .kesesuaian-icon { color: var(--success-hover); }
 .kesesuaian-card.warn .kesesuaian-icon { color: var(--warning-hover); }
 .kesesuaian-card.bad .kesesuaian-icon { color: var(--danger-hover); }
-.kesesuaian-title { font-size: 17.6px; font-weight: 700; color: var(--text-primary); flex: 1; }
+.kesesuaian-title { font-size: 22px; font-weight: 700; color: var(--text-primary); flex: 1; }
 .kesesuaian-status-pill {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  text-transform: uppercase;
  letter-spacing: 0.03em;
@@ -2913,7 +2913,7 @@ const copyJson = async () => {
   gap: 6px;
   cursor: pointer;
   list-style: none;
-  font-size: 16.3px;
+  font-size: 20.4px;
   font-weight: 600;
   color: var(--text-secondary);
   user-select: none;
@@ -2931,8 +2931,8 @@ const copyJson = async () => {
 .kesesuaian-detail[open] > .kesesuaian-detail-toggle::before { transform: rotate(45deg); }
 .kesesuaian-detail-toggle:hover { color: var(--text-primary); }
 .kesesuaian-detail-body { margin-top: 8px; }
-.kesesuaian-penjelasan { font-size: 17px; color: var(--text-primary); line-height: 1.55; margin: 0 0 6px; }
-.kesesuaian-estimasi { font-size: 16.3px; color: var(--text-muted); margin: 0; }
+.kesesuaian-penjelasan { font-size: 21.2px; color: var(--text-primary); line-height: 1.55; margin: 0 0 6px; }
+.kesesuaian-estimasi { font-size: 20.4px; color: var(--text-muted); margin: 0; }
 .kesesuaian-estimasi strong { color: var(--text-primary); }
 
 /* Proyeksi Capaian Target — apakah anggaran akan menyentuh target */
@@ -2952,10 +2952,10 @@ const copyJson = async () => {
  gap: 7px;
  flex-wrap: wrap;
 }
-.proyeksi-target-icon { font-size: 17.6px; }
-.proyeksi-target-label { font-size: 16.3px; font-weight: 700; color: var(--text-secondary); flex: 1; }
+.proyeksi-target-icon { font-size: 22px; }
+.proyeksi-target-label { font-size: 20.4px; font-weight: 700; color: var(--text-secondary); flex: 1; }
 .proyeksi-target-pill {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  padding: 3px 10px;
  border-radius: 20px;
@@ -2966,7 +2966,7 @@ const copyJson = async () => {
 .proyeksi-target-box.ok .proyeksi-target-pill { background: var(--success-glow); color: var(--success-text); }
 .proyeksi-target-box.warn .proyeksi-target-pill { background: var(--warning-glow); color: var(--warning-text); }
 .proyeksi-target-box.bad .proyeksi-target-pill { background: var(--danger-glow); color: var(--danger-text); }
-.proyeksi-target-alasan { font-size: 16.3px; color: var(--text-secondary); line-height: 1.5; margin: 6px 0 0; }
+.proyeksi-target-alasan { font-size: 20.4px; color: var(--text-secondary); line-height: 1.5; margin: 6px 0 0; }
 
 /* ══════ 8. Ringkasan Efektif & Inefektif per Rekening ══════ */
 .efektivitas-summary-strip {
@@ -2990,7 +2990,7 @@ const copyJson = async () => {
 .efektivitas-summary-pill.tone-red { border-color: var(--danger-color); background: var(--danger-glow); }
 .efektivitas-summary-pill.tone-gray { border-color: var(--border-color-strong); background: var(--bg-tertiary); }
 .efektivitas-summary-count {
- font-size: 30.4px;
+ font-size: 38px;
  font-weight: 800;
  line-height: 1.1;
  color: var(--text-primary);
@@ -2998,12 +2998,12 @@ const copyJson = async () => {
 .efektivitas-summary-pill.tone-green .efektivitas-summary-count { color: var(--success-text); }
 .efektivitas-summary-pill.tone-red .efektivitas-summary-count { color: var(--danger-text); }
 .efektivitas-summary-label {
- font-size: 15.6px;
+ font-size: 19.5px;
  font-weight: 700;
  color: var(--text-secondary);
 }
 .efektivitas-summary-sub {
- font-size: 15.5px;
+ font-size: 19.4px;
  color: var(--text-muted);
 }
 
@@ -3020,7 +3020,7 @@ const copyJson = async () => {
  display: inline-flex;
  align-items: center;
  gap: 6px;
- font-size: 17px;
+ font-size: 21.2px;
  font-weight: 700;
  padding: 8px 16px;
  border-radius: 20px;
@@ -3049,10 +3049,10 @@ const copyJson = async () => {
  margin-bottom: 4px;
  flex-wrap: wrap;
 }
-.efektivitas-card-nama { font-size: 17.6px; font-weight: 700; color: var(--text-primary); }
-.efektivitas-card-persen { font-size: 16.3px; font-weight: 700; color: var(--text-muted); white-space: nowrap; }
+.efektivitas-card-nama { font-size: 22px; font-weight: 700; color: var(--text-primary); }
+.efektivitas-card-persen { font-size: 20.4px; font-weight: 700; color: var(--text-muted); white-space: nowrap; }
 .efektivitas-card-badge {
- font-size: 15.5px;
+ font-size: 19.4px;
  font-weight: 700;
  text-transform: uppercase;
  letter-spacing: 0.03em;
@@ -3062,11 +3062,11 @@ const copyJson = async () => {
  color: var(--text-muted);
  white-space: nowrap;
 }
-.efektivitas-card-alasan { font-size: 16.3px; color: var(--text-secondary); line-height: 1.5; margin: 0; }
+.efektivitas-card-alasan { font-size: 20.4px; color: var(--text-secondary); line-height: 1.5; margin: 0; }
 
 .indikator-rincian { margin-top: 8px; border-top: 1px dashed #cbd5e1; padding-top: 6px; }
-.indikator-rincian > summary { cursor: pointer; font-size: 16.3px; font-weight: 700; color: #0f766e; list-style: revert; }
-.indikator-rincian-list { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 17px; line-height: 1.45; color: #334155; }
+.indikator-rincian > summary { cursor: pointer; font-size: 20.4px; font-weight: 700; color: #0f766e; list-style: revert; }
+.indikator-rincian-list { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 21.2px; line-height: 1.45; color: #334155; }
 .indikator-rincian-list li strong { display: block; color: #0f172a; }
 /* ── Verifikasi Kelaikan ── */
 .vk-card { border: 1.5px solid var(--border-color, #d0d7d5); border-radius: 12px; padding: 14px 16px; margin: 14px 0; }
@@ -3080,13 +3080,13 @@ const copyJson = async () => {
 .vk-card.warn .vk-status-pill { color: #92400e; }
 .vk-card.bad .vk-status-pill { color: #991b1b; }
 .vk-summary { display: flex; gap: 22px; flex-wrap: wrap; margin: 10px 0 4px; }
-.vk-stat { display: flex; flex-direction: column; font-size: 17.6px; }
-.vk-stat-label { opacity: .75; font-size: 16.3px; }
-.vk-alasan { margin: 6px 0 8px 18px; font-size: 17.6px; }
-.vk-table { width: 100%; border-collapse: collapse; font-size: 17px; }
+.vk-stat { display: flex; flex-direction: column; font-size: 22px; }
+.vk-stat-label { opacity: .75; font-size: 20.4px; }
+.vk-alasan { margin: 6px 0 8px 18px; font-size: 22px; }
+.vk-table { width: 100%; border-collapse: collapse; font-size: 21.2px; }
 .vk-table th, .vk-table td { border: 1px solid rgba(0,0,0,.12); padding: 5px 7px; text-align: left; vertical-align: top; }
-.vk-sub { font-weight: 700; margin: 10px 0 2px; font-size: 17.6px; }
-.vk-list { margin: 0 0 0 18px; font-size: 17.6px; }
-.vk-text { font-size: 17.6px; margin: 0; }
+.vk-sub { font-weight: 700; margin: 10px 0 2px; font-size: 22px; }
+.vk-list { margin: 0 0 0 18px; font-size: 22px; }
+.vk-text { font-size: 22px; margin: 0; }
 </style>
 
