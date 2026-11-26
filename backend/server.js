@@ -135,7 +135,8 @@ app.use(cors({
  callback(new Error(`CORS: origin tidak diizinkan — ${origin}`));
  },
  credentials: true,
- allowedHeaders: ['Content-Type', 'Authorization', 'X-File-Name']
+ allowedHeaders: ['Content-Type', 'Authorization', 'X-File-Name', 'x-api-key', 'x-gpt-key'],
+ exposedHeaders: ['X-Data-Source']
 }));
 app.use(express.json({ limit: '50mb' }));
 
