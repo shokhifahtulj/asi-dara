@@ -423,11 +423,13 @@ export async function setStore(key, data) {
     writeLocalStore(localDb);
   } catch {}
 
-  if (key === 'users_db' || key === 'main_db') {
-    console.warn(`[DB] Data "${key}" berhasil diamankan di cadangan lokal karena database sedang tidak dapat diakses.`);
+  if (key === 'users_db') {
+    console.warn('[DB] Data "users_db" diamankan di cadangan lokal karena database sedang tidak dapat diakses.');
     return;
   }
 
+  // Jangan pura-pura sukses: disk lokal (Vercel /tmp / Render) bersifat sementara, sehingga
+  // data yang "tersimpan" hanya di sana akan hilang. Beri tahu pengguna bahwa simpan gagal.
   throw markDbUnavailable(new Error(
     `Gagal menyimpan data ke database (kemungkinan kuota terlampaui). Perubahan BELUM tersimpan — coba lagi beberapa saat lagi. Detail teknis: ${err.message}`
   ));

@@ -38,15 +38,20 @@ import { startStorageOptimizer, runStorageOptimizer, getOptimizerStats } from '.
 async function readDb() {
  let db = await getStore('main_db');
  if (!db) {
- db = { rkis: [], ssh_databases: [] };
- try {
- await setStore('main_db', db);
- } catch (err) {
- // Database sedang tidak dapat ditulis (mis. kuota habis & belum ada
- // cadangan sama sekali). Jangan gagalkan pembacaan hanya karena inisialisasi
- // gagal — tetap kembalikan struktur kosong agar aplikasi tidak crash.
- console.warn('[DB] Tidak dapat membuat "main_db" baru saat ini:', err.message);
- }
+  // PENTING: jika database sedang tidak terbaca (mode cadangan) JANGAN membuat main_db kosong —
+  // penulisan struktur kosong itu bisa menimpa seluruh arsip begitu database pulih.
+  if (isServingFallbackData()) {
+   const err = new Error('Database belum dapat dibaca. Data arsip tidak diubah demi keamanan.');
+   err.code = 'DB_UNAVAILABLE';
+   err.status = 503;
+   throw err;
+  }
+  db = { rkis: [], ssh_databases: [] };
+  try {
+   await setStore('main_db', db);
+  } catch (err) {
+   console.warn('[DB] Tidak dapat membuat "main_db" baru saat ini:', err.message);
+  }
  }
  if (!db.rkis) db.rkis = [];
  if (!db.ssh_databases) db.ssh_databases = [];
@@ -54,6 +59,14 @@ async function readDb() {
 }
 
 async function writeDb(data) {
+ // Tolak penulisan bila data yang dipegang berasal dari cadangan lama (bukan dari database) —
+ // kalau tidak, data basi akan menimpa data terbaru di database dan dokumen "hilang".
+ if (isServingFallbackData()) {
+  const err = new Error('Database sedang tidak dapat diakses; perubahan ditolak agar data tersimpan tidak tertimpa. Coba lagi sebentar lagi.');
+  err.code = 'DB_UNAVAILABLE';
+  err.status = 503;
+  throw err;
+ }
  await setStore('main_db', data);
  // Publish after Neon confirms the write. This keeps local clients instant
  // and also updates the hub baseline so the cross-instance poller won't

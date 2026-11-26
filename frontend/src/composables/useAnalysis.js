@@ -1607,8 +1607,8 @@ async function handleRkaFiles(files) {
         console.error(saveError);
         queueItem.status = 'error';
         queueItem.statusText = 'Gagal menyimpan ke server';
-        showNotification("Gagal Menyimpan " + file.name, saveError.message, "danger");
-        state.rkis.unshift(analysisObj);
+        showNotification("Gagal Menyimpan " + file.name, saveError.message + ' Dokumen BELUM tersimpan di server — unggah ulang.', "danger");
+        // Sengaja tidak dimasukkan ke state.rkis: dokumen yang tidak ada di server akan hilang saat refresh.
         try {
           await apiFetch('/api/v1/activity-logs', {
             method: 'POST',
@@ -2273,7 +2273,23 @@ async function updateRkiMetadata(id, updates) {
 // ── Berkas asli RKA: simpan ke server (Neon) & unduh dari Arsip ──────────────
 async function uploadRkaOriginalFile(id, file) {
   if (!id || !file) return false;
-  try {
+  // Coba hingga 3x supaya gangguan jaringan/DB sesaat tidak membuat berkas asli gagal tersimpan.
+  let lastErr = null;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      return await uploadRkaOriginalFileOnce(id, file);
+    } catch (err) {
+      lastErr = err;
+      if (attempt < 3) await new Promise(r => setTimeout(r, 1500 * attempt));
+    }
+  }
+  console.warn('[Berkas Asli] Gagal menyimpan berkas asli:', lastErr);
+  showNotification('Berkas Asli Belum Tersimpan', `Analisis tersimpan, tetapi berkas asli ${file.name} gagal diunggah: ${lastErr?.message || 'kesalahan tidak diketahui'}. Gunakan "Unggah Ulang PDF" untuk mencoba lagi.`, 'warning');
+  return false;
+}
+
+async function uploadRkaOriginalFileOnce(id, file) {
+  {
     const res = await apiFetch(`/api/v1/rkis/${encodeURIComponent(id)}/file`, {
       method: 'PUT',
       headers: {
@@ -2294,10 +2310,6 @@ async function uploadRkaOriginalFile(id, file) {
       state.rkis[idx] = { ...state.rkis[idx], hasFile: true, fileName: data.fileName || file.name };
     }
     return true;
-  } catch (err) {
-    console.warn('[Berkas Asli] Gagal menyimpan berkas asli:', err);
-    showNotification('Berkas Asli Belum Tersimpan', `Analisis tersimpan, tetapi berkas asli ${file.name} gagal diunggah: ${err.message}`, 'warning');
-    return false;
   }
 }
 
