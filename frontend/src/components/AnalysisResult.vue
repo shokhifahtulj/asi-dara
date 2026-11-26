@@ -617,6 +617,51 @@
  </div>
  </div>
 
+    <!-- Cara Menghitung SROI (penjabaran rumus awal sampai akhir) -->
+    <details class="sroi-howto-card sroi-gap-details">
+      <summary class="sroi-howto-title">Cara Menghitung SROI <span class="sroi-gap-hint">(klik untuk melihat penjabaran rumus)</span></summary>
+      <ol class="sroi-howto-list">
+        <li>
+          <strong>Nilai Input</strong> = pagu kegiatan
+          <span class="howto-num">{{ formatRupiah(sroiMetrics.valueOfInputs) }}</span>
+        </li>
+        <li>
+          <strong>Total Nilai Dampak</strong> = Kuantitas Outcome × Financial Proxy
+          <span class="howto-num">{{ formatRupiah(sroiMetrics.totalNilaiDampak) }}</span>
+        </li>
+        <li>
+          <strong>Kerugian Bobot</strong>: Total Nilai Dampak × (1 − {{ sroiMetrics.deadweight }}%)
+          <span class="howto-num">{{ formatRupiah(sroiMetrics.dampakSetelahDeadweight) }}</span>
+          <span class="howto-note">Manfaat yang tetap terjadi walau program tidak ada.</span>
+        </li>
+        <li>
+          <strong>Atribusi</strong>: hasil sebelumnya × (1 − {{ sroiMetrics.attribution }}%)
+          <span class="howto-num">{{ formatRupiah(sroiMetrics.dampakSetelahAttribution) }}</span>
+          <span class="howto-note">Bagian manfaat yang disumbang pihak lain.</span>
+        </li>
+        <li>
+          <strong>Pergeseran Manfaat</strong>: hasil sebelumnya × (1 − {{ sroiMetrics.displacement }}%)
+          <span class="howto-num">{{ formatRupiah(sroiMetrics.dampakSetelahDisplacement) }}</span>
+          <span class="howto-note">Manfaat yang hanya berpindah dari tempat lain. Hasilnya adalah Dampak Bersih Tahun 1.</span>
+        </li>
+        <li>
+          <strong>Penyusutan &amp; Diskonto</strong>:
+          <template v-if="sroiMetrics.durationYears > 1">
+            tiap tahun mulai tahun ke-2 dampak × (1 − {{ sroiMetrics.dropOff }}%), lalu dibagi (1 + {{ sroiMetrics.discountRate }}%)<sup>t</sup>; semua tahun dijumlahkan.
+          </template>
+          <template v-else>
+            tidak berlaku karena durasi manfaat 1 tahun, sehingga nilai sekarang sama dengan Dampak Bersih Tahun 1.
+          </template>
+          <span class="howto-num">{{ formatRupiah(sroiMetrics.pvImpact) }}</span>
+        </li>
+        <li>
+          <strong>Rasio SROI</strong> = Dampak Nilai Saat Ini ÷ Nilai Input
+          <span class="howto-num">{{ formatRupiah(sroiMetrics.pvImpact) }} ÷ {{ formatRupiah(sroiMetrics.valueOfInputs) }} = {{ sroiMetrics.sroiRatioText }}</span>
+          <span class="howto-note">Ambang batas: ≥ 1,0 Layak · 0,6–0,99 Cukup · &lt; 0,6 Kurang.</span>
+        </li>
+      </ol>
+    </details>
+
  <!-- Rincian Penyusutan & Diskonto per Tahun (jika durasi manfaat > 1 tahun) -->
  <details v-if="sroiMetrics.yearlyBreakdown && sroiMetrics.yearlyBreakdown.length > 1" class="sroi-yearly-table-wrap sroi-gap-details">
  <summary class="sroi-yearly-title">Rincian Penyusutan &amp; Diskonto Multi-Tahun <span class="sroi-gap-hint">(klik untuk melihat)</span></summary>
@@ -2277,6 +2322,19 @@ const copyJson = async () => {
  color: #dc2626;
  margin-top: 2px;
 }
+
+.sroi-howto-card {
+  margin-top: 14px;
+  background: var(--c-gray-50);
+  border: 1px solid var(--c-gray-200);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+.sroi-howto-title { font-size: 17.6px; font-weight: 700; color: var(--c-gray-800); }
+.sroi-howto-list { margin: 8px 0 0; padding-left: 22px; line-height: 1.5; color: var(--c-gray-800); }
+.sroi-howto-list li { margin-bottom: 10px; }
+.howto-num { display: block; font-weight: 800; }
+.howto-note { display: block; font-size: 0.9em; opacity: .7; }
 
 /* ══════ SROI Transparency Flow (Rule 16) ══════ */
 .sroi-transparency-card {
