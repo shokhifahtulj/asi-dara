@@ -441,39 +441,6 @@ async function downloadUserBackupJson() {
 }
 
 /**
- * Backup OTOMATIS — dipanggil diam-diam setiap kali sebuah dokumen RKA
- * selesai diunggah (lihat pemanggilannya di handleRkaFiles), tanpa perlu
- * pengguna menekan tombol backup manual. Mengunduh SATU berkas .json berisi
- * seluruh dokumen RKA milik akun yang sedang login, dengan nama berkas
- * "asidara_backup_...". Kegagalan tidak ditampilkan sebagai error ke
- * pengguna (proses unggah utama sudah dianggap berhasil) — cukup dicatat
- * di console agar tidak mengganggu alur unggah.
- */
-async function autoBackupOnUpload() {
-  if (currentUser.value?.role !== 'admin') return; // pengaman: hanya admin
-  try {
-    const res = await apiFetch('/api/v1/backup/export-user');
-    if (!res.ok) return;
-    const data = await res.json();
-    const total = (data.rkis || data.data?.main_db?.rkis || []).length;
-    if (total === 0) return;
-
-    const username = currentUser.value?.username || 'user';
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `asidara_backup_${username}_${new Date().toISOString().slice(0, 10)}_${Date.now()}.json`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-  } catch (err) {
-    console.warn('[Backup Otomatis] Gagal membuat backup otomatis setelah unggah:', err);
-  }
-}
-
-/**
  * Ambil riwayat versi sebuah dokumen RKA (backup otomatis dari setiap
  * upload/edit) — dipakai untuk menampilkan "versi terdahulu vs sekarang"
  * di panel Admin/User.
@@ -1594,11 +1561,7 @@ async function handleRkaFiles(files) {
           await uploadRkaOriginalFile(savedObj.id, file);
           updateProgressBar(100, 'Selesai diproses', queueItem);
           queueItem.status = 'done';
-          // Backup otomatis setiap kali ada dokumen baru berhasil diunggah —
-          // tidak menunggu (fire-and-forget) supaya tidak memperlambat
-          // tampilan progress bar ke pengguna.
-          // Hanya admin yang menerima berkas JSON otomatis; user pengupload tidak.
-          if (currentUser.value?.role === 'admin') autoBackupOnUpload();
+          // (Unduh backup JSON otomatis setelah unggah sudah dihapus. Backup manual tetap tersedia di menu Backup.)
         } else {
           const errData = await res.json().catch(() => ({}));
           throw new Error(errData.error || `Server menolak penyimpanan (${res.status})`);
@@ -2365,7 +2328,7 @@ async function reanalyzeDocWithPdf(targetId, file, onProgress = () => { }) {
     textContent = `Rencana Kerja dan Anggaran (RKA) SKPD Kabupaten Cirebon\nDokumen: ${file.name}\nCatatan: PDF hasil pindai/gambar tanpa teks digital.`;
   }
 
-  onProgress(70, "Layanan AI sedang mengevaluasi ulang SROI...");
+  onProgress(70, "Layanan AI sedang mengevaluasi ulang Nilai Prakiraan Dampak...");
   const analysisObj = await processWithAIService(textContent, file.name, file.size);
 
   // Sanitasi OPD agar bersih
@@ -2425,7 +2388,7 @@ async function reanalyzeDocWithPdf(targetId, file, onProgress = () => { }) {
   onProgress(100, "Selesai dianalisis ulang!");
   showNotification(
     "Analisis Ulang Selesai",
-    `Dokumen "${updatedDoc.namaDokumen || updatedDoc.program}" berhasil dianalisis ulang dengan hasil SROI terbaru.`,
+    `Dokumen "${updatedDoc.namaDokumen || updatedDoc.program}" berhasil dianalisis ulang dengan Nilai Prakiraan Dampak terbaru.`,
     "success"
   );
 
@@ -2512,7 +2475,7 @@ async function regenerateDocFromStoredText(targetId, onProgress = () => { }, { a
   let metode = '';
   for (let attempt = 1; attempt <= MAX_TRY; attempt++) {
     onProgress(40, attempt === 1
-      ? 'Layanan AI sedang mengevaluasi ulang SROI...'
+      ? 'Layanan AI sedang mengevaluasi ulang Nilai Prakiraan Dampak...'
       : `Layanan AI sedang sibuk, mencoba lagi otomatis (${attempt}/${MAX_TRY})...`);
     analysisObj = await processWithAIService(
       sourceText,
